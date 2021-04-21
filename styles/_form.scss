@@ -1,0 +1,199 @@
+@import 'variables';
+
+/* Form */
+
+.contact_form {
+  width: 100%;
+}
+
+.contact_form input[type=text],
+.contact_form input[type=email] {
+  border: 1px solid $black-color;
+  width: 100%;
+  background: $grey-color;
+  color: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 2rem;
+  outline: none !important;
+  transition: 0.3s;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.contact_form textarea {
+  border: 1px solid $black-color;
+  background: $grey-color;
+  color: $white-color;
+  width: 100%;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  height: 20rem;
+  overflow: hidden;
+  border-radius: 2rem;
+  outline: none !important;
+  transition: 0.3s;
+  margin-top: 2.5rem;
+}
+
+.contact_form .form-message {
+  margin: 2.5rem 0;
+}
+
+.contact_form .output_message {
+  display: block;
+  color: #fff;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  border-radius: 2rem;
+}
+
+.contact_form .output_message.success {
+  background: #28a745;
+}
+
+.contact_form .output_message.success::before {
+  content: "\f14a";
+  padding-right: 1rem;
+}
+
+.contact_form .output_message.error {
+  background: #dc3545;
+}
+
+.contact_form .output_message.error::before {
+  content: "\f071";
+  padding-right: 1rem;
+}
+
+.contact {
+  max-width: 80vw;
+  margin: 5rem auto;
+  display: flex;
+
+  @media screen and (max-width: $bp-md) {
+    flex-direction: column;
+  }
+
+  &__left {
+    padding-right: 2rem;
+  }
+
+  &__right {
+    flex: 1 1 60rem;
+  }
+
+  &__nes {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $bp-md) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+
+  &__input {
+    flex: 0 1 22rem;
+
+    @media screen and (max-width: $bp-md) {
+      flex: 1 1 7rem;
+    }
+  }
+
+  &__message {
+    width: 100%;
+  }
+
+  &__container {
+    margin-top: 8rem;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+  }
+
+  &__icon {
+    svg {
+      width: 5rem;
+      height: 5rem;
+      fill: $main-color;
+    }
+  }
+
+  &__details {
+    margin-left: 1rem;
+
+    & p:first-child {
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    & p:nth-child(2) {
+      margin: 0;
+      font-size: 1.3rem;
+    }
+  }
+
+  &__button {
+    position: relative;
+    font-size: 1.8rem;
+    width: 30rem;
+    height: 7rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: $main-color;
+    color: $white-color;
+    border: none;
+    padding: 2rem;
+    border-radius: 5rem;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s;
+    }
+
+    i {
+      width: 3rem;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      right: 30%;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s;
+
+      svg {
+        width: 3rem;
+        height: 3rem;
+        display: none;
+      }
+    }
+
+    &:hover i {
+      transform: translate(80%, -50%);
+    }
+
+    &:hover i svg {
+      display: block;
+    }
+
+    &:hover span {
+      transform: translate(-70%, -50%);
+    }
+  }
+}

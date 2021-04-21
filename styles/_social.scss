@@ -1,0 +1,36 @@
+
+@import 'variables';
+
+.social {
+  margin-top: 2rem;
+  display: flex;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem;
+    background-color: $grey-color;
+    border-radius: 50%;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $main-color;
+    }
+  }
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

@@ -1,0 +1,46 @@
+
+@import 'variables';
+
+.header {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  &__h1 {
+    font-size: 5rem;
+    color: $white-color;
+    text-transform: uppercase;
+    font-weight: 800;
+
+    @media screen and (max-width: $bp-md) {
+      font-weight: 600;
+      font-size: 4rem;
+    }
+  }
+
+  &__color {
+    color: $main-color;
+  }
+
+  &__back {
+    font-size: 11rem;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 3rem);
+    color: $grey-color;
+    z-index: -1;
+    letter-spacing: 1.5rem;
+
+    @media screen and (max-width: $bp-md) {
+      font-weight: 800;
+      top: 0;
+      letter-spacing: 3px;
+      font-size: 6rem;
+      transform: translate(-50%, 0);
+    }
+  }
+}
