@@ -1,9 +1,11 @@
-import { useRouter } from "next/router"
+import { useRouter } from 'next/router'
 
-const PortfolioItem = () => {
+function PortfolioItem() {
   const router = useRouter()
   const pathname = router.query.item
-  console.log(pathname);
+
+  console.log(pathname)
+
   return (
     <div>
       <h1>This is a portfolio Item</h1>
