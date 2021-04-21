@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --ext .js ./",
-"lint.fix": "eslint --fix --ext .js ./"
+    "lint.fix": "eslint --fix --ext .js ./"
   },
   "dependencies": {
     "next": "10.1.3",
