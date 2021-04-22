@@ -1,19 +1,26 @@
 import '../styles/application.scss';
-import { Provider } from "react-redux";
 import React from "react";
+import Layout from '../components/Layout'
 import store from "../redux/store";
-import Navbar from "../components/Nav";
+import { Provider } from "react-redux";
 import { createWrapper } from "next-redux-wrapper";
+
+
+
 
 
 function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
-      <Navbar />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </Provider>
   )
 }
 const makestore = () => store;
 const wrapper = createWrapper(makestore)
+
 export default wrapper.withRedux(MyApp)
+
+
