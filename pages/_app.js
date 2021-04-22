@@ -1,13 +1,9 @@
 import '../styles/application.scss';
-import React from "react";
-import Layout from '../components/Layout'
-import store from "../redux/store";
-import { Provider } from "react-redux";
-import { createWrapper } from "next-redux-wrapper";
-
-
-
-
+import React from 'react';
+import { Provider } from 'react-redux';
+import { createWrapper } from 'next-redux-wrapper';
+import Layout from '../components/Layout';
+import store from '../redux/store';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -16,11 +12,9 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </Layout>
     </Provider>
-  )
+  );
 }
 const makestore = () => store;
-const wrapper = createWrapper(makestore)
+const wrapper = createWrapper(makestore);
 
-export default wrapper.withRedux(MyApp)
-
-
+export default wrapper.withRedux(MyApp);

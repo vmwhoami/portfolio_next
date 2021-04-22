@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { REGISTRATION_SUCCESS, REGISTER_FAILURE } from './registrationTypes';
+import { REGISTER_FAILURE, REGISTRATION_SUCCESS } from './registrationTypes';
 
 const config = {
   headers: {
@@ -18,6 +18,7 @@ const registerFailure = (data) => ({
 
 const register = (user) => async (dispatch) => {
   const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/users';
+
   axios({
     method: 'POST',
     url,

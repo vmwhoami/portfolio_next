@@ -1,3 +1,8 @@
-const links = ["home", "portfolio", "contact", "about"]
+const links = [
+  'home',
+  'portfolio',
+  'contact',
+  'about',
+];
 
-export default links
+export default links;

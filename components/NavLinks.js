@@ -1,46 +1,61 @@
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
 import {
-  Home, Portfolio, User, Envelope, Blog,
-} from './Svgs'
-const Navlinks = ({ link, changeTogle }) => {
+  Blog, Envelope, Home, Portfolio, User,
+} from './Svgs';
+
+function Navlinks({ link, changeTogle }) {
   const giveSvg = (link) => {
     switch (link) {
       case 'home':
-        return <Home />
+        return <Home />;
       case 'portfolio':
-        return <Portfolio />
+        return <Portfolio />;
       case 'contact':
-        return <Envelope />
+        return <Envelope />;
       case 'about':
-        return <User />
+        return <User />;
       case 'blog':
-        return <Blog />
+        return <Blog />;
       default:
-        break
+        break;
     }
-  }
+  };
+
   if (changeTogle) {
     return (
-      <Link href={link == 'home' ? "/" : `/${link}`}><a className="navigation__itemlink" onClick={() => changeTogle()}>
-        <i className="navigation__icon">
-          {giveSvg(link)}
-        </i>
-        <span className="navigation__item__span">{link}</span>
-      </a>
+      <Link href={link == 'home'
+        ? '/'
+        : `/${link}`}
+      >
+        <a
+          className="navigation__itemlink"
+          onClick={() => changeTogle()}
+        >
+          <i className="navigation__icon">
+            {giveSvg(link)}
+          </i>
+
+          <span className="navigation__item__span">{link}</span>
+        </a>
       </Link>
-    )
-  } else {
-    return (
-      <Link href={link == 'home' ? "/" : `/${link}`}><a className="mynav__link">
+    );
+  }
+
+  return (
+    <Link href={link == 'home'
+      ? '/'
+      : `/${link}`}
+    >
+      <a className="mynav__link">
         <i className="mynav__icon">
           {giveSvg(link)}
         </i>
+
         <span className="mynav__link__a">{link}</span>
       </a>
-      </Link>
-    )
-  }
+    </Link>
+  );
 }
 
-export default Navlinks
+export default Navlinks;
