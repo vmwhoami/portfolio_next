@@ -1,8 +1,14 @@
 import Link from 'next/link';
+import { useEffect } from "react";
+import { useDispatch } from 'react-redux'
 import { Portfolio } from '../components/Svgs';
 import SocialLinks from '../components/SocialLinks';
-
+import { getPortfolios } from "../redux/portfolios/portfolioActions";
 export default function Home() {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(getPortfolios)
+  }, [])
   return (
     <main className="main">
       <div className="main__container">
