@@ -5,9 +5,8 @@ export const Layout = ({ children }) => {
   return (
     <>
       <Nav />
-      {/* <MobileNav /> */}
+      <MobileNav />
       {children}
-
     </>
   )
 }

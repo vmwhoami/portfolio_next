@@ -1,10 +1,10 @@
 import Navlinks from './NavLinks'
+import links from './linksArray'
 const Nav = () => {
-  const links = ["home", "portfolio", "contact"]
   return (
     <nav className="mynav">
       {links.map((link) => {
-        return <Navlinks link={link} />
+        return <Navlinks key={link} link={link} />
       })}
     </nav>
   )

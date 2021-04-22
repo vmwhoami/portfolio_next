@@ -1,9 +1,6 @@
 import React, { useRef } from 'react';
-import Link from 'next/link'
-import {
-  Home, Portfolio, User, Envelope, Blog,
-} from './Svgs';
-
+import Navlinks from './NavLinks'
+import links from './linksArray'
 const Navigation = () => {
   const refContainer = useRef(null);
 
@@ -20,57 +17,9 @@ const Navigation = () => {
       <div className="navigation__background">&nbsp;</div>
       <nav className="navigation__nav">
         <ul className="navigation__list">
-
-          <li className="navigation__item">
-            <Link href="/"><a className="navigation__itemlink" onClick={() => changeTogle()}>
-              <i className="navigation__icon">
-                <Home />
-              </i>
-              <span className="navigation__item__span">Home</span>
-            </a>
-            </Link>
-          </li>
-
-          <li className="navigation__item">
-            <Link href="/portfolio"><a className="navigation__itemlink" onClick={() => changeTogle()}>
-              <i className="navigation__icon">
-                <Portfolio />
-              </i>
-              <span className="navigation__item__span">Portfolio</span>
-            </a>
-            </Link>
-          </li>
-
-          <li className="navigation__item">
-            <Link className="navigation__itemlink" onClick={() => changeTogle()} href="/contact">
-              <i className="navigation__icon">
-                <Envelope />
-              </i>
-              <span className="navigation__item__span">Contact</span>
-            </Link>
-          </li>
-
-          {/*
-          <li className="navigation__item">
-            <Link className="navigation__itemlink" href="/about">
-              <i className="navigation__icon">
-                <User />
-              </i>
-              <span className="navigation__item__span">About-me</span>
-            </Link>
-          </li> */}
-
-
-          {/*
-          <li className="navigation__item">
-            <Link className="navigation__itemlink" href="/blog">
-              <i className="navigation__icon">
-                <Blog />
-              </i>
-              <span className="navigation__item__span">blog</span>
-            </Link>
-          </li> */}
-
+          {links.map((link) => {
+            return <Navlinks key={link} link={link} changeTogle={changeTogle} />
+          })}
         </ul>
       </nav>
     </div>
