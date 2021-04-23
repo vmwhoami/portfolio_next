@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
-const PortThumb = ({ image, title }) => (
+const PortThumb = ({ id, image }) => (
   <div className="post_thumb ">
-    <Link href={`/portfolio/${title}`} ><a className="link_container">
+    <Link href={`/portfolio/${id}`} ><a className="link_container">
       <img className="img_fluid" src={image} />
     </a>
     </Link>

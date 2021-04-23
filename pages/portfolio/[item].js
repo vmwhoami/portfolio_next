@@ -1,65 +1,57 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Github, Earth, Back } from '../../components/Svgs';
+import { useSelector } from 'react-redux';
+import { Back } from '../../components/Svgs';
 import Heading from '../../components/smallComponents/Heading';
-
+import LiveLinks from "../../components/portfoliocomp/LiveLinks";
 function PortfolioItem() {
   const router = useRouter();
   const pathname = router.query.item;
+  const reducer = useSelector((state) => state.portfolioReducer.items);
+  if (reducer < 1) {
+    return <h1>Loading</h1>
+  } else {
+    const { portfolios } = reducer.data
 
-  console.log(pathname);
+    const item = portfolios.find((item) => item._id === pathname)
+    const { title, image, githubLink, liveLink, description } = item
+    return (
+      <div className="container">
+        <Heading
+          white=""
+          color={title}
+          bg="Portfolio"
+        />
 
-  return (
-    <div className="container">
-      <Heading
-        white=""
-        color={title}
-        bg="Portfolio"
-      />
-      {loading ? <LoopCircleLoading /> : null}
-      <div className="portItemCont">
-        <ImageOfItem thumb_image={main_image} />
-        <div className="content">
-          <h3 className="content__h3">
-            {subtitle}
-            {' '}
-          </h3>
-          <p>{body}</p>
-
-          <hr className="white-line " />
-          <div className="links">
-            <LiveLinks github_link={github_link} Github={Github} />
-            <LiveLinks live_link={live_link} Earth={Earth} />
-            <Link className="links__container" to="/portfolio">
-              <span className="links__text">back to portfolios</span>
-              <i className="links__icon">
-                <Back />
-              </i>
-            </Link>
+        <div className="portItemCont">
+          <div className="imgcontainer">
+            <img className="imgcontainer__img " src={image} />
           </div>
+          <div className="content">
+            <h3 className="content__h3">
+
+            </h3>
+            <p>{description}</p>
+
+            <hr className="white-line " />
+            <div className="links">
+              <LiveLinks githublink={githubLink} />
+              <LiveLinks liveLink={liveLink} live />
+              <Link href="/portfolio"><a className="links__container">
+                <span className="links__text">back to portfolios</span>
+                <i className="links__icon">
+                  <Back />
+                </i>
+              </a>
+              </Link>
+            </div>
+          </div>
+
         </div>
-
       </div>
-    </div>
-  );
+    );
+  }
 }
-
-const LiveLinks = ({
-  live_link, github_link, Earth, Github,
-}) => (
-  <a target="_blank" className="links__container" rel="noreferrer" href={live_link || github_link}>
-    <span className="links__text">{Earth ? 'Live' : 'Github'}</span>
-    <i className="links__icon">
-      {Earth ? <Earth /> : <Github />}
-    </i>
-  </a>
-);
-
-const ImageOfItem = ({ thumb_image }) => (
-  <div className="imgcontainer">
-    <img className="imgcontainer__img " src={thumb_image} />
-  </div>
-);
 
 
 export default PortfolioItem;
