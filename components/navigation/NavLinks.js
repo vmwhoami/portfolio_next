@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import {
   Blog, Envelope, Home, Portfolio, User,
-} from './Svgs';
+} from '../Svgs';
 
 function Navlinks({ link, changeTogle }) {
   const giveSvg = (link) => {

@@ -1,4 +1,4 @@
-import { Github, LinkedIn, Twitter } from './Svgs';
+import { Github, LinkedIn, Twitter } from '../Svgs';
 
 function SocialLinks() {
   return (

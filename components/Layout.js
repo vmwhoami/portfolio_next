@@ -1,6 +1,5 @@
-import { Fragment } from 'react';
-import Nav from './Nav';
-import MobileNav from './Mobilenav';
+import Nav from './navigation/Nav';
+import MobileNav from './navigation/Mobilenav';
 
 export function Layout({ children }) {
   return (
