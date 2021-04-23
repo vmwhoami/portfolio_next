@@ -1,14 +1,7 @@
 import Link from 'next/link';
-import { useEffect } from "react";
-import { useDispatch } from 'react-redux';
 import { Portfolio } from '../components/Svgs';
 import SocialLinks from '../components/smallComponents/SocialLinks';
-import { getPortfolios } from "../redux/portfolios/portfolioActions";
 export default function Home() {
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(getPortfolios())
-  }, [])
   return (
     <main className="main">
       <div className="main__container">
@@ -37,7 +30,6 @@ export default function Home() {
             <Link href="/portfolio">
               <a className="mybutton">
                 <span className="mybutton__span">Portfolio</span>
-
                 <i className="mybutton__icon">
                   <Portfolio />
                 </i>
