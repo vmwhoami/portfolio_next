@@ -31,14 +31,15 @@ ul {
 body {
   background-color: $black-color;
   font-family: $open-sans;
+  color: $white-color;
+  font-weight: 400;
+  font-size: 1.6rem;
 }
 
 .container-f {
   margin: 0;
   padding: 0;
-  color: $white-color;
-  font-weight: 400;
-  font-size: 1.6rem;
+
   
 }
 
