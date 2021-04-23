@@ -1,6 +1,6 @@
 import { GET_ALL_ITEMS, GET_ALL_FAILURE } from './portfolioTypes';
 
-const initial = { items: [] };
+const initial = { items: [], errors: [] };
 const portfolioReducer = (state = initial, action) => {
   switch (action.type) {
     case GET_ALL_ITEMS:

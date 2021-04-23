@@ -2,11 +2,10 @@ import Link from 'next/link';
 
 function Portfolio() {
   return (
-    <div>
-      <Link href="/"> to home</Link>
-      <Link href="/portfolio/id"> To items</Link>
+    <div className="container">
+      <div className="grid-container">
 
-      <h1>Hello from portfolio page</h1>
+      </div>
     </div>
   );
 }
