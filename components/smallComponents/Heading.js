@@ -23,7 +23,7 @@ const Heading = ({ white, color, bg }) => (
       <h1 className="header__h1" >
         {white}
         {' '}
-        <span className="header__color">{color}</span>
+        <motion.span className="header__color">{color}</motion.span>
         <motion.span className="header__back" >{bg}</motion.span>
       </h1>
     </motion.div>
