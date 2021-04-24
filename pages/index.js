@@ -1,21 +1,51 @@
 import Link from 'next/link';
 import { Portfolio } from '../components/Svgs';
 import SocialLinks from '../components/smallComponents/SocialLinks';
-
+import { motion } from 'framer-motion'
 export default function Home() {
+  const easing = [0.5, 1, 0.89, 1]
+  const fadeInSide = {
+    initial: {
+      x: -200,
+
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: .6,
+        ease: easing
+      }
+    }
+  }
+
+  const fadeInRight = {
+    initial: {
+      x: 300,
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: .6,
+        ease: easing
+      }
+    }
+  }
   return (
-    <main className="main">
+    <motion.main initial="initial" animate="animate" className="main">
       <div className="main__container">
-        <div className="image">
+        <motion.div variants={fadeInSide} className="image">
           <img
             alt="Vitalie Melnic"
             className="image__img"
             src="./pictures/portfolio.jpg"
           />
-        </div>
+        </motion.div>
 
         <div className="about">
-          <div className="about__container">
+          <motion.div variants={fadeInRight} className="about__container">
             <p className="about__intro">Hi there! </p>
 
             <h1 className="about__heading">
@@ -38,10 +68,10 @@ export default function Home() {
             </Link>
 
             <SocialLinks />
-          </div>
+          </motion.div>
         </div>
       </div>
 
-    </main>
+    </motion.main>
   );
 }
