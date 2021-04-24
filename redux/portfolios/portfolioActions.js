@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { GET_ALL_ITEMS, GET_ALL_FAILURE } from './portfolioTypes';
 
-const config = {
-  headers: {
-    'Content-Type': 'application/json',
-  },
-};
+// const config = {
+//   headers: {
+//     'Content-Type': 'application/json',
+//   },
+// };
 
 const getItemsSuccess = (data) => ({
   type: GET_ALL_ITEMS,
@@ -30,5 +30,5 @@ const getPortfolios = () => async (dispatch) => {
 };
 
 export {
-  getPortfolios,
+  getPortfolios, registerFailure,
 };
