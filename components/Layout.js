@@ -1,13 +1,14 @@
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import Nav from './navigation/Nav';
 import MobileNav from './navigation/Mobilenav';
-import { useEffect } from "react";
-import { useDispatch } from 'react-redux';
-import { getPortfolios } from "../redux/portfolios/portfolioActions";
+import { getPortfolios } from '../redux/portfolios/portfolioActions';
+
 export function Layout({ children }) {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getPortfolios())
-  }, [])
+    dispatch(getPortfolios());
+  }, []);
   return (
     <>
       <Nav />

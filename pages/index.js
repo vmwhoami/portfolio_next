@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Portfolio } from '../components/Svgs';
 import SocialLinks from '../components/smallComponents/SocialLinks';
+
 export default function Home() {
   return (
     <main className="main">
@@ -23,7 +24,7 @@ export default function Home() {
             </h1>
 
             <p className="about__description">
-              I'm a Moldavian based developer focused on crafting clean &amp; user‑friendly experiences, I am
+              I'm a developer focused on crafting clean &amp; user‑friendly experiences, I am
               passionate about building excellent software that improves the lives of those around me.
             </p>
 

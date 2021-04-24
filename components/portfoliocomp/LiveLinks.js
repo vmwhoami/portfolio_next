@@ -1,7 +1,7 @@
 import { Github, Earth } from '../Svgs';
 
 const LiveLinks = ({
-  liveLink, githubLink, live
+  liveLink, githubLink, live,
 }) => (
   <a target="_blank" className="links__container" rel="noreferrer" href={liveLink || githubLink}>
     <span className="links__text">{live ? 'Live' : 'Github'}</span>
@@ -11,4 +11,4 @@ const LiveLinks = ({
   </a>
 );
 
-export default LiveLinks
+export default LiveLinks;

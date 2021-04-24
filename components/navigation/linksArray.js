@@ -3,7 +3,7 @@ const links = [
   'portfolio',
   'contact',
   'about',
-  'blog'
+  'blog',
 ];
 
 export default links;

@@ -19,17 +19,16 @@ const registerFailure = (data) => ({
 const getPortfolios = () => async (dispatch) => {
   const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/portfolios';
   try {
-    const response = await axios.get(url)
+    const response = await axios.get(url);
 
     if (response) {
-      dispatch(getItemsSuccess(response.data))
+      dispatch(getItemsSuccess(response.data));
     }
   } catch (error) {
-    dispatch(registerFailure(error))
+    dispatch(registerFailure(error));
   }
-
 };
 
 export {
-  getPortfolios
+  getPortfolios,
 };
