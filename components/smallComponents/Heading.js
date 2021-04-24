@@ -12,18 +12,19 @@ const Heading = ({ white, color, bg }) => (
         visible: {
           scale: 1,
           opacity: 1,
+          ease: "easeIn",
           transition: {
-            delay: .2
+            delay: .1
           }
         }
       }
       }
     >
-      <h1 className="header__h1">
+      <h1 className="header__h1" >
         {white}
         {' '}
         <span className="header__color">{color}</span>
-        <span className="header__back">{bg}</span>
+        <motion.span className="header__back" >{bg}</motion.span>
       </h1>
     </motion.div>
   </div>
