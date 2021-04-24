@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from 'next/link';
 import {
   Blog, Envelope, Home, Portfolio, User,
@@ -18,13 +19,13 @@ function Navlinks({ link, changeTogle }) {
       case 'blog':
         return <Blog />;
       default:
-        break;
+        return null;
     }
   };
 
   if (changeTogle) {
     return (
-      <Link href={link == 'home'
+      <Link href={link === 'home'
         ? '/'
         : `/${link}`}
       >
@@ -43,7 +44,7 @@ function Navlinks({ link, changeTogle }) {
   }
 
   return (
-    <Link href={link == 'home'
+    <Link href={link === 'home'
       ? '/'
       : `/${link}`}
     >
@@ -58,4 +59,9 @@ function Navlinks({ link, changeTogle }) {
   );
 }
 
+Navlinks.propTypes = {
+  link: PropTypes.string.isRequired,
+  changeTogle: PropTypes.func.isRequired,
+
+};
 export default Navlinks;

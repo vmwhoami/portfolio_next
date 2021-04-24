@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Github, Earth } from '../Svgs';
 
 const LiveLinks = ({
@@ -10,5 +11,9 @@ const LiveLinks = ({
     </i>
   </a>
 );
+LiveLinks.propTypes = {
+  liveLink: PropTypes.string.isRequired,
+  githubLink: PropTypes.string.isRequired,
 
+};
 export default LiveLinks;

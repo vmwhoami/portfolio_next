@@ -1,9 +1,10 @@
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { Portfolio } from '../components/Svgs';
 import SocialLinks from '../components/smallComponents/SocialLinks';
-import { motion } from 'framer-motion'
+
 export default function Home() {
-  const easing = [0.5, 1, 0.89, 1]
+  const easing = [0.5, 1, 0.89, 1];
   const fadeInSide = {
     initial: {
       x: -200,
@@ -13,12 +14,12 @@ export default function Home() {
       x: 0,
       opacity: 1,
       transition: {
-        duration: .6,
-        ease: easing
-      }
-    }
-  }
-
+        duration: 0.6,
+        ease: easing,
+      },
+    },
+  };
+  const easint2 = [0.34, 1.56, 0.64, 1];
   const fadeInRight = {
     initial: {
       x: 300,
@@ -28,11 +29,11 @@ export default function Home() {
       x: 0,
       opacity: 1,
       transition: {
-        duration: .6,
-        ease: easing
-      }
-    }
-  }
+        duration: 0.6,
+        ease: easint2,
+      },
+    },
+  };
   return (
     <motion.main initial="initial" animate="animate" className="main">
       <div className="main__container">

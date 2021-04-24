@@ -2,13 +2,16 @@ import '../styles/application.scss';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createWrapper } from 'next-redux-wrapper';
+import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 import store from '../redux/store';
-import { motion } from "framer-motion";
 
 function MyApp({ Component, pageProps, router }) {
   return (
-    <motion.div key={router.route} initial="pageInitial" animate="pageAnimate"
+    <motion.div
+      key={router.route}
+      initial="pageInitial"
+      animate="pageAnimate"
       variants={{
         pageInitial: {
           opacity: 0,
@@ -17,8 +20,8 @@ function MyApp({ Component, pageProps, router }) {
           opacity: 1,
         },
         transition: {
-          duration: 1
-        }
+          duration: 1,
+        },
       }}
     >
       <Provider store={store}>
