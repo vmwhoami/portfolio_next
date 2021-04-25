@@ -61,7 +61,7 @@ function Navlinks({ link, changeTogle }) {
 
 Navlinks.propTypes = {
   link: PropTypes.string.isRequired,
-  changeTogle: PropTypes.func.isRequired,
+  changeTogle: PropTypes.func,
 
 };
 export default Navlinks;

@@ -10,16 +10,13 @@ function Portfolio() {
     return <h1>Loading</h1>;
   }
   const { portfolios } = reducer.data;
-  const fadeInUp = {
-    initial: {
-      y: 60,
-      opacity: 0,
-    },
+  const stagger = {
     animate: {
-      y: 0,
-      opacity: 1,
-    },
-  };
+      transition: {
+        staggerChildren: .2
+      }
+    }
+  }
   return (
     <div className="container">
       <Heading
@@ -31,12 +28,22 @@ function Portfolio() {
         {portfolios.map(({
           _id: id, title, description, image,
         }) => (
-          <motion.div variants={fadeInUp}>
-            <article key={id} className="post_container  ">
-              <PortThumb image={image} id={id} />
-              <PortContent title={title} description={description} id={id} />
-            </article>
-          </motion.div>
+
+          <motion.article initial={{ opacity: 0, y: 100 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: .6
+              }
+            }}
+
+
+            key={id} className="post_container  ">
+            <PortThumb image={image} id={id} />
+            <PortContent title={title} description={description} id={id} />
+          </motion.article>
+
         ))}
       </div>
     </div>
