@@ -10,13 +10,27 @@ function Portfolio() {
     return <h1>Loading</h1>;
   }
   const { portfolios } = reducer.data;
-  const stagger = {
-    animate: {
+
+  const container = {
+    hidden: {
+      y: 200,
+      opacity: .2
+    },
+    show: {
+      y: 0,
+      opacity: 1,
       transition: {
-        staggerChildren: .2
+        staggerChildren: 0.2,
+        ease: [0.34, 1.56, 0.64, 1]
       }
     }
   }
+
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 }
+  }
+
   return (
     <div className="container">
       <Heading
@@ -24,28 +38,23 @@ function Portfolio() {
         color="Portfolio"
         bg="Work"
       />
-      <div className="grid-container">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="show"
+
+        className="grid-container">
         {portfolios.map(({
           _id: id, title, description, image,
         }) => (
 
-          <motion.article initial={{ opacity: 0, y: 100 }}
-            animate={{
-              opacity: 1,
-              y: 0,
-              transition: {
-                duration: .6
-              }
-            }}
-
-
-            key={id} className="post_container  ">
+          <motion.article variants={item} key={id} className="post_container  ">
             <PortThumb image={image} id={id} />
             <PortContent title={title} description={description} id={id} />
           </motion.article>
 
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

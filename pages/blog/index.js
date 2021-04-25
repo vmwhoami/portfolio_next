@@ -1,6 +1,12 @@
+import Heading from '../../components/smallComponents/Heading';
+
 const BlogPage = () => (
-  <div>
-    <h1>This is going to be the blog page</h1>
+  <div className="container">
+    <Heading
+      white="My "
+      color="Blog"
+      bg="Blog"
+    />
   </div>
 );
 export default BlogPage;

@@ -54,7 +54,8 @@
   display: inline-block;
   height: 16rem;
   cursor: pointer;
-
+  width: 100%;
+  
   &:hover .img_fluid {
     transform: scale(1.2);
     border-radius: 1rem 1rem 0 0;
