@@ -4,12 +4,12 @@ import Heading from '../../components/smallComponents/Heading';
 import PortContent from '../../components/portfoliocomp/portContent';
 import PortThumb from '../../components/portfoliocomp/portThumb';
 
-function Portfolio() {
+
+function Portfolio(props) {
+
   const reducer = useSelector((state) => state.portfolioReducer.items);
-  if (reducer < 1) {
-    return <h1>Loading</h1>;
-  }
-  const { portfolios } = reducer.data;
+  let { portfolios } = props.data
+
 
   const container = {
     hidden: {
@@ -60,3 +60,11 @@ function Portfolio() {
 }
 
 export default Portfolio;
+
+
+export async function getStaticProps() {
+  const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/portfolios';
+  const res = await fetch(url)
+  const response = await res.json()
+  return { props: response, revalidate: 10 }
+}

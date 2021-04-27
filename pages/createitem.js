@@ -2,6 +2,7 @@ import React from 'react'
 import Heading from "../components/smallComponents/Heading";
 
 const Createitem = () => {
+
   return (
     <div className="container">
       <Heading
@@ -9,7 +10,6 @@ const Createitem = () => {
         color="item"
         bg="new item"
       />
-
 
     </div>
   )

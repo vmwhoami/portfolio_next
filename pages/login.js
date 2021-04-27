@@ -26,7 +26,7 @@ const Login = () => {
     setEmail('')
     setPassword('')
   }
-  console.log(loggedIn);
+
   return (
     <div className="container">
       <Heading
