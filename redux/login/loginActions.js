@@ -7,27 +7,59 @@ const config = {
   },
 };
 
-const loginSuccess = (data) => ({
+const loginSuccess = (message) => ({
   type: LOGIN_SUCCESS,
-  payload: data,
+  payload: message,
 });
-const loginFailure = (data) => ({
+
+const loginFailure = (error) => ({
   type: LOGIN_FAILURE,
-  payload: data,
+  payload: error,
 });
 
-const login = (user) => async (dispatch) => {
-  const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/users';
-  try {
-    const res = await axios({ method: 'POST', url, data: user, config })
-    dispatch(loginSuccess(res.data))
-  } catch (error) {
+const logoutUSer = () => ({
+  type: LOGOUT,
+});
 
+const login = (credentials) => async (dispatch) => {
+  const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/login';
+  try {
+    const response = await axios({ method: 'POST', url, data: credentials, config, })
+    const { status, data } = response
+    if (status === 422) throw new Error(response);
+    if (status === 200) {
+
+      await localStorage.setItem('vitaliemelnic', data.token);
+      return dispatch(loginSuccess("Logged in successfull"));
+    }
+
+  } catch (error) {
+    console.log(error);
+    dispatch(loginFailure("You have provided a wrong email or password"))
+  }
+
+};
+
+const autoLogin = () => async (dispatch) => {
+  const url = 'https://mother-child-api.herokuapp.com/api/v1/auto_login';
+  const token = await localStorage.getItem('token');
+
+  if (token) {
+    axios.get(url, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }).then((response) => {
+      dispatch(loginSuccess(response.data));
+    });
   }
 };
 
+const logout = () => (dispatch) => {
+  localStorage.removeItem('token');
+  dispatch(logoutUSer());
+};
+
 export {
-  login,
-  loginSuccess,
-  loginFailure,
+  login, loginSuccess, loginFailure, autoLogin, logout,
 };

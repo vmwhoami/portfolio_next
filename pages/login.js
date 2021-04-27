@@ -2,6 +2,7 @@ import Heading from '../components/smallComponents/Heading';
 import { Lock } from '../components/Svgs';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { login } from '../redux/login/loginActions'
 const Login = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
@@ -20,8 +21,7 @@ const Login = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(email);
-    console.log(password);
+    dispatch(login({ email, password }))
   }
   return (
     <div className="container">
