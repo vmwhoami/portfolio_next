@@ -4,6 +4,7 @@ const links = [
   'contact',
   'about',
   'blog',
+
 ];
 
 export default links;

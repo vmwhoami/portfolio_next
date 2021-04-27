@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../redux/login/loginActions'
 const Login = () => {
   const dispatch = useDispatch();
+  const loggedIn = useSelector((state) => state.loginReducer.loggedIn);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const handleChange = (e) => {
@@ -22,7 +23,10 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     dispatch(login({ email, password }))
+    setEmail('')
+    setPassword('')
   }
+  console.log(loggedIn);
   return (
     <div className="container">
       <Heading
@@ -37,7 +41,7 @@ const Login = () => {
             <div className="login__input">
               <input required placeholder="EMAIL"
                 type="email"
-                onChange={(e) => handleChange(e)} name="email" id="email" />
+                onChange={(e) => handleChange(e)} value={email} name="email" id="email" />
             </div>
 
             <div className="login__input">
@@ -45,9 +49,12 @@ const Login = () => {
                 type="password"
                 name="password"
                 id="password"
+                value={password}
                 onChange={(e) => handleChange(e)} />
             </div>
+            <div className="login__message">
 
+            </div>
           </div>
           <button type="submit" className="mybutton">
             <span className="mybutton__span">login</span>
