@@ -5,7 +5,6 @@ import Nav from './navigation/Nav';
 import MobileNav from './navigation/Mobilenav';
 import { getPortfolios } from '../redux/portfolios/portfolioActions';
 
-
 export function Layout({ children }) {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -26,6 +25,5 @@ Layout.propTypes = {
   children: PropTypes.instanceOf(Object).isRequired,
 
 };
-
 
 export default Layout;

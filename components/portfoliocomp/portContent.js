@@ -1,6 +1,8 @@
 import Link from 'next/link';
 
-const PortContent = ({ title, description, id, convertTitle }) => (
+const PortContent = ({
+  title, description, id, convertTitle,
+}) => (
   <div className="post_content">
     <div className="entry_header">
       <h3>

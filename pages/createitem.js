@@ -1,18 +1,15 @@
-import React from 'react'
-import Heading from "../components/smallComponents/Heading";
+import React from 'react';
+import Heading from '../components/smallComponents/Heading';
 
-const Createitem = () => {
+const Createitem = () => (
+  <div className="container">
+    <Heading
+      white="Create"
+      color="item"
+      bg="new item"
+    />
 
-  return (
-    <div className="container">
-      <Heading
-        white="Create"
-        color="item"
-        bg="new item"
-      />
+  </div>
+);
 
-    </div>
-  )
-}
-
-export default Createitem
+export default Createitem;

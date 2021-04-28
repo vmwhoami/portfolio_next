@@ -1,8 +1,9 @@
-import Heading from '../components/smallComponents/Heading';
-import { Lock } from '../components/Svgs';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../redux/login/loginActions'
+import Heading from '../components/smallComponents/Heading';
+import { Lock } from '../components/Svgs';
+import { login } from '../redux/login/loginActions';
+
 const Login = () => {
   const dispatch = useDispatch();
   const loggedIn = useSelector((state) => state.loginReducer.loggedIn);
@@ -21,11 +22,11 @@ const Login = () => {
     return null;
   };
   const handleSubmit = (e) => {
-    e.preventDefault()
-    dispatch(login({ email, password }))
-    setEmail('')
-    setPassword('')
-  }
+    e.preventDefault();
+    dispatch(login({ email, password }));
+    setEmail('');
+    setPassword('');
+  };
 
   return (
     <div className="container">
@@ -39,33 +40,40 @@ const Login = () => {
           <div className="form__container">
             <input type="hidden" name="form-name" value="contact" />
             <div className="login__input">
-              <input required placeholder="EMAIL"
+              <input
+                required
+                placeholder="EMAIL"
                 type="email"
-                onChange={(e) => handleChange(e)} value={email} name="email" id="email" />
+                onChange={(e) => handleChange(e)}
+                value={email}
+                name="email"
+                id="email"
+              />
             </div>
 
             <div className="login__input">
-              <input required placeholder="PASSWORD"
+              <input
+                required
+                placeholder="PASSWORD"
                 type="password"
                 name="password"
                 id="password"
                 value={password}
-                onChange={(e) => handleChange(e)} />
+                onChange={(e) => handleChange(e)}
+              />
             </div>
-            <div className="login__message">
-
-            </div>
+            <div className="login__message" />
           </div>
           <button type="submit" className="mybutton">
             <span className="mybutton__span">login</span>
             <i className="mybutton__icon">
-              <Lock size={"size"} />
+              <Lock size="size" />
             </i>
           </button>
         </form>
       </div>
     </div>
-  )
+  );
 };
 
 export default Login;

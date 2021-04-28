@@ -24,26 +24,26 @@ const logoutUSer = () => ({
 const login = (credentials) => async (dispatch) => {
   const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/login';
   try {
-    const response = await axios({ method: 'POST', url, data: credentials, config, })
-    const { status, data } = response
+    const response = await axios({
+      method: 'POST', url, data: credentials, config,
+    });
+    const { status, data } = response;
     if (status !== 200) throw new Error();
     if (status === 200) {
       await localStorage.setItem('vitaliemelnic', data.token);
-      return dispatch(loginSuccess("Successfull login"));
+      return dispatch(loginSuccess('Successfull login'));
     }
-
   } catch (error) {
-    dispatch(loginFailure("You have provided a wrong email or password"))
+    dispatch(loginFailure('You have provided a wrong email or password'));
   }
-
 };
 
 const autoLogin = (url) => async (dispatch) => {
   const token = await localStorage.getItem('vitaliemelnic');
   if (token) {
-    axios.get(url, { headers: { Authorization: `Bearer ${token}` } })
-  };
-}
+    axios.get(url, { headers: { Authorization: `Bearer ${token}` } });
+  }
+};
 const logout = () => (dispatch) => {
   localStorage.removeItem('token');
   dispatch(logoutUSer());

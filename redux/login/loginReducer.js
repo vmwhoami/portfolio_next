@@ -10,7 +10,7 @@ const loginReducer = (state = initial, action) => {
   switch (action.type) {
     case LOGIN_SUCCESS:
       return {
-        ...state, errors: false, loggedIn: true, message: action.payload
+        ...state, errors: false, loggedIn: true, message: action.payload,
       };
     case LOGIN_FAILURE:
       return {

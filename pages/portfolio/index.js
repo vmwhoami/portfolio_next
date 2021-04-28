@@ -3,29 +3,31 @@ import Heading from '../../components/smallComponents/Heading';
 import PortContent from '../../components/portfoliocomp/portContent';
 import PortThumb from '../../components/portfoliocomp/portThumb';
 
-
 function Portfolio(props) {
-  let { portfolios } = props.data
+  if (!props.data) {
+    return <h1>Loading..</h1>;
+  }
+  const { portfolios } = props.data;
   const container = {
     hidden: {
       y: 200,
-      opacity: .2
+      opacity: 0.2,
     },
     show: {
       y: 0,
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        ease: [0.34, 1.56, 0.64, 1]
-      }
-    }
-  }
+        ease: [0.34, 1.56, 0.64, 1],
+      },
+    },
+  };
 
   const item = {
     hidden: { opacity: 0 },
-    show: { opacity: 1 }
-  }
-  const convertTitle = (title) => title.trim().toLowerCase().split(' ').join("-");
+    show: { opacity: 1 },
+  };
+  const convertTitle = (title) => title.trim().toLowerCase().split(' ').join('-');
   return (
     <div className="container">
       <Heading
@@ -38,7 +40,8 @@ function Portfolio(props) {
         initial="hidden"
         animate="show"
 
-        className="grid-container">
+        className="grid-container"
+      >
         {portfolios.map(({
           _id: id, title, description, image,
         }) => (
@@ -56,11 +59,10 @@ function Portfolio(props) {
 
 export default Portfolio;
 
-
 export async function getStaticProps() {
   const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/portfolios';
-  const res = await fetch(url)
-  const response = await res.json()
+  const res = await fetch(url);
+  const response = await res.json();
 
-  return { props: response, revalidate: 10 }
+  return { props: response, revalidate: 10 };
 }
