@@ -59,33 +59,17 @@ function PortfolioItem() {
 
 export async function getStaticProps(context) {
   const id = context.params.item
-
   const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/portfolios/1'
-
-  const res = await axios({
-    method: 'GET',
-    url: url,
-    headers: {},
-    data: {
-      id: id
-    }
-  });
-
-
+  const res = await axios({ method: 'GET', url: url, headers: {}, data: { id: id } });
   return {
-    props: { portfolio: res.data }
+    props: { portfolio: res.data }, revalidate: 1800
   }
 }
 export async function getStaticPaths() {
   const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/portfolios'
-  const res = await fetch(url)
-  const data = await res.json()
-
-  const paths = data.data.portfolios.map(p => {
-    return {
-      params: { item: p._id.toString() }
-    }
-  })
+  const data = await axios.get(url)
+  const { portfolios } = data.data.data
+  const paths = portfolios.map(p => ({ params: { item: p._id.toString() } }))
 
   return {
     paths,
