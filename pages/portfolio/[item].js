@@ -5,6 +5,9 @@ import LiveLinks from '../../components/portfoliocomp/LiveLinks';
 import axios from 'axios';
 function PortfolioItem(props) {
 
+  if (!props.portfolio.data) {
+    return <h1>Loading..</h1>
+  }
   const {
     title, image, githubLink, liveLink, description, technologies
   } = props.portfolio.data;
@@ -13,8 +16,8 @@ function PortfolioItem(props) {
   return (
     <div className="container">
       <Heading
-        white=""
-        color={title}
+        white={title}
+        color=""
         bg="Portfolio"
       />
 
@@ -54,7 +57,7 @@ export async function getStaticProps(context) {
   const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/portfolios/1'
   const res = await axios({ method: 'GET', url: url, headers: {}, data: { id: id } });
   return {
-    props: { portfolio: res.data }, revalidate: 1800
+    props: { portfolio: res.data }, revalidate: 10
   }
 }
 export async function getStaticPaths() {
