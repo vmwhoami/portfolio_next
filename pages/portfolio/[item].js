@@ -1,24 +1,15 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useSelector } from 'react-redux';
 import { Back } from '../../components/Svgs';
 import Heading from '../../components/smallComponents/Heading';
 import LiveLinks from '../../components/portfoliocomp/LiveLinks';
 import axios from 'axios';
-function PortfolioItem() {
-  const router = useRouter();
-  const pathname = router.query.item;
+function PortfolioItem(props) {
 
-  const reducer = useSelector((state) => state.portfolioReducer.items);
-  if (reducer < 1) {
-    return <h1>Loading</h1>;
-  }
-  const { portfolios } = reducer.data;
-
-  const item = portfolios.find((item) => item._id === pathname);
   const {
-    title, image, githubLink, liveLink, description,
-  } = item;
+    title, image, githubLink, liveLink, description, technologies
+  } = props.portfolio.data;
+  const links = [githubLink, liveLink]
+
   return (
     <div className="container">
       <Heading
@@ -39,11 +30,12 @@ function PortfolioItem() {
 
           <hr className="white-line " />
           <div className="links">
+
             <LiveLinks githublink={githubLink} />
-            <LiveLinks liveLink={liveLink} live />
+            <LiveLinks liveLink={liveLink} />
             <Link href="/portfolio">
               <a className="links__container">
-                <span className="links__text">back to portfolios</span>
+                <span className="links__text">back </span>
                 <i className="links__icon">
                   <Back />
                 </i>

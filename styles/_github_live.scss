@@ -20,6 +20,7 @@
   }
 
   &__text {
+    text-transform: capitalize;
     font-size: 1.6rem;
     color: $white-color;
   }
