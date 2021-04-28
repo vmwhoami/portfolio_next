@@ -67,7 +67,7 @@ const Login = () => {
           <button type="submit" className="mybutton">
             <span className="mybutton__span">login</span>
             <i className="mybutton__icon">
-              <Lock size="size" />
+              <Lock />
             </i>
           </button>
         </form>

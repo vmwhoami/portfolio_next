@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
 import Link from 'next/link';
 
 const PortThumb = ({
-  id, image, title, convertTitle,
+  id, image,
 }) => (
   <div className="post_thumb ">
     <Link href={`/portfolio/${id}`}>
@@ -11,5 +12,11 @@ const PortThumb = ({
     </Link>
   </div>
 );
+
+PortThumb.propTypes = {
+  id: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+
+};
 
 export default PortThumb;

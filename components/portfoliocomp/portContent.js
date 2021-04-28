@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
 import Link from 'next/link';
 
 const PortContent = ({
-  title, description, id, convertTitle,
+  title, description, id,
 }) => (
   <div className="post_content">
     <div className="entry_header">
@@ -22,4 +23,9 @@ const PortContent = ({
   </div>
 );
 
+PortContent.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+};
 export default PortContent;

@@ -5,13 +5,13 @@ import { Back } from '../../components/Svgs';
 import Heading from '../../components/smallComponents/Heading';
 import LiveLinks from '../../components/portfoliocomp/LiveLinks';
 
-function PortfolioItem(props) {
-  if (!props?.portfolio.data) {
+function PortfolioItem({ portfolio }) {
+  if (!portfolio.data) {
     return <h1>Loading..</h1>;
   }
   const {
     title, image, githubLink, liveLink, description, technologies,
-  } = props.portfolio.data;
+  } = portfolio.data;
   const links = [githubLink, liveLink];
 
   return (
@@ -24,7 +24,7 @@ function PortfolioItem(props) {
 
       <div className="portItemCont">
         <div className="imgcontainer">
-          <img className="imgcontainer__img " src={image} />
+          <img className="imgcontainer__img " src={image} alt={title} />
         </div>
         <div className="content">
 

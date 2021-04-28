@@ -13,8 +13,6 @@ const LiveLinks = ({ link }) => {
   );
 };
 LiveLinks.propTypes = {
-  liveLink: PropTypes.string,
-  githubLink: PropTypes.string,
-
+  link: PropTypes.string.isRequired,
 };
 export default LiveLinks;

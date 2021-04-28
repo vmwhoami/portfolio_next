@@ -1,13 +1,14 @@
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 import Heading from '../../components/smallComponents/Heading';
 import PortContent from '../../components/portfoliocomp/portContent';
 import PortThumb from '../../components/portfoliocomp/portThumb';
 
-function Portfolio(props) {
-  if (!props.data) {
+function Portfolio({ data }) {
+  if (!data) {
     return <h1>Loading..</h1>;
   }
-  const { portfolios } = props.data;
+  const { portfolios } = data;
   const container = {
     hidden: {
       y: 200,
@@ -39,7 +40,6 @@ function Portfolio(props) {
         variants={container}
         initial="hidden"
         animate="show"
-
         className="grid-container"
       >
         {portfolios.map(({
@@ -47,8 +47,18 @@ function Portfolio(props) {
         }) => (
 
           <motion.article variants={item} key={id} className="post_container  ">
-            <PortThumb image={image} id={id} title={title} convertTitle={convertTitle} />
-            <PortContent title={title} description={description} id={id} convertTitle={convertTitle} />
+            <PortThumb
+              image={image}
+              id={id}
+              title={title}
+              convertTitle={convertTitle}
+            />
+            <PortContent
+              title={title}
+              description={description}
+              id={id}
+              convertTitle={convertTitle}
+            />
           </motion.article>
 
         ))}
@@ -56,6 +66,11 @@ function Portfolio(props) {
     </div>
   );
 }
+
+Portfolio.propTypes = {
+  data: PropTypes.instanceOf(Object).isRequired,
+
+};
 
 export default Portfolio;
 

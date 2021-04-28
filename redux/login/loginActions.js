@@ -36,9 +36,10 @@ const login = (credentials) => async (dispatch) => {
   } catch (error) {
     dispatch(loginFailure('You have provided a wrong email or password'));
   }
+  return null;
 };
 
-const autoLogin = (url) => async (dispatch) => {
+const autoLogin = (url) => async () => {
   const token = await localStorage.getItem('vitaliemelnic');
   if (token) {
     axios.get(url, { headers: { Authorization: `Bearer ${token}` } });
