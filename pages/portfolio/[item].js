@@ -23,6 +23,7 @@ function PortfolioItem(props) {
           <img className="imgcontainer__img " src={image} />
         </div>
         <div className="content">
+
           <h3 className="content__h3">
             {title}
           </h3>
@@ -30,9 +31,8 @@ function PortfolioItem(props) {
 
           <hr className="white-line " />
           <div className="links">
+            {links.map(link => <LiveLinks key={link} link={link} />)}
 
-            <LiveLinks githublink={githubLink} />
-            <LiveLinks liveLink={liveLink} />
             <Link href="/portfolio">
               <a className="links__container">
                 <span className="links__text">back </span>

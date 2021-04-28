@@ -1,28 +1,20 @@
 import PropTypes from 'prop-types';
 import { Github, Earth } from '../Svgs';
 
-const LiveLinks = (props) => {
+const LiveLinks = ({ link }) => {
 
-  const { liveLink, githubLink } = props
-  if (liveLink) {
-    return (
-      <a target="_blank" className="links__container" rel="noreferrer" href={liveLink}>
-        <span className="links__text">Live</span>
-        <i className="links__icon">
-          <Earth />
-        </i>
-      </a>
-    )
-  } else {
-    return (
-      <a target="_blank" className="links__container" rel="noreferrer" href={githubLink}>
-        <span className="links__text">Github</span>
-        <i className="links__icon">
-          <Github />
-        </i>
-      </a>
-    )
+  const checkGithub = (link) => {
+    return /github/.test(link)
   }
+  return (
+    <a target="_blank" className="links__container" rel="noreferrer" href={link}>
+      <span className="links__text">{checkGithub(link) ? 'Github' : 'Live'}</span>
+      <i className="links__icon">
+        {checkGithub(link) ? <Github /> : <Earth />}
+      </i>
+    </a>
+  )
+
 };
 LiveLinks.propTypes = {
   liveLink: PropTypes.string,
