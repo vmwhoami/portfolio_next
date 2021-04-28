@@ -5,7 +5,7 @@ import LiveLinks from '../../components/portfoliocomp/LiveLinks';
 import axios from 'axios';
 function PortfolioItem(props) {
 
-  if (!props.portfolio.data) {
+  if (!props?.portfolio.data) {
     return <h1>Loading..</h1>
   }
   const {
