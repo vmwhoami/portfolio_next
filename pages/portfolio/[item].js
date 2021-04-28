@@ -4,10 +4,11 @@ import { useSelector } from 'react-redux';
 import { Back } from '../../components/Svgs';
 import Heading from '../../components/smallComponents/Heading';
 import LiveLinks from '../../components/portfoliocomp/LiveLinks';
-
+import axios from 'axios';
 function PortfolioItem() {
   const router = useRouter();
   const pathname = router.query.item;
+
   const reducer = useSelector((state) => state.portfolioReducer.items);
   if (reducer < 1) {
     return <h1>Loading</h1>;
@@ -57,12 +58,38 @@ function PortfolioItem() {
 }
 
 export async function getStaticProps(context) {
-  const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/portfolios';
-  const res = await fetch(url)
-  const response = await res.json()
-  return { props: response, revalidate: 10 }
+  const id = context.params.item
+
+  const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/portfolios/1'
+
+  const res = await axios({
+    method: 'GET',
+    url: url,
+    headers: {},
+    data: {
+      id: id
+    }
+  });
+
+
+  return {
+    props: { portfolio: res.data }
+  }
 }
 export async function getStaticPaths() {
+  const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/portfolios'
+  const res = await fetch(url)
+  const data = await res.json()
 
+  const paths = data.data.portfolios.map(p => {
+    return {
+      params: { item: p._id.toString() }
+    }
+  })
+
+  return {
+    paths,
+    fallback: true
+  }
 }
 export default PortfolioItem;

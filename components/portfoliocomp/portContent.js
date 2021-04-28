@@ -4,7 +4,7 @@ const PortContent = ({ title, description, id, convertTitle }) => (
   <div className="post_content">
     <div className="entry_header">
       <h3>
-        <Link href={`/portfolio/${convertTitle(title)}`}>
+        <Link href={`/portfolio/${id}`}>
           <a className="portfolio__heading">
             {title}
           </a>

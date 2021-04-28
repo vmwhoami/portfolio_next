@@ -61,5 +61,6 @@ export async function getStaticProps() {
   const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/portfolios';
   const res = await fetch(url)
   const response = await res.json()
+
   return { props: response, revalidate: 10 }
 }
