@@ -1,28 +1,51 @@
 import { Github, LinkedIn, Twitter } from '../Svgs';
+import { motion } from 'framer-motion';
 
 function SocialLinks() {
+  const container = {
+    hidden: {
+
+      opacity: 0
+    },
+    show: {
+
+      opacity: 1,
+      transition: {
+        staggerChildren: .5,
+        delay: .5
+      }
+    }
+  }
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, y: 0 }
+  }
   return (
     <div className="social__container">
-      <div className="social">
-        <a target="_blank" className="social__link" href="https://www.linkedin.com/in/vitaliemelnic/" rel="noreferrer">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="show"
+        className="social">
+        <motion.a variants={item} target="_blank" className="social__link" href="https://www.linkedin.com/in/vitaliemelnic/" rel="noreferrer">
           <i className="social__icon">
             <LinkedIn />
           </i>
-        </a>
+        </motion.a>
 
-        <a target="_blank" className="social__link" href="https://github.com/vmwhoami" rel="noreferrer">
+        <motion.a variants={item} target="_blank" className="social__link" href="https://github.com/vmwhoami" rel="noreferrer">
           <i className="social__icon">
             <Github />
           </i>
-        </a>
+        </motion.a>
 
-        <a target="_blank" className="social__link" href="https://twitter.com/vmwhoami" rel="noreferrer">
+        <motion.a variants={item} target="_blank" className="social__link" href="https://twitter.com/vmwhoami" rel="noreferrer">
           <i className="social__icon">
             <Twitter />
           </i>
-        </a>
+        </motion.a>
 
-      </div>
+      </motion.div>
     </div>
   );
 }

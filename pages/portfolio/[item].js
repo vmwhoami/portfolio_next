@@ -56,4 +56,13 @@ function PortfolioItem() {
   );
 }
 
+export async function getStaticProps(context) {
+  const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/portfolios';
+  const res = await fetch(url)
+  const response = await res.json()
+  return { props: response, revalidate: 10 }
+}
+export async function getStaticPaths() {
+
+}
 export default PortfolioItem;

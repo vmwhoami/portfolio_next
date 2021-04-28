@@ -1,4 +1,3 @@
-import { useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
 import Heading from '../../components/smallComponents/Heading';
 import PortContent from '../../components/portfoliocomp/portContent';
@@ -6,11 +5,7 @@ import PortThumb from '../../components/portfoliocomp/portThumb';
 
 
 function Portfolio(props) {
-
-  const reducer = useSelector((state) => state.portfolioReducer.items);
   let { portfolios } = props.data
-
-
   const container = {
     hidden: {
       y: 200,
@@ -30,7 +25,7 @@ function Portfolio(props) {
     hidden: { opacity: 0 },
     show: { opacity: 1 }
   }
-
+  const convertTitle = (title) => title.trim().toLowerCase().split(' ').join("-");
   return (
     <div className="container">
       <Heading
@@ -49,8 +44,8 @@ function Portfolio(props) {
         }) => (
 
           <motion.article variants={item} key={id} className="post_container  ">
-            <PortThumb image={image} id={id} />
-            <PortContent title={title} description={description} id={id} />
+            <PortThumb image={image} id={id} title={title} convertTitle={convertTitle} />
+            <PortContent title={title} description={description} id={id} convertTitle={convertTitle} />
           </motion.article>
 
         ))}

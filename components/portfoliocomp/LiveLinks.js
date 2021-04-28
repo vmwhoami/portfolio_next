@@ -7,7 +7,7 @@ const LiveLinks = ({
   <a target="_blank" className="links__container" rel="noreferrer" href={liveLink || githubLink}>
     <span className="links__text">{live ? 'Live' : 'Github'}</span>
     <i className="links__icon">
-      {Earth ? <Earth /> : <Github />}
+      {live ? <Earth /> : <Github />}
     </i>
   </a>
 );
