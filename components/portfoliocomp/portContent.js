@@ -16,7 +16,7 @@ const PortContent = ({
     </div>
     <div className="entry_content">
       <p>
-        {`${description} `}
+        {`${description.split('.')[0]}...`}
         {' '}
       </p>
     </div>

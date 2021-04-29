@@ -7,9 +7,11 @@
 
   &__container {
     background-color: $main-color;
-    display: inline-flex;
+    display:  flex;
+    justify-content: center;
     align-items: center;
-    margin: 5px;
+    margin: 1rem;
+    height: 4rem;
     padding: 1rem 2rem;
     border-radius: 1rem;
     cursor: pointer;

@@ -32,6 +32,9 @@ function Navlinks({ link, changeTogle }) {
         <a
           className="navigation__itemlink"
           onClick={() => changeTogle()}
+          onKeyDown={() => changeTogle()}
+          role="button"
+          tabIndex={0}
         >
           <i className="navigation__icon">
             {giveSvg(link)}

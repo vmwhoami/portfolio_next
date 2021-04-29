@@ -17,7 +17,7 @@ function Navigation() {
         ref={refContainer}
         type="checkbox"
       />
-
+      <>{ /* eslint-disable-next-line jsx-a11y/label-has-associated-control */}</>
       <label
         className="navigation__button"
         htmlFor="nav_toggle"

@@ -1,13 +1,20 @@
 @import 'variables';
 
 .grid-container {
-  max-width: 80vw;
+  width: 75vw;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  // grid-template-rows: 1fr 1fr 1fr;
   grid-auto-rows: 1fr;
   gap: 3rem;
+
+  @media screen and (max-width: $bp-lg) {
+    width: 90vw;
+  }
+  
+  @media screen and (max-width: 320px) {
+    width: 95vw;
+  }
 }
 
 .post_thumb {
