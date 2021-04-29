@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import Head from "next/head";
+import Head from 'next/head';
 import PropTypes from 'prop-types';
 import Heading from '../../components/smallComponents/Heading';
 import PortContent from '../../components/portfoliocomp/portContent';
@@ -34,7 +34,8 @@ function Portfolio({ data }) {
     <div className="container">
       <Head>
         <title>Vitalie Melnic Porfolios</title>
-        <meta name="description"
+        <meta
+          name="description"
           content="Vitalie Melnic webdeveloper portfolios"
         />
 

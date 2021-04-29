@@ -2,8 +2,8 @@ const links = [
   'home',
   'portfolio',
   'contact',
-  'about',
-  'blog',
+  // 'about',
+  // 'blog',
 
 ];
 

@@ -28,9 +28,9 @@ function PortfolioItem({ portfolio }) {
         </div>
         <div className="content">
 
-          <h3 className="content__h3">
+          <h2 className="content__h3">
             {title}
-          </h3>
+          </h2>
           <p>{description}</p>
 
           <hr className="white-line " />

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Head from "next/head";
+import Head from 'next/head';
 
 import { motion } from 'framer-motion';
 import { Portfolio } from '../components/Svgs';
@@ -40,11 +40,13 @@ export default function Home() {
     <motion.main
       initial="initial"
       animate="animate"
-      className="main">
+      className="main"
+    >
       <div className="main__container">
         <Head>
           <title>Vitalie Melnic Porfolio Website</title>
-          <meta name="description"
+          <meta
+            name="description"
             content="Vitalie Melnic Porfolio website vmwhoami vmwhoiam"
           />
 
@@ -67,8 +69,11 @@ export default function Home() {
             </h1>
 
             <p className="about__description">
-              I'm a developer focused on crafting clean &amp; user‑friendly experiences, I am
-              passionate about building excellent software that improves the lives of those around me.
+              I'm a developer focused on crafting
+              clean &amp; user‑friendly experiences, I am
+              passionate about building excellent
+              software that improves the lives of those
+              around me.
             </p>
 
             <Link href="/portfolio">
