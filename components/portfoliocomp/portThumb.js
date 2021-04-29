@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 
 const PortThumb = ({
-  id, image,
+  id, image, title
 }) => (
   <div className="post_thumb ">
     <Link href={`/portfolio/${id}`}>
       <a className="link_container">
-        <img className="img_fluid" src={image} />
+        <img className="img_fluid" src={image} alt={title} />
       </a>
     </Link>
   </div>

@@ -25,24 +25,26 @@ function Navlinks({ link, changeTogle }) {
 
   if (changeTogle) {
     return (
-      <Link href={link === 'home'
-        ? '/'
-        : `/${link}`}
-      >
-        <a
-          className="navigation__itemlink"
-          onClick={() => changeTogle()}
-          onKeyDown={() => changeTogle()}
-          role="button"
-          tabIndex={0}
+      <li>
+        <Link href={link === 'home'
+          ? '/'
+          : `/${link}`}
         >
-          <i className="navigation__icon">
-            {giveSvg(link)}
-          </i>
+          <a
+            className="navigation__itemlink"
+            onClick={() => changeTogle()}
+            onKeyDown={() => changeTogle()}
+            role="button"
+            tabIndex={0}
+          >
+            <i className="navigation__icon">
+              {giveSvg(link)}
+            </i>
 
-          <span className="navigation__item__span">{link}</span>
-        </a>
-      </Link>
+            <span className="navigation__item__span">{link}</span>
+          </a>
+        </Link>
+      </li>
     );
   }
 
