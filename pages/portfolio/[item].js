@@ -14,7 +14,7 @@ function PortfolioItem({ portfolio }) {
     title, image, githubLink, liveLink, description, technologies,
   } = portfolio.data;
   const links = [githubLink, liveLink];
-  const genKeys = () => Math.random().toString(36).slice(2, 9)
+  const genKeys = () => Math.random().toString(36).slice(2, 9);
 
   return (
     <div className="container">
@@ -23,10 +23,12 @@ function PortfolioItem({ portfolio }) {
         color=""
         bg="Portfolio"
       />
-
       <div className="portItemCont">
         <div className="imgcontainer">
-          <img className="imgcontainer__img " src={image} alt={title} />
+          <img className="imgcontainer__img "
+            src={image}
+            alt={title}
+          />
         </div>
         <div className="content">
 
@@ -38,7 +40,7 @@ function PortfolioItem({ portfolio }) {
           <h3>Technologies used:</h3>
           <hr className="white-line " />
           <div className="technologies">
-            {technologies.map(technology => <span key={genKeys()} >{technology}</span>)}
+            {technologies.map((technology) => <span key={genKeys()}>{technology}</span>)}
           </div>
           <hr className="white-line " />
           <div className="links">
