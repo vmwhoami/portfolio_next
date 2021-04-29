@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Head from "next/head";
+
 import { motion } from 'framer-motion';
 import { Portfolio } from '../components/Svgs';
 import SocialLinks from '../components/smallComponents/SocialLinks';
@@ -35,8 +37,18 @@ export default function Home() {
     },
   };
   return (
-    <motion.main initial="initial" animate="animate" className="main">
+    <motion.main
+      initial="initial"
+      animate="animate"
+      className="main">
       <div className="main__container">
+        <Head>
+          <title>Vitalie Melnic Porfolio Website</title>
+          <meta name="description"
+            content="Vitalie Melnic Porfolio website vmwhoami vmwhoiam"
+          />
+
+        </Head>
         <motion.div variants={fadeInSide} className="image">
           <img
             alt="Vitalie Melnic"

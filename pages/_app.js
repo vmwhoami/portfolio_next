@@ -1,4 +1,5 @@
 import '../styles/application.scss';
+import Head from "next/head";
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createWrapper } from 'next-redux-wrapper';
@@ -26,6 +27,9 @@ function MyApp({ Component, pageProps, router }) {
     >
       <Provider store={store}>
         <Layout>
+          <Head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          </Head>
           <Component {...pageProps} />
         </Layout>
       </Provider>

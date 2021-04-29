@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Head from "next/head";
 import PropTypes from 'prop-types';
 import Heading from '../../components/smallComponents/Heading';
 import PortContent from '../../components/portfoliocomp/portContent';
@@ -31,6 +32,14 @@ function Portfolio({ data }) {
   const convertTitle = (title) => title.trim().toLowerCase().split(' ').join('-');
   return (
     <div className="container">
+      <Head>
+        <title>Vitalie Melnic Porfolios</title>
+        <meta name="description"
+          content="Vitalie Melnic webdeveloper portfolios"
+        />
+
+      </Head>
+
       <Heading
         white="My"
         color="Portfolio"
