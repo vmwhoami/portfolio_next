@@ -2,6 +2,7 @@ import Link from 'next/link';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import { Back } from '../../components/Svgs';
+
 import Heading from '../../components/smallComponents/Heading';
 import LiveLinks from '../../components/portfoliocomp/LiveLinks';
 
@@ -37,9 +38,7 @@ function PortfolioItem({ portfolio }) {
           <h3>Technologies used:</h3>
           <hr className="white-line " />
           <div className="technologies">
-            {technologies.map((technology, index) => (
-              <span key={index}>{technology}</span>
-            ))}
+            {technologies.map(technology => <span key={genKeys()} >{technology}</span>)}
           </div>
           <hr className="white-line " />
           <div className="links">
@@ -69,7 +68,7 @@ PortfolioItem.defaultProps = {
       githubLink: '',
       liveLink: '',
       description: '',
-      technologies: '',
+      technologies: [],
     },
   },
 };
