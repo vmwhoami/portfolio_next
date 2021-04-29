@@ -13,6 +13,7 @@ function PortfolioItem({ portfolio }) {
     title, image, githubLink, liveLink, description, technologies,
   } = portfolio.data;
   const links = [githubLink, liveLink];
+  const genKeys = () => Math.random().toString(36).slice(2, 9)
 
   return (
     <div className="container">
@@ -33,13 +34,20 @@ function PortfolioItem({ portfolio }) {
           </h2>
           <p>{description}</p>
 
+          <h3>Technologies used:</h3>
+          <hr className="white-line " />
+          <div className="technologies">
+            {technologies.map((technology, index) => (
+              <span key={index}>{technology}</span>
+            ))}
+          </div>
           <hr className="white-line " />
           <div className="links">
-            {links.map((link) => <LiveLinks key={link} link={link} />)}
+            {links.map((link) => <LiveLinks key={genKeys()} link={link} />)}
 
             <Link href="/portfolio">
               <a className="links__container">
-                <span className="links__text">back </span>
+                <span className="links__text">back</span>
                 <i className="links__icon">
                   <Back />
                 </i>
@@ -66,7 +74,7 @@ PortfolioItem.defaultProps = {
   },
 };
 PortfolioItem.propTypes = {
-  portfolio: PropTypes.instanceOf(Object).isRequired,
+  portfolio: PropTypes.instanceOf(Object),
 };
 export async function getStaticProps(context) {
   const id = context.params.item;

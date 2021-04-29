@@ -1,4 +1,5 @@
 import '../styles/application.scss';
+import PropTypes from 'prop-types';
 import Head from 'next/head';
 import React from 'react';
 import { Provider } from 'react-redux';
@@ -36,6 +37,13 @@ function MyApp({ Component, pageProps, router }) {
     </motion.div>
   );
 }
+
+MyApp.propTypes = {
+  Component: PropTypes.instanceOf(Object).isRequired,
+  pageProps: PropTypes.instanceOf(Object).isRequired,
+  router: PropTypes.instanceOf(Object).isRequired,
+
+};
 const makestore = () => store;
 const wrapper = createWrapper(makestore);
 

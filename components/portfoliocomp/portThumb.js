@@ -16,6 +16,7 @@ const PortThumb = ({
 PortThumb.propTypes = {
   id: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 
 };
 
