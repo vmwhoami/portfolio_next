@@ -1,11 +1,12 @@
-import { Envelope, Phone, Plane } from '../components/Svgs';
+import { Envelope, Phone } from '../components/Svgs';
 import SocialLinks from '../components/smallComponents/SocialLinks';
+import { useSelector } from 'react-redux';
 import Heading from '../components/smallComponents/Heading';
-import useForm from "../components/formValidations/useForm";
-import validation from "../components/formValidations/validation";
-const Contact = () => {
-  const { handleChange, handleSubmit, values, errors } = useForm(validation)
+import Form from "../components/formValidations/form";
 
+
+const Contact = () => {
+  const submitted = useSelector((state) => state.commonReducer.submitted);
   return (
     <div className="container">
       <Heading
@@ -40,52 +41,8 @@ const Contact = () => {
         </div>
         {/* START OF THE RIGHT SIDE */}
         <div className="contact__right">
-          <form className="contact_form" method="POST"
-            name="contact"
-            onSubmit={handleSubmit} >
-            <div className="contact__nes">
-              <div className="contact__input">
-                <input placeholder="YOUR NAME" type="text"
-                  name="name"
-                  id="name"
-                  value={values.name}
-                  onChange={handleChange}
-                />
-                {errors.name && <p>{errors.name}</p>}
-              </div>
+          {submitted ? <h1>The form was submitted</h1> : <Form />}
 
-              <div className="contact__input">
-                <input placeholder="YOUR EMAIL" type="email" name="email" id="email"
-                  value={values.email}
-                  onChange={handleChange}
-                />
-                {errors.email && <p>{errors.email}</p>}
-              </div>
-
-              <div className="contact__input">
-                <input placeholder="YOUR SUBJECT" type="text" name="subject" id="subject"
-                  value={values.subject}
-                  onChange={handleChange}
-                />
-              </div>
-
-            </div>
-
-            <div className="contact__message">
-              <textarea placeholder="YOUR MESSAGE" name="message" id="message"
-                onChange={handleChange}
-                value={values.message}
-              />
-              {errors.message && <p>{errors.message}</p>}
-            </div>
-            <div data-netlify-recaptcha="true" />
-            <button type="submit" className="contact__button">
-              <span>SEND MESSAGE</span>
-              <i className="social__icon">
-                <Plane />
-              </i>
-            </button>
-          </form>
         </div>
 
       </div>

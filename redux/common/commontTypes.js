@@ -1,0 +1,2 @@
+const SUBMITTED = "SUBMITTED"
+export { SUBMITTED }
