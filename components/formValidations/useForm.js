@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { submitData } from '../../redux/common/commonActions';
 
 export const useForm = (validation) => {
+  const error = useSelector(state => state.commonReducer.error)
   const dispatch = useDispatch();
   const [values, setValues] = useState({
     name: '',
@@ -24,11 +25,8 @@ export const useForm = (validation) => {
     e.preventDefault();
     setErrors(validation(values));
 
-    if (Object.values(errors).length === 0) {
-      dispatch(submitData(values));
-    } else {
-      console.log('This is not going to be sent');
-    }
+    dispatch(submitData(values))
+
   };
 
   return {

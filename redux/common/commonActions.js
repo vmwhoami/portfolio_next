@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { SUBMITTED } from './commontTypes';
+import { SUBMITTED, ERROR } from './commontTypes';
 
 const config = {
   headers: {
@@ -11,6 +11,10 @@ const changeSubmitted = () => ({
   type: SUBMITTED,
 });
 
+const submissionError = () => ({
+  type: ERROR,
+})
+
 const submitData = (data) => async (dispatch) => {
   const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/contacts';
   try {
@@ -21,12 +25,11 @@ const submitData = (data) => async (dispatch) => {
       config,
     });
 
-    if (response) {
-      console.log(response);
-      dispatch(changeSubmitted());
-    }
+
+    dispatch(changeSubmitted());
+
   } catch (error) {
-    dispatch(registerFailure(error));
+    dispatch(submissionError());
   }
 };
 
