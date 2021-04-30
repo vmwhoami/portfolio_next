@@ -2,7 +2,7 @@ import { SUBMITTED, ERROR } from './commontTypes';
 
 const initial = {
   submitted: false,
-  error: false
+  error: false,
 };
 
 const commonReducer = (state = initial, action) => {

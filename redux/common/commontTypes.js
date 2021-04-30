@@ -1,3 +1,3 @@
 const SUBMITTED = 'SUBMITTED';
-const ERROR = 'ERROR'
+const ERROR = 'ERROR';
 export { SUBMITTED, ERROR };

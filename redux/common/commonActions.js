@@ -13,21 +13,15 @@ const changeSubmitted = () => ({
 
 const submissionError = () => ({
   type: ERROR,
-})
+});
 
 const submitData = (data) => async (dispatch) => {
   const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/contacts';
   try {
-    const response = await axios({
-      method: 'POST',
-      url,
-      data,
-      config,
+    await axios({
+      method: 'POST', url, data, config,
     });
-
-
     dispatch(changeSubmitted());
-
   } catch (error) {
     dispatch(submissionError());
   }
