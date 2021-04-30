@@ -1,2 +1,2 @@
-const SUBMITTED = "SUBMITTED"
-export { SUBMITTED }
+const SUBMITTED = 'SUBMITTED';
+export { SUBMITTED };

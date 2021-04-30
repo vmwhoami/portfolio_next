@@ -1,18 +1,24 @@
 import React from 'react';
-import useForm from "./useForm";
-import validation from "./validation";
+import useForm from './useForm';
+import validation from './validation';
 import { Plane } from '../Svgs';
 
-
 const Form = () => {
-  const { handleChange, handleSubmit, values, errors } = useForm(validation)
+  const {
+    handleChange, handleSubmit, values, errors,
+  } = useForm(validation);
   return (
-    <form className="contact_form" method="POST"
+    <form
+      className="contact_form"
+      method="POST"
       name="contact"
-      onSubmit={handleSubmit} >
+      onSubmit={handleSubmit}
+    >
       <div className="contact__nes">
         <div className="contact__input">
-          <input placeholder="YOUR NAME" type="text"
+          <input
+            placeholder="YOUR NAME"
+            type="text"
             name="name"
             id="name"
             value={values.name}
@@ -22,7 +28,11 @@ const Form = () => {
         </div>
 
         <div className="contact__input">
-          <input placeholder="YOUR EMAIL" type="email" name="email" id="email"
+          <input
+            placeholder="YOUR EMAIL"
+            type="email"
+            name="email"
+            id="email"
             value={values.email}
             onChange={handleChange}
           />
@@ -30,7 +40,11 @@ const Form = () => {
         </div>
 
         <div className="contact__input">
-          <input placeholder="YOUR SUBJECT" type="text" name="subject" id="subject"
+          <input
+            placeholder="YOUR SUBJECT"
+            type="text"
+            name="subject"
+            id="subject"
             value={values.subject}
             onChange={handleChange}
           />
@@ -39,7 +53,10 @@ const Form = () => {
       </div>
 
       <div className="contact__message">
-        <textarea placeholder="YOUR MESSAGE" name="message" id="message"
+        <textarea
+          placeholder="YOUR MESSAGE"
+          name="message"
+          id="message"
           onChange={handleChange}
           value={values.message}
         />
@@ -53,7 +70,7 @@ const Form = () => {
         </i>
       </button>
     </form>
-  )
-}
+  );
+};
 
-export default Form
+export default Form;

@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { SUBMITTED } from './commontTypes';
 
-
 const config = {
   headers: {
     'Content-Type': 'application/json',
@@ -18,9 +17,9 @@ const submitData = (data) => async (dispatch) => {
     const response = await axios({
       method: 'POST',
       url,
-      data: data,
+      data,
       config,
-    })
+    });
 
     if (response) {
       console.log(response);

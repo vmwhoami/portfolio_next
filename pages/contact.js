@@ -1,9 +1,9 @@
+import { useSelector } from 'react-redux';
 import { Envelope, Phone } from '../components/Svgs';
 import SocialLinks from '../components/smallComponents/SocialLinks';
-import { useSelector } from 'react-redux';
 import Heading from '../components/smallComponents/Heading';
-import Form from "../components/formValidations/form";
-
+import Form from '../components/formValidations/form';
+import Success from '../components/formValidations/success';
 
 const Contact = () => {
   const submitted = useSelector((state) => state.commonReducer.submitted);
@@ -41,13 +41,12 @@ const Contact = () => {
         </div>
         {/* START OF THE RIGHT SIDE */}
         <div className="contact__right">
-          {submitted ? <h1>The form was submitted</h1> : <Form />}
-
+          {submitted ? <Success /> : <Form />}
         </div>
 
       </div>
     </div>
-  )
+  );
 };
 
 export default Contact;

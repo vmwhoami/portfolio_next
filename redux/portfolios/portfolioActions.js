@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { GET_ALL_ITEMS, GET_ALL_FAILURE } from './portfolioTypes';
 
-
 const getItemsSuccess = (data) => ({
   type: GET_ALL_ITEMS,
   payload: data,

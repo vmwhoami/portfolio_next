@@ -25,7 +25,8 @@ function PortfolioItem({ portfolio }) {
       />
       <div className="portItemCont">
         <div className="imgcontainer">
-          <img className="imgcontainer__img "
+          <img
+            className="imgcontainer__img "
             src={image}
             alt={title}
           />
