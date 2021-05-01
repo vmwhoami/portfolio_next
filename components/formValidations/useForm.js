@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { submitData } from '../../redux/common/commonActions';
 
 const useForm = (validation) => {
-  const error = useSelector((state) => state.commonReducer.error);
   const dispatch = useDispatch();
   const [values, setValues] = useState({
     name: '',
