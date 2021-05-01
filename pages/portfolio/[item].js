@@ -48,12 +48,12 @@ function PortfolioItem({ portfolio }) {
             {links.map((link) => <LiveLinks key={genKeys()} link={link} />)}
 
             <Link href="/portfolio">
-              <a className="links__container">
+              <button type="button" className="links__container">
                 <span className="links__text">back</span>
                 <i className="links__icon">
                   <Back />
                 </i>
-              </a>
+              </button>
             </Link>
           </div>
         </div>

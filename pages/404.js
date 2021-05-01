@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-function PageNotfount(props) {
+function PageNotfount() {
   return (
     <div>
       <h1>Page not found</h1>

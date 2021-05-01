@@ -77,12 +77,12 @@ export default function Home() {
             </p>
 
             <Link href="/portfolio">
-              <a className="mybutton">
+              <button type="button" className="mybutton">
                 <span className="mybutton__span">Portfolio</span>
                 <i className="mybutton__icon">
                   <Portfolio />
                 </i>
-              </a>
+              </button>
             </Link>
 
             <SocialLinks />

@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Heading from '../components/smallComponents/Heading';
 import { Lock } from '../components/Svgs';
 import { login } from '../redux/login/loginActions';
 
 const Login = () => {
   const dispatch = useDispatch();
-  const loggedIn = useSelector((state) => state.loginReducer.loggedIn);
+  // const loggedIn = useSelector((state) => state.loginReducer.loggedIn);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const handleChange = (e) => {
