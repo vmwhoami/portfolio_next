@@ -11,7 +11,7 @@
   @media screen and (max-width: $bp-lg) {
     width: 90vw;
   }
-  
+
   @media screen and (max-width: 320px) {
     width: 95vw;
   }
@@ -45,7 +45,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
 
 .img_fluid {
@@ -59,10 +58,11 @@
 
 .link_container {
   display: inline-block;
+  border: none;
   height: 16rem;
   cursor: pointer;
   width: 100%;
-  
+
   &:hover .img_fluid {
     transform: scale(1.2);
     border-radius: 1rem 1rem 0 0;
@@ -81,5 +81,20 @@
   &:hover {
     color: $white-color;
     border-radius: 0;
+  }
+}
+
+.portcontent {
+  color: $white-color;
+  font-size: 2.5rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    text-decoration: none;
+    color: $main-color;
   }
 }

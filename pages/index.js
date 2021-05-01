@@ -64,11 +64,13 @@ export default function Home() {
             <p className="about__intro">Hi there! </p>
 
             <h1 className="about__heading">
+              {/* eslint-disable-next-line  */}
               I'm
               <span className="about__name">Vitalie Melnic</span>
             </h1>
 
             <p className="about__description">
+              {/* eslint-disable-next-line  */}
               I'm a developer focused on crafting
               clean &amp; user‑friendly experiences, I am
               passionate about building excellent

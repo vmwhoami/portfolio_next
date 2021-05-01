@@ -8,9 +8,9 @@ const PortContent = ({
     <div className="entry_header">
       <h2>
         <Link href={`/portfolio/${id}`}>
-          <a className="portfolio__heading">
+          <button type="button" className="portfolio__heading portcontent">
             {title}
-          </a>
+          </button>
         </Link>
       </h2>
     </div>

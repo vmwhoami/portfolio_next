@@ -30,6 +30,7 @@ function Navlinks({ link, changeTogle }) {
           ? '/'
           : `/${link}`}
         >
+          {/* eslint-disable-next-line  */}
           <a
             className="navigation__itemlink"
             onClick={() => changeTogle()}
@@ -63,7 +64,9 @@ function Navlinks({ link, changeTogle }) {
     </Link>
   );
 }
-
+Navlinks.defaultProps = {
+  changeTogle: null,
+};
 Navlinks.propTypes = {
   link: PropTypes.string.isRequired,
   changeTogle: PropTypes.func,

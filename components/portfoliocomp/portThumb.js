@@ -6,9 +6,9 @@ const PortThumb = ({
 }) => (
   <div className="post_thumb ">
     <Link href={`/portfolio/${id}`}>
-      <a className="link_container">
+      <button type="button" className="link_container">
         <img className="img_fluid" src={image} alt={title} />
-      </a>
+      </button>
     </Link>
   </div>
 );

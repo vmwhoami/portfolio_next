@@ -17,6 +17,7 @@ const Contact = () => {
 
       <div className="contact">
         <div className="contact__left">
+          {/* eslint-disable-next-line  */}
           <h3 className="text-uppercase contact__title ">Don't be shy !</h3>
           <p className="mb-3">Get in touch I am open to discuss new projects and ideas. </p>
           <div className="contact__info">

@@ -92,6 +92,7 @@ export async function getStaticPaths() {
   const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/portfolios';
   const data = await axios.get(url);
   const { portfolios } = data.data.data;
+  /* eslint-disable-next-line */
   const paths = portfolios.map((p) => ({ params: { item: p._id.toString() } }));
 
   return {

@@ -3,18 +3,16 @@
   margin: 2rem auto 2rem auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
- 
   grid-gap: 2rem;
 
   @media screen and (max-width: $bp-small) {
     margin: auto;
   }
-
 }
 
 .imgcontainer {
   &__img {
-     width: 100%; 
+    width: 100%;
   }
 }
 
@@ -33,9 +31,8 @@
   }
 }
 
-.technologies{
+.technologies {
   width: 100%;
-
   display: flex;
   justify-content: space-around;
   padding: 1rem;
