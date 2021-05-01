@@ -30,7 +30,8 @@ function Navlinks({ link, changeTogle }) {
           ? '/'
           : `/${link}`}
         >
-          <a
+          <button
+            type="button"
             className="navigation__itemlink"
             onClick={() => changeTogle()}
             onKeyDown={() => changeTogle()}
@@ -42,7 +43,7 @@ function Navlinks({ link, changeTogle }) {
             </i>
 
             <span className="navigation__item__span">{link}</span>
-          </a>
+          </button>
         </Link>
       </li>
     );
@@ -53,13 +54,13 @@ function Navlinks({ link, changeTogle }) {
       ? '/'
       : `/${link}`}
     >
-      <a className="mynav__link">
+      <button type="button" className="mynav__link">
         <i className="mynav__icon">
           {giveSvg(link)}
         </i>
 
         <span className="mynav__link__a">{link}</span>
-      </a>
+      </button>
     </Link>
   );
 }

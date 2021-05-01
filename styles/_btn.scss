@@ -43,6 +43,7 @@ cursor: pointer;
     align-items: center;
     top: 50%;
     left: 50%;
+    outline: none; 
     transform: translate(-50%, -50%);
     transition: all cubic-bezier(0.44, 0.87, 0.83, 1) 0.3s;
   }
