@@ -1,0 +1,46 @@
+
+@import 'variables';
+@import 'home','btn','nav','heading','social','form','portfolio','humburgernav','login_register','github_live','portfolio_item';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @media screen and (max-width: $bp-small) {
+    font-size: 60%;
+  }
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: $black-color;
+  font-family: $open-sans;
+  color: $white-color;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.container-f {
+  margin: 0;
+  padding: 0;
+}
+
+.my-5 {
+  margin: 2rem 0 2rem 0;
+}

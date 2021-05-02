@@ -1,0 +1,132 @@
+@import 'variables';
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background: $grey-color;
+  background:
+    linear-gradient(
+      75deg,
+      $main-color 0%,
+      $main-color 25%,
+      $black-color 25%
+    );
+
+  @media screen and (max-width: $bp-md) {
+    background: $black-color;
+  }
+
+  &__container {
+    display: flex;
+    padding: 2.5rem;
+    align-items: center;
+
+    @media screen and (max-width: $bp-md) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+
+.image {
+  height: calc(100vh - 6rem);
+  width: 50vw;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.9);
+
+  @media screen and (max-width: $bp-md) {
+    margin-top: 5rem;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    border: 6px solid $grey-color;
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+    overflow: hidden;
+
+    @media screen and (max-width: $bp-md) {
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+}
+
+.about {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  &__container {
+    width: 50rem;
+    color: $white-color;
+
+    @media screen and (max-width: $bp-lg) {
+      line-height: 1.5rem;
+      width: 40rem;
+    }
+
+    @media screen and (max-width: $bp-md) {
+      margin-top: 5rem;
+      text-align: center;
+      width: 80vw;
+    }
+  }
+
+  &__intro {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+  }
+
+  &__heading {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+
+    @media screen and (max-width: $bp-lg) {
+      font-size: 3.5rem;
+      line-height: 1em;
+    }
+
+    margin: 1rem 0 1rem;
+  }
+
+  &__name {
+    font-weight: 800;
+    color: $main-color;
+  }
+
+  &__description {
+    font-size: 1.6rem;
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+svg {
+  fill: $white-color;
+  width: 2rem;
+  height: 2rem;
+}
+
+.card {
+  background-color: $grey-color !important;
+}
+
+.rounded-corners {
+  border-radius: 3rem;
+}
+
+.social__container {
+  display: flex;
+  width: 100%;
+
+  @media screen and (max-width: $bp-md) {
+    justify-content: center;
+  }
+}
