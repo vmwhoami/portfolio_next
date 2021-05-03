@@ -33,13 +33,9 @@ function MyApp({ Component, pageProps, router }) {
             {/* was this working */}
             <YMInitializer
               accounts={[76919173]}
-              options={{
-                clickmap: true,
-                trackLinks: true,
-                accurateTrackBounce: true,
-                webvisor: true,
-              }}
+              options={{ webvisor: true }}
             />
+
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           </Head>
           {/* eslint-disable-next-line  */}
