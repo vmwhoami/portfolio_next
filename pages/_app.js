@@ -30,10 +30,18 @@ function MyApp({ Component, pageProps, router }) {
       <Provider store={store}>
         <Layout>
           <Head>
-
+            {/* was this working */}
+            <YMInitializer
+              accounts={[76919173]}
+              options={{
+                clickmap: true,
+                trackLinks: true,
+                accurateTrackBounce: true,
+                webvisor: true,
+              }}
+            />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           </Head>
-          <YMInitializer accounts={[76919173]} options={{ webvisor: true }} />
           {/* eslint-disable-next-line  */}
           <Component {...pageProps} />
         </Layout>
