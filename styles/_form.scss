@@ -196,4 +196,31 @@
       transform: translate(-70%, -50%);
     }
   }
+
+  &__sent{
+    display: flex;
+    justify-content: center;
+  }
+
+  &__svg{
+ 
+    width: 40rem;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    svg{
+      width: 40rem;
+      height: 40rem;
+    }
+  }
+}
+
+#galocica{
+ transform-origin: center;
+}
+
+@keyframes identifier {
+  
 }
