@@ -33,7 +33,12 @@ function MyApp({ Component, pageProps, router }) {
             {/* was this working */}
             <YMInitializer
               accounts={[76919173]}
-              options={{ webvisor: true }}
+              options={{
+                clickmap: true,
+                trackLinks: true,
+                accurateTrackBounce: true,
+                webvisor: true,
+              }}
             />
 
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
