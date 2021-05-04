@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps, router }) {
           <Head>
             {/* was this working */}
             <YMInitializer
-              accounts={[76919173]}
+              accounts={[77676457]}
               options={{
                 clickmap: true,
                 trackLinks: true,
