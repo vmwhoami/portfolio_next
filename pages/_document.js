@@ -25,7 +25,7 @@ class Mydocument extends Document {
            <noscript><div><img src="https://mc.yandex.ru/watch/72187387" style="position:absolute; left:-9999px;" alt="" /></div></noscript>`,
             }}
           />
-
+          <meta name="google-site-verification" content="UUZectgnSbjlwfqkJjJG8yZmsqc5vfv74JSKisGsa4E" />
         </Head>
         <body>
           <Main />
