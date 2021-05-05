@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Envelope, Phone } from '../components/Svgs';
 import SocialLinks from '../components/smallComponents/SocialLinks';
+import Head from 'next/head';
 import Heading from '../components/smallComponents/Heading';
 import Form from '../components/formValidations/form';
 import Success from '../components/formValidations/success';
@@ -9,6 +10,13 @@ const Contact = () => {
   const submitted = useSelector((state) => state.commonReducer.submitted);
   return (
     <div className="container">
+      <Head>
+        <title>Contact Vitalie Melnic</title>
+        <meta
+          name="description"
+          content="Vitalie Melnic contact page "
+        />
+      </Head>
       <Heading
         white="get in"
         color="touch"
