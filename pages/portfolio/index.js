@@ -12,15 +12,16 @@ function Portfolio({ data }) {
   const { portfolios } = data;
   const container = {
     hidden: {
-      y: 200,
-      opacity: 0.2,
+
+      scale: 2,
+      opacity: 0.7,
     },
     show: {
-      y: 0,
+      scale: 1,
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        ease: [0.34, 1.56, 0.64, 1],
+        staggerChildren: 0.3,
+        ease: [0.34, 1.2, 0.64, 1],
       },
     },
   };
