@@ -24,9 +24,15 @@ export const About = () => (
       <div className="whyme">
         <div className="whyme__experience">
           <h2>Experience</h2>
+
+
         </div>
-        <div className="whyme__skills"></div>
-        <div className="whyme__featured"></div>
+        <div className="whyme__skills">
+          <h2>Skills</h2>
+        </div>
+        <div className="whyme__featured">
+          <h2>Featured</h2>
+        </div>
       </div>
     </div>
   </div>
