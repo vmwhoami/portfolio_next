@@ -13,7 +13,7 @@ export const About = () => (
         <article>
           <p> Hi there as I already stated on my main page my name is Vitalie.
         </p>
-          <p>  I'm a full-stack developer and I've spent the whole 2020 working with people across five different time zones in a Development Program called Microverse.</p>
+          <p>  I'm a full-stack developer and I've spent the whole 2020 pair programming with people across five different time zones in a Development Program called Microverse.</p>
         </article>
 
         <div className="aboutimg">
@@ -21,8 +21,13 @@ export const About = () => (
         </div>
       </main>
 
+      <div className="whyme">
+        <div className="whyme__experience"></div>
+        <div className="whyme__skills"></div>
+        <div className="whyme__featured"></div>
 
 
+      </div>
     </div>
   </div>
 

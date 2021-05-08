@@ -102,22 +102,22 @@
       flex: 1 1 7rem;
     }
 
-    p{
+    p {
       text-align: center;
       padding: 1rem;
-      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      color:$main-color;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: $main-color;
     }
   }
 
   &__message {
     width: 100%;
-    p{
+
+    p {
       text-align: center;
       padding: 1rem;
-      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      color:$main-color;
-
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: $main-color;
     }
   }
 
@@ -233,4 +233,3 @@
 #galocica {
   transform-origin: center;
 }
-
