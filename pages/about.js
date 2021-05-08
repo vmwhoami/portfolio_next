@@ -22,11 +22,11 @@ export const About = () => (
       </main>
 
       <div className="whyme">
-        <div className="whyme__experience"></div>
+        <div className="whyme__experience">
+          <h2>Experience</h2>
+        </div>
         <div className="whyme__skills"></div>
         <div className="whyme__featured"></div>
-
-
       </div>
     </div>
   </div>
