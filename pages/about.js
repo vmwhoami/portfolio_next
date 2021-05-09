@@ -8,7 +8,7 @@ export const About = () => {
     'PostgressSQL',
     'MongoD']
   const tools = ['Photoshop', 'Illustrator', 'PremierePro', 'After Effects']
-
+  const featured = ['Should Web Developers Learn How To Use Photoshop?']
   return (
     <div className="container aboutpage">
       <Heading
@@ -34,7 +34,6 @@ export const About = () => {
           <div className="whyme__experience">
             <h2>Experience</h2>
 
-
           </div>
           <div className="whyme__skills">
             <h2>Skills</h2>
@@ -51,7 +50,11 @@ export const About = () => {
           </div>
           <div className="whyme__featured">
             <h2>Featured</h2>
-            <h3>Articles</h3>
+
+            <div className="whyme__skills__articles">
+              <h3>Articles</h3>
+              <ul>{featured.map(el => <li key={el} >{el}</li>)}</ul>
+            </div>
           </div>
         </div>
       </div>
