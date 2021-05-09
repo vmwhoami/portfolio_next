@@ -1,7 +1,7 @@
 import Heading from '../components/smallComponents/Heading';
 
 export const About = () => (
-  <div className="container">
+  <div className="container aboutpage">
     <Heading
       white="About "
       color="me"

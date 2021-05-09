@@ -9,7 +9,6 @@
   main {
     display: flex;
 
-
     article {
       display: flex;
       flex-direction: column;
@@ -35,48 +34,64 @@
   }
 }
 
-.aboutp::after {
-  content: "";
-  background: url('../public/pictures/vmlogo.svg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: -30rem 1rem;
-  position: absolute;
-  top: 65%;
-  left: 0%;
-  height:100% ;
-  width: 100%;
-  z-index: -1;
-  opacity: 0.1;
-}
+// .aboutp::after {
+//   content: "";
+//   background: url('../public/pictures/vmlogo.svg');
+//   background-repeat: no-repeat;
+//   background-size: 100%;
+//   background-position: -30rem 1rem;
+//   position: absolute;
+//   top: 65%;
+//   left: 0%;
+//   height:100% ;
+//   width: 100%;
+//   z-index: -1;
+//   opacity: 0.1;
+// }
 
-
-.whyme{
+.whyme {
   display: flex;
   margin-top: 5rem;
   height: 40rem;
   width: 100%;
- h2{
-   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   letter-spacing: 1rem;
-  font-size: 2.4rem;
-   text-transform: capitalize;
- }
 
-  &__experience{
+  h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 1rem;
+    font-size: 2.4rem;
+    text-transform: capitalize;
+  }
+
+  &__experience {
     flex: 0 0 40%;
     // background-color: red;
     height: 40rem;
   }
-  &__skills{
+
+  &__skills {
     // background-color: green;
     height: 40rem;
     width: 40rem;
   }
-  &__featured{
+
+  &__featured {
     // background-color: blue;
     height: 40rem;
     width: 40rem;
   }
 }
 
+.aboutpage::after {
+  content: "";
+  background: url('../public/pictures/vmlogo.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 60rem 1rem;
+  position: absolute;
+  top: 85%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.1;
+}
