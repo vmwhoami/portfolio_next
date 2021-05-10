@@ -35,10 +35,13 @@ export const About = ({ experience }) => {
         <div className="whyme">
           <div className="whyme__experience">
             <h2>Experience</h2>
+            <div className="whyme__experience__container">
 
+            </div>
           </div>
           <div className="whyme__skills">
             <h2>Skills</h2>
+
             <div className="whyme__skills__container">
               <div className="whyme__skills__knoledge">
                 <h3>Knoledge</h3>
@@ -52,7 +55,6 @@ export const About = ({ experience }) => {
           </div>
           <div className="whyme__featured">
             <h2>Featured</h2>
-
             <div className="whyme__skills__articles">
               <h3>Articles</h3>
               <ul>{featured.map(el => <li key={el} >{el}</li>)}</ul>
