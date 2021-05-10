@@ -1,7 +1,8 @@
 {"experience":
   [
-    {"id":1,"title": "Freelance Web Developer","period":"January 2020 Present","location":"Chisinau Moldova remote"},
-    {"id":2,"title": "Lifeguard Splish Splash","period":"April-2007 October-2007","location":"Staten Island New York U.S.A"}
+    {"id":1,"title": "Freelance Web Developer","period":"January 2020 Present","location":"Chisinau Moldova remote","description":"Paired programed with people across 5 different timezones blah blah"},
+    {"id":2,"title": "Truck driver dispatcher","period":"April-2007 October-2007","location":"Staten Island New York U.S.A",
+      "description":"Negotiated prices took care of drivers"},
     {"id":3,"title": "Lifeguard Splish Splash","period":"April-2007 October-2007","location":"Staten Island New York U.S.A"}
   ]
   }

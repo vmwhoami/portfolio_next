@@ -1,6 +1,9 @@
 import path from 'path';
 import fs from 'fs';
 import Heading from '../components/smallComponents/Heading';
+import Info from '../components/smallComponents/Info'
+
+
 export const About = ({ experience }) => {
 
   const knoledge = ["HTML", 'CSS', 'SCSS', 'JAVASCRIPT', 'RUBY', 'RUBY ON RAILS', 'NODE JS',
@@ -36,7 +39,11 @@ export const About = ({ experience }) => {
           <div className="whyme__experience">
             <h2>Experience</h2>
             <div className="whyme__experience__container">
-
+              {
+                experience.map(exp => {
+                  return <Info key={exp.id} {...exp} />
+                })
+              }
             </div>
           </div>
           <div className="whyme__skills">
@@ -77,4 +84,3 @@ export const getStaticProps = async () => {
 }
 
 export default About;
-``
