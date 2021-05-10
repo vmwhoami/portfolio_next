@@ -4,12 +4,20 @@ const Info = ({ title, period, location, description }) => {
   const [info, showInfo] = useState(false)
   return (
     <article className="info">
-      <header>
-        <button className="aboutbtn" onClick={() => showInfo(!info)}>{info ? <Minus /> : <Plus />}</button>
-        <h3>{title}</h3>
-        <span>{period}</span><span>{location}</span>
+      <header className="info__header">
+        <div className="info__longinfo">
+          <button className="info__btn" onClick={() => showInfo(!info)}>
+            {info ? <Minus /> : <Plus />}
+          </button>
+          <h3>{title}</h3>
+        </div>
+        <div className="info__shortinfo">
+          <p className="info__period">{period}</p>
+          <p className="info__location">{location}</p>
+        </div>
+
       </header>
-      {info && <p>{description}</p>}
+      {info && <p className="info__description">{description}</p>}
     </article>
   )
 }
