@@ -1,15 +1,16 @@
 @import 'variables';
 
 .info{
-  margin:1rem 1rem 0 0  ;
+  margin:1rem 2rem 0 0  ;
   background-color: #ffffff10;
   transition: all .4s cubic-bezier(0.215, 0.610, 0.355, 1);
   cursor: pointer;
   z-index: 4;
+
+
 &:hover{
   transform: scale(1.05);
   background-color: #ffffff50;
-
 }
   &__header{
     display: flex;
@@ -40,10 +41,16 @@
       width:2rem;
       height: 2rem;
     }
+
   }
-h4{
-  margin-left: 1rem;
-}
+  &:hover &__btn{
+    background-color: #ffffff;
+  }
+
+  h4{
+    margin-left: 1rem;
+  }
+
   &__shortinfo{
     display: flex;
     flex-direction: column;
@@ -58,3 +65,5 @@ h4{
     padding:1rem 1rem 2rem 4rem;
   }
 }
+
+ 
