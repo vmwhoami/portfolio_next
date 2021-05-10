@@ -65,7 +65,7 @@ export const About = ({ experience }) => {
   )
 };
 
-export async function getStaticProps() {
+export const getStaticProps = async () => {
   const filepath = path.join(process.cwd(), 'data', 'experience.json')
   const jsonData = await fs.readFileSync(filepath)
   const data = JSON.parse(jsonData)
