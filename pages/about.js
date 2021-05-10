@@ -1,6 +1,8 @@
+import path from 'path';
+import fs from 'fs';
 import Heading from '../components/smallComponents/Heading';
+export const About = ({ experience }) => {
 
-export const About = () => {
   const knoledge = ["HTML", 'CSS', 'SCSS', 'JAVASCRIPT', 'RUBY', 'RUBY ON RAILS', 'NODE JS',
     'REACT',
     'REDUX',
@@ -63,4 +65,14 @@ export const About = () => {
   )
 };
 
+export async function getStaticProps() {
+  const filepath = path.join(process.cwd(), 'data', 'experience.json')
+  const jsonData = await fs.readFileSync(filepath)
+  const data = JSON.parse(jsonData)
+  return {
+    props: data
+  }
+}
+
 export default About;
+``
