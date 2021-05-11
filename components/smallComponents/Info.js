@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Minus, Plus } from '../Svgs';
 
 const Info = ({
@@ -6,7 +7,7 @@ const Info = ({
 }) => {
   const [info, showInfo] = useState(false);
   return (
-    <article className="info" onClick={() => showInfo(!info)}>
+    <article className="info" role="presentation" onClick={() => showInfo(!info)} onKeyDown={() => showInfo(!info)}>
       <header className="info__header">
         <div className="info__longinfo">
           <button type="button" className="info__btn">
@@ -25,4 +26,11 @@ const Info = ({
   );
 };
 
+Info.propTypes = {
+  title: PropTypes.string.isRequired,
+  period: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+
+};
 export default Info;
