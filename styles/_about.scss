@@ -24,10 +24,10 @@
 
       
     @media screen and (max-width: $bp-md) {
-      padding: 1rem;
+      padding: 1rem 0 ; 
     }
       p {
-        margin-top: 3rem;
+        margin-top: 1.5rem;
         font-size: 1.6rem;
         line-height: 2.5rem;
       }
@@ -80,6 +80,11 @@
  
     height: 40rem;
     width: 40rem;
+    @media screen and (max-width: $bp-md) {
+      margin-top: 2rem;
+      height: auto;
+      width: auto;
+    }
 
     &__container{
     display: flex;
@@ -115,7 +120,7 @@ li{
     @media screen and (max-width: $bp-md) {
       height: auto;
       width: auto;
-      margin-top: 15rem;
+      margin-top: 2rem;
     }
   
   }
