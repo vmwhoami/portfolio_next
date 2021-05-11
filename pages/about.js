@@ -1,19 +1,12 @@
 import path from 'path';
+import PropTypes from 'prop-types';
 import fs from 'fs';
 import Heading from '../components/smallComponents/Heading';
-import Info from '../components/smallComponents/Info'
+import Info from '../components/smallComponents/Info';
 
-
-export const About = ({ experience }) => {
-
-  const knoledge = ["HTML", 'CSS', 'SCSS', 'JAVASCRIPT', 'RUBY', 'RUBY ON RAILS', 'NODE JS',
-    'REACT',
-    'REDUX',
-    'NEXT JS',
-    'PostgressSQL',
-    'MongoD']
-  const tools = ['Photoshop', 'Illustrator', 'PremierePro', 'After Effects']
-  const featured = ['Should Web Developers Learn How To Use Photoshop?']
+export const About = ({
+  experience, knoledge, tools, featured
+}) => {
   return (
     <div className="container aboutpage">
       <Heading
@@ -25,8 +18,10 @@ export const About = ({ experience }) => {
 
         <main>
           <article>
-            <p> Hi there as I already stated on my main page my name is Vitalie.
-        </p>
+            <p>
+              {' '}
+              Hi there as I already stated on my main page my name is Vitalie.
+            </p>
             <p>  I'm a full-stack developer and I've spent the whole 2020 pair programming with people across five different time zones in a Development Program called Microverse.</p>
           </article>
 
@@ -40,9 +35,7 @@ export const About = ({ experience }) => {
             <h2>Experience</h2>
             <div className="whyme__experience__container">
               {
-                experience.map(exp => {
-                  return <Info key={exp.id} {...exp} />
-                })
+                experience.map((exp) => <Info key={exp.id} {...exp} />)
               }
             </div>
           </div>
@@ -52,11 +45,11 @@ export const About = ({ experience }) => {
             <div className="whyme__skills__container">
               <div className="whyme__skills__knoledge">
                 <h3>Knoledge</h3>
-                <ul>{knoledge.map(el => <li key={el} >{el}</li>)}</ul>
+                <ul>{knoledge.map((el) => <li key={el}>{el}</li>)}</ul>
               </div>
               <div className="whyme__skills__tools">
                 <h3>Tools</h3>
-                <ul>{tools.map(el => <li key={el} >{el}</li>)}</ul>
+                <ul>{tools.map((el) => <li key={el}>{el}</li>)}</ul>
               </div>
             </div>
           </div>
@@ -64,7 +57,9 @@ export const About = ({ experience }) => {
             <h2>Featured</h2>
             <div className="whyme__skills__articles">
               <h3>Articles</h3>
-              <ul>{featured.map(el => <li key={el} >{el}</li>)}</ul>
+              <ul>{featured.map((el) => {
+                return <li><a href={el.link} target="blank"> {el.title}</a></li>
+              })}</ul>
             </div>
           </div>
         </div>
@@ -73,14 +68,18 @@ export const About = ({ experience }) => {
 
   )
 };
-
 export const getStaticProps = async () => {
-  const filepath = path.join(process.cwd(), 'data', 'experience.json')
-  const jsonData = await fs.readFileSync(filepath)
-  const data = JSON.parse(jsonData)
+  const filepath = path.join(process.cwd(), 'data', 'experience.json');
+  const jsonData = await fs.readFileSync(filepath);
+  const data = JSON.parse(jsonData);
   return {
-    props: data
-  }
-}
+    props: data,
+  };
+};
 
+About.propTypes = {
+  experience: PropTypes.instanceOf(Object).isRequired,
+  knoledge: PropTypes.instanceOf(Array).isRequired,
+
+};
 export default About;

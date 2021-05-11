@@ -64,8 +64,10 @@
   h2 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     letter-spacing: 1rem;
+    padding-left: 1rem;
     font-size: 2.4rem;
     text-transform: capitalize;
+    background-color: $main-color;
   }
   h3{
     letter-spacing: 4px;
@@ -131,9 +133,9 @@ li{
   background: url('../public/pictures/vmlogo.svg');
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: -30rem 1rem;
+  background-position: -30rem 0;
   position: absolute;
-  top: 85%;
+  top: 70%;
   left: 0%;
   height: 100%;
   width: 100%;

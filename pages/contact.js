@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
+import Head from 'next/head';
 import { Envelope, Phone } from '../components/Svgs';
 import SocialLinks from '../components/smallComponents/SocialLinks';
-import Head from 'next/head';
 import Heading from '../components/smallComponents/Heading';
 import Form from '../components/formValidations/form';
 import Success from '../components/formValidations/success';

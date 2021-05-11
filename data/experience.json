@@ -21,5 +21,14 @@
       "location": "Staten Island New York U.S.A",
       "description": "Did some stuff and then some other stuff"
     }
-  ]
+  ],
+  "knoledge":["HTML", "CSS", "SCSS", "JAVASCRIPT", "RUBY", "RUBY ON RAILS", "NODE JS", "REACT",
+    "REDUX","NEXT JS", "PostgressSQL", "MongoD"],
+    "tools":["Photoshop", "Illustrator", "PremierePro", "After Effects"],
+    "featured":[
+      {
+      "id":1,
+      "title":"Should Web Developers Learn How To Use Photoshop?","link":"https://medium.com/@vmwhoami/is-having-photoshop-skills-essential-for-web-developers-625865accf82"
+    }
+    ]
 }
