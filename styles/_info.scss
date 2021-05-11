@@ -1,30 +1,29 @@
 @import 'variables';
 
-.info{
-  margin:1rem 2rem 0 0  ;
+.info {
+  margin: 1rem 2rem 0 0;
   background-color: #ffffff10;
-  transition: all .4s cubic-bezier(0.215, 0.610, 0.355, 1);
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
   cursor: pointer;
   z-index: 4;
 
-
-&:hover{
-  transform: scale(1.05);
-  background-color: #ffffff50;
-}
-  &__header{
-    display: flex;
-    flex-direction: column;
- 
+  &:hover {
+    transform: scale(1.05);
+    background-color: #ffffff50;
   }
 
-  &__longinfo{
+  &__header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__longinfo {
     display: flex;
     align-items: center;
     padding: 1rem;
   }
 
-  &__btn{
+  &__btn {
     cursor: pointer;
     background-color: #ffffff20;
     border: none;
@@ -33,40 +32,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   border-radius: 50%;
-   
+    border-radius: 50%;
 
-    svg{
-      fill:$main-color;
-      width:2rem;
+    svg {
+      fill: $main-color;
+      width: 2rem;
       height: 2rem;
     }
-
-  }
-  &:hover &__btn{
-    background-color: #ffffff;
   }
 
-  h4{
+  &:hover &__btn {
+    background-color: #fff;
+  }
+
+  h4 {
     margin-left: 1rem;
   }
 
-  &__shortinfo{
+  &__shortinfo {
     display: flex;
     flex-direction: column;
-   
-    padding:0 0 1rem 5rem;
+    padding: 0 0 1rem 5rem;
   }
-  &__period{
+
+  &__period {
     font-size: 1.6rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   // &__location{}
 
-  &__description{
+  &__description {
     font-size: 1.4rem;
-    padding:1rem 1rem 2rem 4rem;
+    padding: 1rem 1rem 2rem 4rem;
   }
 }
-
- 

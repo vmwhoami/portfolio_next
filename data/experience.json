@@ -2,24 +2,42 @@
   "experience": [
     {
       "id": 1,
-      "title": "Freelance Web Developer",
-      "period": "January 2020 - Present",
-      "location": "Chisinau Moldova",
-      "description": "Paired programed with people across 5 different timezones blah blah"
+      "title": "Freelance Web developer",
+      "period": "November 2020 – Present",
+      "company":"Freelance",
+      "location": "Chisinau Moldova remote",
+      "description": "I help businesses build an online presence."
     },
+    
     {
       "id": 2,
-      "title": "Truck driver dispatcher",
-      "period": "April 2007 - October 2007",
-      "location": "Staten Island New York U.S.A",
-      "description": "Negotiated prices took care of drivers"
+      "title": "TSE (Technical Support Engineer)",
+      "period": "January 2021 – April 2021",
+      "company":"Microverse",
+      "location": "Chisinau Moldova remote",
+      "description": "Reviewing students' real-world projects code and informing technical and professional set up issues. Giving constructive feedback on their projects specific parts and in general. To highlight, to improve and would be nice to have. Meeting with other TSE and TSE leads. Discussing new ideas for improving the code review process. Delivering the best quality to the students."
     },
     {
       "id": 3,
-      "title": "Lifeguard Splish Splash",
-      "period": "April 2007 - October 2007",
-      "location": "Staten Island New York U.S.A",
-      "description": "Did some stuff and then some other stuff"
+      "title": "Truck driver dispatcher",
+      "company":"AFC trucking",
+      "period": "August 2019 - January 2020",
+      "location": "Chisinau Moldova - Chicago Illinois U.S.A remote position",
+      "description": "Responsible for dispatching 10 trucks reducing cost expenses for the company. Oversaw coordination and orientation of all the drivers in my department. Ensured employee satisfaction while maintaining a good working environment."
+    },
+    {
+      "id": 4,
+      "title": "Delivery driver",
+      "period": "March 2018 - June 2019",
+      "location": "London,UK - Brighton & Hove,UK",
+      "description": "Delivered food for two big companies in food delivery companies in the UK, UberEats and Deliveroo.Ensured client satisfaction by delivering to door."
+    },
+    {
+      "id": 5,
+      "title": "Freelancer",
+      "period": "October 2008 - January 2018",
+      "location": "Changsha - Shanghai,China",
+      "description": "I began my career as a freelance dancer in China. This type of work was definitely different from development but I also learned several of the skills I now use frequently as a developer, the ability to learn fast, problem-solving, photo and video editing working with raster images and effective communication with clients."
     }
   ],
   "knoledge":["HTML", "CSS", "SCSS", "JAVASCRIPT", "RUBY", "RUBY ON RAILS", "NODE JS", "REACT",
