@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
-import { Github, LinkedIn, Twitter } from '../Svgs';
+import {
+  Github, LinkedIn, Twitter, CV,
+} from '../Svgs';
 
 function SocialLinks() {
   const container = {
@@ -43,6 +45,11 @@ function SocialLinks() {
         <motion.a variants={item} target="_blank" className="social__link" href="https://twitter.com/vmwhoami" rel="noreferrer">
           <i className="social__icon">
             <Twitter />
+          </i>
+        </motion.a>
+        <motion.a variants={item} download className="social__link" href="./VITALIE MELNIC.docx" rel="noreferrer">
+          <i className="social__icon">
+            <CV />
           </i>
         </motion.a>
 
