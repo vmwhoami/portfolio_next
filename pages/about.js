@@ -1,5 +1,6 @@
 import path from 'path';
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 import fs from 'fs';
 import Heading from '../components/smallComponents/Heading';
 import Info from '../components/smallComponents/Info';
@@ -29,7 +30,13 @@ export const About = ({
         </article>
 
         <div className="aboutimg">
-          <img src="/pictures/mainabout.jpg" alt="vitalieMelnic" />
+          <Image
+            src="/pictures/mainabout.jpg"
+            alt="Vitalie Melnic"
+            width={900}
+            height={600}
+          />
+
         </div>
       </main>
 
