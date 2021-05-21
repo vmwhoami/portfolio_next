@@ -64,9 +64,8 @@ function PortfolioItem({ portfolio }) {
   );
 }
 
-
 PortfolioItem.propTypes = {
-  portfolio: PropTypes.instanceOf(Object),
+  portfolio: PropTypes.instanceOf(Object).isRequired,
 };
 
 export async function getStaticProps(context) {
