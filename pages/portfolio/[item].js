@@ -12,7 +12,7 @@ function PortfolioItem({ portfolio }) {
   }
   const {
     title, image, githubLink, liveLink, description, technologies,
-  } = portfolio[0];
+  } = portfolio;
 
   const links = [githubLink, liveLink];
   const genKeys = () => Math.random().toString(36).slice(2, 9);
@@ -64,19 +64,7 @@ function PortfolioItem({ portfolio }) {
   );
 }
 
-PortfolioItem.defaultProps = {
-  portfolio: {
-    data: {
-      title: '',
-      image: '',
-      githubLink: '',
-      liveLink: '',
-      description: '',
-      technologies: [],
-      slug: '',
-    },
-  },
-};
+
 PortfolioItem.propTypes = {
   portfolio: PropTypes.instanceOf(Object),
 };
@@ -87,9 +75,9 @@ export async function getStaticProps(context) {
   const res = await axios({
     method: 'GET', url, headers: {},
   });
-
+  const data = res.data.data[0];
   return {
-    props: { portfolio: res.data.data }, revalidate: 10,
+    props: { portfolio: data }, revalidate: 10,
   };
 }
 export async function getStaticPaths() {
