@@ -54,13 +54,14 @@ function Portfolio({ data }) {
         className="grid-container"
       >
         {portfolios.map(({
-          _id: id, title, description, image,
+          _id: id, title, description, image, slug,
         }) => (
 
           <motion.article variants={item} key={id} className="post_container  ">
             <PortThumb
               image={image}
               id={id}
+              slug={slug}
               title={title}
               convertTitle={convertTitle}
             />
@@ -68,6 +69,7 @@ function Portfolio({ data }) {
               title={title}
               description={description}
               id={id}
+              slug={slug}
               convertTitle={convertTitle}
             />
           </motion.article>

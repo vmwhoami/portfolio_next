@@ -7,12 +7,13 @@ import Heading from '../../components/smallComponents/Heading';
 import LiveLinks from '../../components/portfoliocomp/LiveLinks';
 
 function PortfolioItem({ portfolio }) {
-  if (!portfolio.data) {
+  if (!portfolio) {
     return <h1>Loading..</h1>;
   }
   const {
     title, image, githubLink, liveLink, description, technologies,
-  } = portfolio.data;
+  } = portfolio[0];
+
   const links = [githubLink, liveLink];
   const genKeys = () => Math.random().toString(36).slice(2, 9);
 
@@ -72,20 +73,23 @@ PortfolioItem.defaultProps = {
       liveLink: '',
       description: '',
       technologies: [],
+      slug: '',
     },
   },
 };
 PortfolioItem.propTypes = {
   portfolio: PropTypes.instanceOf(Object),
 };
+
 export async function getStaticProps(context) {
-  const id = context.params.item;
-  const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/portfolios/1';
+  const title = context.params.item;
+  const url = `https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/portfolios/${title}`;
   const res = await axios({
-    method: 'GET', url, headers: {}, data: { id },
+    method: 'GET', url, headers: {},
   });
+
   return {
-    props: { portfolio: res.data }, revalidate: 10,
+    props: { portfolio: res.data.data }, revalidate: 10,
   };
 }
 export async function getStaticPaths() {
@@ -93,7 +97,7 @@ export async function getStaticPaths() {
   const data = await axios.get(url);
   const { portfolios } = data.data.data;
   /* eslint-disable-next-line */
-  const paths = portfolios.map((p) => ({ params: { item: p._id.toString() } }));
+  const paths = portfolios.map((p) => ({ params: { item: p.slug.toString() } }));
 
   return {
     paths,
