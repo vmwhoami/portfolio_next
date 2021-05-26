@@ -1,6 +1,5 @@
 import path from 'path';
 import PropTypes from 'prop-types';
-import Image from 'next/image';
 import fs from 'fs';
 import Heading from '../components/smallComponents/Heading';
 import Info from '../components/smallComponents/Info';
@@ -36,11 +35,10 @@ export const About = ({
         </article>
 
         <div className="aboutimg">
-          <Image
+          <img
             src="/pictures/mainabout.jpg"
             alt="Vitalie Melnic"
-            width={900}
-            height={600}
+
           />
 
         </div>
@@ -97,20 +95,33 @@ export const About = ({
         </a>
         <div>
           <p>
-            In interviews I have been often asked what did
-            I do before coding and when I tell them they ask what sort of dancing did I do.
+            I have been often asked what did I do before coding.
+            When I tell them that I was a dancer the next question
+            is what type of dance did I dance.
           </p>
           <p>
             Because I started late I never considered
             myself a professional dancer.
-            The same impostor syndrome is influencing my developer career at the moment
+            The same impostor syndrome is influencing my developer career at the moment.
           </p>
           <p>
             My channel link will be at your left or underneath for mobile, for anyone interested.
           </p>
+          <p>
+            I will include two of my least hated videos below so you
+            won`&apos;`t have to jump to youtube.
+          </p>
         </div>
       </div>
-      <div className="personl__dance" />
+      <div className="personal__dance">
+
+        <div className="video">
+          <iframe src="https://www.youtube.com/embed/XHBM84biLJI" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+        </div>
+        <div className="video">
+          <iframe src="https://www.youtube.com/embed/EmdMW_KyAhM" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+        </div>
+      </div>
     </div>
   </div>
 
