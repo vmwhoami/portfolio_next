@@ -4,6 +4,7 @@ import Image from 'next/image';
 import fs from 'fs';
 import Heading from '../components/smallComponents/Heading';
 import Info from '../components/smallComponents/Info';
+import { Youtube } from '../components/Svgs';
 
 export const About = ({
   experience, knoledge, tools, featured,
@@ -28,7 +29,9 @@ export const About = ({
           </p>
           <p>
             {' '}
-            I have double citizenship one is Romanian which allows me to travel and work freely around the EU and one in Moldova where I was born and raised.
+            I have double citizenship one is Romanian which
+            allows me to travel and work freely around the EU
+            and one in Moldova where I was born and raised.
           </p>
         </article>
 
@@ -88,6 +91,26 @@ export const About = ({
     </div>
     <div className="personal">
       <h2>Personal</h2>
+      <div className="personal__info">
+        <a href="https://www.youtube.com/user/vmwhoiam/videos" target="_blank" rel="noreferrer">
+          <Youtube />
+        </a>
+        <div>
+          <p>
+            In interviews I have been often asked what did
+            I do before coding and when I tell them they ask what sort of dancing did I do.
+          </p>
+          <p>
+            Because I started late I never considered
+            myself a professional dancer.
+            The same impostor syndrome is influencing my developer career at the moment
+          </p>
+          <p>
+            My channel link will be at your left or underneath for mobile, for anyone interested.
+          </p>
+        </div>
+      </div>
+      <div className="personl__dance" />
     </div>
   </div>
 

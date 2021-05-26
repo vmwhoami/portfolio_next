@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Minus, Plus } from '../Svgs';
 
 const Info = ({
@@ -21,7 +22,19 @@ const Info = ({
         </div>
 
       </header>
-      {info && <p className="info__description">{description}</p>}
+      <AnimatePresence>
+
+        {info && (
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="info__description"
+        >
+          {description}
+        </motion.p>
+        )}
+      </AnimatePresence>
     </article>
   );
 };
