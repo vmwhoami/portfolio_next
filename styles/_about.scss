@@ -1,5 +1,14 @@
 @import 'variables';
 
+@mixin heading {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  letter-spacing: 1rem;
+  padding-left: 1rem;
+  font-size: 2.4rem;
+  text-transform: capitalize;
+  background-color: $main-color;
+}
+
 .aboutp {
   width: 80vw;
   margin: 0  auto;
@@ -50,7 +59,7 @@
 .whyme {
   display: flex;
   margin-top: 5rem;
-  height: 40rem;
+  min-height: 40rem;
   width: 100%;
 
   @media screen and (max-width: $bp-md) {
@@ -58,12 +67,7 @@
   }
 
   h2 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    letter-spacing: 1rem;
-    padding-left: 1rem;
-    font-size: 2.4rem;
-    text-transform: capitalize;
-    background-color: $main-color;
+    @include heading;
   }
 
   h3 {
@@ -140,4 +144,15 @@
   width: 100%;
   z-index: -1;
   opacity: 0.1;
+}
+
+
+.personal{
+  width: 80vw;
+    margin: 0 auto;
+    padding-top: 20rem; 
+h2{
+  @include heading;
+}
+
 }

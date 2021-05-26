@@ -15,7 +15,6 @@ export const About = ({
       bg="About"
     />
     <div className="aboutp">
-
       <main>
         <article>
           <p>
@@ -26,6 +25,10 @@ export const About = ({
             {' '}
             I&apos;m a full-stack developer and I&apos;ve spent the whole 2020 pair programming
             with people across five different time zones in a Development Program called Microverse.
+          </p>
+          <p>
+            {' '}
+            I have double citizenship one is Romanian which allows me to travel and work freely around the EU and one in Moldova where I was born and raised.
           </p>
         </article>
 
@@ -82,6 +85,9 @@ export const About = ({
           </div>
         </div>
       </div>
+    </div>
+    <div className="personal">
+      <h2>Personal</h2>
     </div>
   </div>
 
