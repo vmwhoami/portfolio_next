@@ -1,12 +1,15 @@
 import axios from 'axios';
-import { LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT } from './loginTypes';
+import { LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT, SET_ADMIN } from './loginTypes';
 
 const config = {
   headers: {
     'Content-Type': 'application/json',
   },
 };
-
+const setAdmin = (bool) => ({
+  type: SET_ADMIN,
+  payload: bool,
+})
 const loginSuccess = (message) => ({
   type: LOGIN_SUCCESS,
   payload: message,
@@ -27,14 +30,13 @@ const login = (credentials) => async (dispatch) => {
     const response = await axios({
       method: 'POST', url, data: credentials, config,
     });
-    const { status, data } = response;
-    if (status !== 200) throw new Error();
-    if (status === 200) {
-      await localStorage.setItem('vitaliemelnic', data.token);
-      return dispatch(loginSuccess('Successfull login'));
-    }
+    const { data } = response;
+    const { admin } = data.data;
+    dispatch(setAdmin(admin))
+    await localStorage.setItem('vitaliemelnic', JSON.stringify({ admin: admin, token: data.token }));
+    return dispatch(loginSuccess(data.status));
   } catch (error) {
-    dispatch(loginFailure('You have provided a wrong email or password'));
+    dispatch(loginFailure(error.message));
   }
   return null;
 };

@@ -1,31 +1,33 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Heading from '../components/smallComponents/Heading';
 import { Lock } from '../components/Svgs';
 import { login } from '../redux/login/loginActions';
 
 const Login = () => {
   const dispatch = useDispatch();
-  // const loggedIn = useSelector((state) => state.loginReducer.loggedIn);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const loginReducer = useSelector((state) => state.loginReducer);
+  const { loggedIn, message } = loginReducer
+  const [values, setValues] = useState({
+    email: '',
+    password: ''
+  });
   const handleChange = (e) => {
     const { name, value } = e.target;
-    switch (name) {
-      case 'email':
-        return setEmail(value);
-      case 'password':
-        return setPassword(value);
-      default:
-        break;
-    }
-    return null;
+    setValues({
+      ...values,
+      [name]: value
+    })
+
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    const { email, password } = values;
     dispatch(login({ email, password }));
-    setEmail('');
-    setPassword('');
+    setValues({
+      email: '',
+      password: ''
+    })
   };
 
   return (
@@ -44,8 +46,8 @@ const Login = () => {
                 required
                 placeholder="EMAIL"
                 type="email"
-                onChange={(e) => handleChange(e)}
-                value={email}
+                onChange={handleChange}
+                value={values.email}
                 name="email"
                 id="email"
               />
@@ -55,15 +57,17 @@ const Login = () => {
               <input
                 required
                 placeholder="PASSWORD"
+                autoComplete="current-password"
                 type="password"
                 name="password"
                 id="password"
-                value={password}
-                onChange={(e) => handleChange(e)}
+                value={values.password}
+                onChange={handleChange}
               />
             </div>
             <div className="login__message" />
           </div>
+          {loggedIn ? <p>{message}</p> : <p>{message}</p>}
           <button type="submit" className="mybutton">
             <span className="mybutton__span">login</span>
             <i className="mybutton__icon">
