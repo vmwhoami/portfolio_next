@@ -12,7 +12,6 @@ function Portfolio({ data }) {
   const { portfolios } = data;
   const container = {
     hidden: {
-
       scale: 2,
       opacity: 0.7,
     },
