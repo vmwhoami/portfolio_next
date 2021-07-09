@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
 import Heading from '../components/smallComponents/Heading';
 import { Lock } from '../components/Svgs';
@@ -6,8 +7,10 @@ import { login } from '../redux/login/loginActions';
 
 const Login = () => {
   const dispatch = useDispatch();
-  const loginReducer = useSelector((state) => state.loginReducer);
-  const { loggedIn, message } = loginReducer;
+  const router = useRouter();
+  const {
+    loggedIn, user, errorMsg, admin,
+  } = useSelector((state) => state.loginReducer);
   const [values, setValues] = useState({
     email: '',
     password: '',
@@ -28,7 +31,7 @@ const Login = () => {
       password: '',
     });
   };
-
+  if (loggedIn && admin) router.push('/admin');
   return (
     <div className="container">
       <Heading
@@ -66,7 +69,7 @@ const Login = () => {
             </div>
             <div className="login__message" />
           </div>
-          {loggedIn ? <p>{message}</p> : <p>{message}</p>}
+          {loggedIn ? <p>{`Logged In as ${user}`}</p> : <p>{errorMsg}</p>}
           <button type="submit" className="mybutton">
             <span className="mybutton__span">login</span>
             <i className="mybutton__icon">

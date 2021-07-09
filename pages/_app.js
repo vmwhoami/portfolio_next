@@ -7,6 +7,7 @@ import { createWrapper } from 'next-redux-wrapper';
 import { motion } from 'framer-motion';
 import Layout from '../components/Layout';
 import store from '../redux/store';
+import ProtectedRoute from '../components/ProtectedRoute';
 
 const variants = {
   pageInitial: {
@@ -30,13 +31,15 @@ function MyApp({ Component, pageProps, router }) {
       animate="pageAnimate"
     >
       <Provider store={store}>
-        <Layout>
-          <Head>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          </Head>
-          {/* eslint-disable-next-line  */}
-          <Component {...pageProps} />
-        </Layout>
+        <ProtectedRoute router={router}>
+          <Layout>
+            <Head>
+              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </Head>
+            {/* eslint-disable-next-line  */}
+            <Component {...pageProps} />
+          </Layout>
+        </ProtectedRoute>
       </Provider>
     </motion.div>
   );

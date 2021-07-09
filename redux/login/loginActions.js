@@ -55,5 +55,5 @@ const logout = () => (dispatch) => {
 };
 
 export {
-  login, loginSuccess, loginFailure, autoLogin, logout,
+  login, loginSuccess, loginFailure, autoLogin, logout, setAdmin,
 };
