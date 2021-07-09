@@ -1,10 +1,13 @@
-import { LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT, SET_ADMIN } from './loginTypes';
+import {
+  LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT, SET_ADMIN,
+} from './loginTypes';
 
 const initial = {
   loggedIn: false,
   admin: false,
-  message: null,
-  errors: false,
+  user: null,
+  errorMsg: null,
+  error: false,
 };
 
 const loginReducer = (state = initial, action) => {
@@ -15,11 +18,11 @@ const loginReducer = (state = initial, action) => {
       };
     case LOGIN_SUCCESS:
       return {
-        ...state, errors: false, loggedIn: true, message: action.payload,
+        ...state, error: false, loggedIn: true, user: action.payload,
       };
     case LOGIN_FAILURE:
       return {
-        ...state, errors: true, loggedIn: false, message: action.payload,
+        ...state, errors: true, loggedIn: false, errorMsg: action.payload,
       };
 
     case LOGOUT:

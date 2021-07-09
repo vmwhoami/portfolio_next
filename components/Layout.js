@@ -6,17 +6,24 @@ import MobileNav from './navigation/Mobilenav';
 import { loginSuccess } from '../redux/login/loginActions';
 
 const Layout = ({ children }) => {
-  if (typeof window !== "undefined") {
-    let l = localStorage.getItem('vitaliemelnic')
-    console.log(JSON.parse(l));
+  const dispatch = useDispatch()
+  let logedInUser;
+  if (typeof window !== 'undefined') {
+    let logger = localStorage.getItem('vitaliemelnic');
+    logedInUser = JSON.parse(logger);
   }
+  useEffect(() => {
+    if (logedInUser) {
+      dispatch(loginSuccess())
+    }
+  }, [logedInUser]);
   return (
     <>
       <Nav />
       <MobileNav />
       {children}
     </>
-  )
+  );
 };
 
 Layout.propTypes = {

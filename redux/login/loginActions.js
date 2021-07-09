@@ -1,5 +1,7 @@
 import axios from 'axios';
-import { LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT, SET_ADMIN } from './loginTypes';
+import {
+  LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT, SET_ADMIN,
+} from './loginTypes';
 
 const config = {
   headers: {
@@ -9,10 +11,10 @@ const config = {
 const setAdmin = (bool) => ({
   type: SET_ADMIN,
   payload: bool,
-})
-const loginSuccess = (message) => ({
+});
+const loginSuccess = (email) => ({
   type: LOGIN_SUCCESS,
-  payload: message,
+  payload: email,
 });
 
 const loginFailure = (error) => ({
@@ -31,10 +33,10 @@ const login = (credentials) => async (dispatch) => {
       method: 'POST', url, data: credentials, config,
     });
     const { data } = response;
-    const { admin } = data.data;
-    dispatch(setAdmin(admin))
-    await localStorage.setItem('vitaliemelnic', JSON.stringify({ admin: admin, token: data.token }));
-    return dispatch(loginSuccess(data.status));
+    const { admin, email } = data.data;
+    dispatch(setAdmin(admin));
+    await localStorage.setItem('vitaliemelnic', JSON.stringify({ email, admin, token: data.token }));
+    return dispatch(loginSuccess(email));
   } catch (error) {
     dispatch(loginFailure(error.message));
   }

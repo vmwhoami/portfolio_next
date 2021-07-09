@@ -7,18 +7,17 @@ import { login } from '../redux/login/loginActions';
 const Login = () => {
   const dispatch = useDispatch();
   const loginReducer = useSelector((state) => state.loginReducer);
-  const { loggedIn, message } = loginReducer
+  const { loggedIn, message } = loginReducer;
   const [values, setValues] = useState({
     email: '',
-    password: ''
+    password: '',
   });
   const handleChange = (e) => {
     const { name, value } = e.target;
     setValues({
       ...values,
-      [name]: value
-    })
-
+      [name]: value,
+    });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,8 +25,8 @@ const Login = () => {
     dispatch(login({ email, password }));
     setValues({
       email: '',
-      password: ''
-    })
+      password: '',
+    });
   };
 
   return (
