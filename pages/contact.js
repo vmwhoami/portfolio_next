@@ -42,8 +42,19 @@ const Contact = () => {
               <Phone />
             </i>
             <div className="contact__details">
-              <p>call me:</p>
-              <p> +373 69442476</p>
+              <p>Call me:</p>
+              <div>
+                <p>
+                  <span>MD:</span>
+                  {' '}
+                  +373 69442476
+                </p>
+                <p>
+                  <span>IT:</span>
+                  {' '}
+                  +39 3473192340
+                </p>
+              </div>
             </div>
           </div>
           <SocialLinks />

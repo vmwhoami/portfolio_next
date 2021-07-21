@@ -15,7 +15,6 @@ const PortContent = ({
       </h2>
     </div>
     <div className="entry_content">
-      <p>{slug}</p>
       <p>
         {`${description.split(' ').slice(0, 10).join(' ')}...`}
         {' '}

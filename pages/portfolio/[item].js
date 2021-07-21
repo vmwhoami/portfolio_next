@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import ReactMarkdown from 'react-markdown';
 import { Back } from '../../components/Svgs';
 
 import Heading from '../../components/smallComponents/Heading';
@@ -37,8 +38,7 @@ function PortfolioItem({ portfolio }) {
           <h2 className="content__h3">
             {title}
           </h2>
-          <p>{description}</p>
-
+          <ReactMarkdown>{description}</ReactMarkdown>
           <h3>Technologies used:</h3>
           <hr className="white-line " />
           <div className="technologies">

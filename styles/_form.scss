@@ -147,16 +147,19 @@
 
   &__details {
     margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+   p:first-child {
+     text-transform: uppercase;
+   }
+ 
+   div{
+     display: flex;
+     flex-direction: column;
+     min-width: 15vw;
 
-    & p:first-child {
-      margin: 0;
-      text-transform: uppercase;
-    }
-
-    & p:nth-child(2) {
-      margin: 0;
-      font-size: 1.3rem;
-    }
+     
+   }
   }
 
   &__sent {
