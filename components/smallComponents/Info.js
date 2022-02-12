@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Minus, Plus } from '../Svgs';
 
 const Info = ({
-  title, period, location, description, company
+  title, period, location, description, company,
 }) => {
   const [info, showInfo] = useState(false);
   return (
