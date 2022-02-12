@@ -29,6 +29,7 @@ function Portfolio({ data }) {
     hidden: { opacity: 0 },
     show: { opacity: 1 },
   };
+
   const convertTitle = (title) => title.trim().toLowerCase().split(' ').join('-');
   return (
     <div className="container">
@@ -42,33 +43,12 @@ function Portfolio({ data }) {
       </Head>
 
       <Heading white="My" color="Portfolio" bg="Work" />
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate="show"
-        className="grid-container"
-      >
-        {portfolios.map(({
-          _id: id, title, description, image, slug,
-        }) => (
-
-          <motion.article variants={item} key={id} className="post_container  ">
-            <PortThumb
-              image={image}
-              id={id}
-              slug={slug}
-              title={title}
-              convertTitle={convertTitle}
-            />
-            <PortContent
-              title={title}
-              description={description}
-              id={id}
-              slug={slug}
-              convertTitle={convertTitle}
-            />
+      <motion.div variants={container} initial="hidden" animate="show" className="grid-container" >
+        {portfolios.map(({ _id: id, title, description, image, slug }) => (
+          <motion.article variants={item} key={id} className="post_container">
+            <PortThumb image={image} id={id} slug={slug} title={title} convertTitle={convertTitle} />
+            <PortContent title={title} description={description} id={id} slug={slug} convertTitle={convertTitle} />
           </motion.article>
-
         ))}
       </motion.div>
     </div>
@@ -76,8 +56,7 @@ function Portfolio({ data }) {
 }
 
 Portfolio.propTypes = {
-  data: PropTypes.instanceOf(Object).isRequired,
-
+  data: PropTypes.instanceOf(Object).isRequired, 
 };
 
 export default Portfolio;
