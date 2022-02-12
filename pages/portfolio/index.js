@@ -41,11 +41,7 @@ function Portfolio({ data }) {
 
       </Head>
 
-      <Heading
-        white="My"
-        color="Portfolio"
-        bg="Work"
-      />
+      <Heading white="My" color="Portfolio" bg="Work" />
       <motion.div
         variants={container}
         initial="hidden"

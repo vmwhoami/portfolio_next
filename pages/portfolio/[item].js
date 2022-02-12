@@ -20,45 +20,28 @@ function PortfolioItem({ portfolio }) {
 
   return (
     <div className="container">
-      <Heading
-        white={title}
-        color=""
-        bg="Portfolio"
-      />
+      <Heading white={title} color="" bg="Portfolio" />
       <div className="portItemCont">
         <div className="imgcontainer">
-          <img
-            className="imgcontainer__img "
-            src={image}
-            alt={title}
-          />
+          <img className="imgcontainer__img " src={image} alt={title} />
         </div>
         <div className="content">
-
-          <h2 className="content__h3">
-            {title}
-          </h2>
+          <h2 className="content__h3">{title}</h2>
           <ReactMarkdown>{description}</ReactMarkdown>
           <h3>Technologies used:</h3>
           <hr className="white-line " />
-          <div className="technologies">
-            {technologies.map((technology) => <span key={genKeys()}>{technology}</span>)}
-          </div>
+          <div className="technologies">{technologies.map((technology) => <span key={genKeys()}>{technology}</span>)}</div>
           <hr className="white-line " />
           <div className="links">
             {links.map((link) => <LiveLinks key={genKeys()} link={link} />)}
-
             <Link href="/portfolio">
               <button type="button" className="links__container">
                 <span className="links__text">back</span>
-                <i className="links__icon">
-                  <Back />
-                </i>
+                <i className="links__icon"><Back /></i>
               </button>
             </Link>
           </div>
         </div>
-
       </div>
     </div>
   );
