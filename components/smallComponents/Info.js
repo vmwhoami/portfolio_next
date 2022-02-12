@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Minus, Plus } from '../Svgs';
 
 const Info = ({
-  title, period, location, description,
+  title, period, location, description, company
 }) => {
   const [info, showInfo] = useState(false);
   return (
@@ -18,6 +18,7 @@ const Info = ({
         </div>
         <div className="info__shortinfo">
           <p className="info__period">{period}</p>
+          <p className="info__location">{company}</p>
           <p className="info__location">{location}</p>
         </div>
 
@@ -44,6 +45,6 @@ Info.propTypes = {
   period: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-
+  company: PropTypes.string.isRequired,
 };
 export default Info;

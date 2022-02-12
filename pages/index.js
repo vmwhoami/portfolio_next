@@ -41,7 +41,6 @@ export default function Home() {
             className="about__container"
           >
             <p className="about__intro">Hi there! </p>
-
             <h1 className="about__heading">
 
               I&apos;m
@@ -50,7 +49,7 @@ export default function Home() {
 
             <p className="about__description">
 
-              I&apos;m a developer focused on crafting
+              a developer focused on crafting
               clean &amp; user‑friendly experiences, I am
               passionate about building excellent
               software that improves the lives of those

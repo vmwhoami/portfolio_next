@@ -92,6 +92,11 @@
     height: 40rem;
     width: 40rem;
 
+    &__articles {
+      ul li{
+        margin: 20px 0;
+      }
+    }
     @media screen and (max-width: $bp-md) {
       margin-top: 2rem;
       height: auto;
@@ -203,6 +208,7 @@
     height: 50rem;
     display: flex;
     justify-content: space-between;
+    gap: 2rem;
 
     @media screen and (max-width: $bp-md) {
       flex-direction: column;
