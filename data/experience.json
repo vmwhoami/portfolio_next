@@ -2,10 +2,18 @@
   "experience": [
     {
       "id": 1,
+      "title": "Full Stack Developer",
+      "period": "June 2021 – Present",
+      "company": "Wordmind | Travod",
+      "location": "Remote",
+      "description": "My responsibilities are to work in a distributed team to ideate software solutions to complex problems design client-side architecture, VueJS jQuery.  Design server-side architecture, Ruby on Rails. Write effective API endpoints  SQL database  manipulation (Postgres, MySQL). Unit testing with Rspec for RoR. Development planning JIRA and SCRUM Daily standup meetings. Technologies Ruby on Rails JavaScript  VueJS  MySQL  Docker GitLab CI"
+    },
+    {
+      "id": 1,
       "title": "Freelance Web developer",
       "period": "November 2020 – Present",
       "company": "Freelance",
-      "location": "Chisinau Moldova remote",
+      "location": "Remote",
       "description": "I help businesses build an online presence."
     },
     {
@@ -13,7 +21,7 @@
       "title": "Truck driver dispatcher",
       "company": "AFC trucking",
       "period": "August 2019 - January 2020",
-      "location": "Chisinau Moldova - Chicago Illinois U.S.A remote position",
+      "location": "Chicago Illinois U.S.A remote position",
       "description": "Responsible for dispatching 10 trucks reducing cost expenses for the company. Oversaw coordination and orientation of all the drivers in my department. Ensured employee satisfaction while maintaining a good working environment."
     },
     {
@@ -38,12 +46,16 @@
     "JAVASCRIPT",
     "RUBY",
     "RUBY ON RAILS",
+    "Rspec",
+    "VueJs",
+    "Docker Basics",
+    "MySQL",
+    "PostgressSQL",
     "NODE JS",
     "REACT",
     "REDUX",
     "NEXT JS",
-    "PostgressSQL",
-    "MongoD"
+    "MongoDb"
   ],
   "tools": [
     "Photoshop",
@@ -55,7 +67,12 @@
     {
       "id": 1,
       "title": "Should Web Developers Learn How To Use Photoshop?",
-      "link": "https://medium.com/@vmwhoami/is-having-photoshop-skills-essential-for-web-developers-625865accf82"
+      "link": "https://hackernoon.com/shoud-web-developers-learn-how-to-use-photoshop-t52n3urc"
+    },
+    {
+      "id": 2,
+      "title": "How to Use binding.pry to Debug a Rails Application in a Docker Container",
+      "link": "https://hackernoon.com/how-to-use-bindingpry-to-debug-a-rails-application-in-a-docker-container"
     }
   ]
 }
