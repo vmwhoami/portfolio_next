@@ -1,7 +1,10 @@
 {
   "intro": [
-    "My name is Vitalie.",
-    "I'm a full-stack developer and I've spent the whole 2020 pair programming with people across five different time zones in a Development Program called Microverse."
+    "My name is Vitalie. I am full-stack developer currently looking for opportunities.",
+    "Spent the whole 2020 year pair programming with people across five different time zones in a Development Program called Microverse.",
+    "For ten years I was based in China as a freelance dancer, and it was here that I began to learn about development when I built my team's website.",
+    "I also taught myself how to design and edit promotional materials with Photoshop and dance videos in Premiere Pro.",
+    "Although I taught myself the basics of HTML and CSS, I was driven to learn more."
   ],
   "experience": [
     {
@@ -40,7 +43,7 @@
       "id": 5,
       "title": "Freelancer",
       "period": "October 2008 - January 2018",
-      "company": "Freelance",
+      "company": "Melody",
       "location": "Changsha - Shanghai,China",
       "description": "I began my career as a dancer in China. This type of work was definitely different from web development, but it was then when I realised that in order to get clients I would need an online presence. In building that, I learned several of the skills I now use frequently as a developer. These are HTML and CSS, Bootstrap, the ability to learn fast, problem-solving, photo and video editing, working with raster images and effective communication with clients. "
     }

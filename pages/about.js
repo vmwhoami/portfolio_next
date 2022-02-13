@@ -4,34 +4,13 @@ import fs from 'fs';
 import Heading from '../components/smallComponents/Heading';
 import Info from '../components/smallComponents/Info';
 import { Youtube } from '../components/Svgs';
+import AboutIntro from '../components/smallComponents/AboutIntro';
 
-export const About = ({ experience, knoledge, tools, featured }) => (
+export const About = ({ experience, knoledge, tools, featured ,intro }) => (
   <div className="container aboutpage">
     <Heading white="About " color="me" bg="About" />
     <div className="aboutp">
-      <main>
-        <article>
-          <p>
-            {' '}
-            My name is Vitalie.
-          </p>
-          <p>
-            {' '}
-            I&apos;m a full-stack developer and I&apos;ve spent the whole 2020 pair programming
-            with people across five different time zones in a Development Program called Microverse.
-          </p>
-          <p>
-            {' '}
-            I have double citizenship one is Romanian which
-            allows me to travel and work freely around the EU
-            and one in Moldova where I was born and raised.
-          </p>
-        </article>
-
-        <div className="aboutimg">
-          <img src="/pictures/mainabout.jpg" alt="Vitalie Melnic" />
-        </div>
-      </main>
+      <AboutIntro intro={intro} />
 
       <div className="whyme">
         <div className="whyme__experience">
@@ -107,7 +86,7 @@ export const About = ({ experience, knoledge, tools, featured }) => (
             src="https://www.youtube.com/embed/XHBM84biLJI"
             title="YouTube video player"
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
         </div>
@@ -117,7 +96,8 @@ export const About = ({ experience, knoledge, tools, featured }) => (
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen />
+            allowFullScreen
+          />
         </div>
       </div>
     </div>
@@ -138,5 +118,6 @@ About.propTypes = {
   knoledge: PropTypes.instanceOf(Array).isRequired,
   tools: PropTypes.instanceOf(Array).isRequired,
   featured: PropTypes.instanceOf(Array).isRequired,
+  intro: PropTypes.instanceOf(Array).isRequired,
 };
 export default About;
