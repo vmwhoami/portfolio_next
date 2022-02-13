@@ -1,23 +1,27 @@
 {
+  "intro": [
+    "My name is Vitalie.",
+    "I'm a full-stack developer and I've spent the whole 2020 pair programming with people across five different time zones in a Development Program called Microverse."
+  ],
   "experience": [
     {
       "id": 1,
       "title": "Full Stack Developer",
-      "period": "June 2021 – Present",
+      "period": "June 2021 - Present",
       "company": "Wordmind | Travod",
       "location": "Remote",
       "description": "My responsibilities are to work in a distributed team to ideate software solutions to complex problems design client-side architecture, VueJS jQuery.  Design server-side architecture, Ruby on Rails. Write effective API endpoints  SQL database  manipulation (Postgres, MySQL). Unit testing with Rspec for RoR. Development planning JIRA and SCRUM Daily standup meetings. Technologies Ruby on Rails JavaScript  VueJS  MySQL  Docker GitLab CI"
     },
     {
-      "id": 1,
+      "id": 2,
       "title": "Freelance Web developer",
-      "period": "November 2020 – Present",
+      "period": "November 2020 - Present",
       "company": "Freelance",
       "location": "Remote",
       "description": "I help businesses build an online presence."
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Truck driver dispatcher",
       "company": "AFC trucking",
       "period": "August 2019 - January 2020",
@@ -25,16 +29,18 @@
       "description": "Responsible for dispatching 10 trucks reducing cost expenses for the company. Oversaw coordination and orientation of all the drivers in my department. Ensured employee satisfaction while maintaining a good working environment."
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Delivery driver",
       "period": "March 2018 - June 2019",
+      "company": "UberEats | Deliveroo",
       "location": "London,UK - Brighton & Hove,UK",
       "description": "Delivered food for two big companies in food delivery companies in the UK, UberEats and Deliveroo.Ensured client satisfaction by delivering to door."
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "Freelancer",
       "period": "October 2008 - January 2018",
+      "company": "Freelance",
       "location": "Changsha - Shanghai,China",
       "description": "I began my career as a dancer in China. This type of work was definitely different from web development, but it was then when I realised that in order to get clients I would need an online presence. In building that, I learned several of the skills I now use frequently as a developer. These are HTML and CSS, Bootstrap, the ability to learn fast, problem-solving, photo and video editing, working with raster images and effective communication with clients. "
     }
@@ -65,12 +71,12 @@
   ],
   "featured": [
     {
-      "id": 1,
+      "id": 6,
       "title": "Should Web Developers Learn How To Use Photoshop?",
       "link": "https://hackernoon.com/shoud-web-developers-learn-how-to-use-photoshop-t52n3urc"
     },
     {
-      "id": 2,
+      "id": 7,
       "title": "How to Use binding.pry to Debug a Rails Application in a Docker Container",
       "link": "https://hackernoon.com/how-to-use-bindingpry-to-debug-a-rails-application-in-a-docker-container"
     }

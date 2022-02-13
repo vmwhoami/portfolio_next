@@ -1,16 +1,15 @@
 import Link from 'next/link';
 import Head from 'next/head';
+import path from 'path';
+import fs from 'fs';
+import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import { Portfolio } from '../components/Svgs';
 import SocialLinks from '../components/smallComponents/SocialLinks';
 import { fadeInSide, fadeInRight } from '../components/animations/indexAnimations';
-import mainText from '../page_text/mainText.json';
-
-export default function Home() {
+export default function Home({ intro, heading, name, description }) {
   return (
-    <motion.main
-      className="main"
-    >
+    <motion.main className="main">
       <div className="main__container">
         <Head>
           <title>Vitalie Melnic Porfolio Website</title>
@@ -22,12 +21,12 @@ export default function Home() {
 
         <div className="about">
           <motion.div variants={fadeInRight} initial="initial" animate="animate" className="about__container">
-            <p className="about__intro">{mainText.intro}</p>
+            <p className="about__intro">{intro}</p>
             <h1 className="about__heading">
-              {mainText.heading}
-              <span className="about__name">{mainText.name}</span>
+              {heading}
+              <span className="about__name">{name}</span>
             </h1>
-            <p className="about__description">{mainText.description}</p>
+            <p className="about__description">{description}</p>
             <Link href="/portfolio">
               <button type="button" className="mybutton">
                 <span className="mybutton__span">Portfolio</span>
@@ -44,3 +43,26 @@ export default function Home() {
     </motion.main>
   );
 }
+
+export const getStaticProps = async () => {
+  const filepath = path.join(process.cwd(), 'page_text', 'main_text.json');
+  const jsonData = await fs.readFileSync(filepath);
+  const data = JSON.parse(jsonData);
+  return {
+    props: data,
+  };
+};
+
+Home.propTypes = {
+  intro: PropTypes.string,
+  heading: PropTypes.string,
+  name: PropTypes.string,
+  description: PropTypes.string,
+};
+
+Home.defaultProps = {
+  intro: '',
+  heading: '',
+  name: '',
+  description: '',
+};

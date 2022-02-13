@@ -102,12 +102,22 @@ export const About = ({ experience, knoledge, tools, featured }) => (
         </div>
       </div>
       <div className="personal__dance">
-
-      <div className="video">
-          <iframe src="https://www.youtube.com/embed/XHBM84biLJI" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+        <div className="video">
+          <iframe
+            src="https://www.youtube.com/embed/XHBM84biLJI"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowFullScreen
+          />
         </div>
         <div className="video">
-          <iframe src="https://www.youtube.com/embed/EmdMW_KyAhM" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+          <iframe
+            src="https://www.youtube.com/embed/EmdMW_KyAhM"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen />
         </div>
       </div>
     </div>
