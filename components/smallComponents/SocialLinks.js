@@ -30,19 +30,37 @@ function SocialLinks() {
         animate="show"
         className="social"
       >
-        <motion.a variants={item} target="_blank" className="social__link" href="https://www.linkedin.com/in/vitaliemelnic/" rel="noreferrer">
+        <motion.a
+          variants={item}
+          target="_blank"
+          className="social__link"
+          href="https://www.linkedin.com/in/vitaliemelnic/"
+          rel="noreferrer"
+        >
           <i className="social__icon">
             <LinkedIn />
           </i>
         </motion.a>
 
-        <motion.a variants={item} target="_blank" className="social__link" href="https://github.com/vmwhoami" rel="noreferrer">
+        <motion.a
+          variants={item}
+          target="_blank"
+          className="social__link"
+          href="https://github.com/vmwhoami"
+          rel="noreferrer"
+        >
           <i className="social__icon">
             <Github />
           </i>
         </motion.a>
 
-        <motion.a variants={item} target="_blank" className="social__link" href="https://twitter.com/vmwhoami" rel="noreferrer">
+        <motion.a
+          variants={item}
+          target="_blank"
+          className="social__link"
+          href="https://twitter.com/vmwhoami"
+          rel="noreferrer"
+        >
           <i className="social__icon">
             <Twitter />
           </i>

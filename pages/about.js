@@ -6,7 +6,9 @@ import Info from '../components/smallComponents/Info';
 import { Youtube } from '../components/Svgs';
 import AboutIntro from '../components/smallComponents/AboutIntro';
 
-export const About = ({ experience, knoledge, tools, featured ,intro }) => (
+export const About = ({
+  experience, knoledge, tools, featured, intro,
+}) => (
   <div className="container aboutpage">
     <Heading white="About " color="me" bg="About" />
     <div className="aboutp">

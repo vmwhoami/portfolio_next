@@ -30,7 +30,9 @@ function PortfolioItem({ portfolio }) {
           <ReactMarkdown>{description}</ReactMarkdown>
           <h3>Technologies used:</h3>
           <hr className="white-line " />
-          <div className="technologies">{technologies.map((technology) => <span key={genKeys()}>{technology}</span>)}</div>
+          <div className="technologies">
+            {technologies.map((technology) => <span key={genKeys()}>{technology}</span>)}
+          </div>
           <hr className="white-line " />
           <div className="links">
             {links.map((link) => <LiveLinks key={genKeys()} link={link} />)}

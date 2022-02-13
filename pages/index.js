@@ -7,7 +7,10 @@ import { motion } from 'framer-motion';
 import { Portfolio } from '../components/Svgs';
 import SocialLinks from '../components/smallComponents/SocialLinks';
 import { fadeInSide, fadeInRight } from '../components/animations/indexAnimations';
-export default function Home({ intro, heading, name, description }) {
+
+export default function Home({
+  intro, heading, name, description,
+}) {
   return (
     <motion.main className="main">
       <div className="main__container">
