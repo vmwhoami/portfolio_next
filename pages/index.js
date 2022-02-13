@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Portfolio } from '../components/Svgs';
 import SocialLinks from '../components/smallComponents/SocialLinks';
 import { fadeInSide, fadeInRight } from '../components/animations/indexAnimations';
-import mainText from '../data/mainText.json';
+import mainText from '../page_text/mainText.json';
 
 export default function Home() {
   return (

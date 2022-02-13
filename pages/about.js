@@ -5,21 +5,15 @@ import Heading from '../components/smallComponents/Heading';
 import Info from '../components/smallComponents/Info';
 import { Youtube } from '../components/Svgs';
 
-export const About = ({
-  experience, knoledge, tools, featured,
-}) => (
+export const About = ({ experience, knoledge, tools, featured }) => (
   <div className="container aboutpage">
-    <Heading
-      white="About "
-      color="me"
-      bg="About"
-    />
+    <Heading white="About " color="me" bg="About" />
     <div className="aboutp">
       <main>
         <article>
           <p>
             {' '}
-            Hi there as I already stated on my main page my name is Vitalie.
+            My name is Vitalie.
           </p>
           <p>
             {' '}
@@ -35,12 +29,7 @@ export const About = ({
         </article>
 
         <div className="aboutimg">
-          <img
-            src="/pictures/mainabout.jpg"
-            alt="Vitalie Melnic"
-
-          />
-
+          <img src="/pictures/mainabout.jpg" alt="Vitalie Melnic" />
         </div>
       </main>
 
@@ -50,8 +39,7 @@ export const About = ({
           <div className="whyme__experience__container">
             {
               /* eslint-disable react/jsx-props-no-spreading */
-
-              experience.map((exp) => <Info key={exp.id} {...exp} />)
+              experience.map((exeperience) => <Info key={exeperience.id} {...exeperience} />)
             }
           </div>
         </div>
@@ -115,7 +103,7 @@ export const About = ({
       </div>
       <div className="personal__dance">
 
-        <div className="video">
+      <div className="video">
           <iframe src="https://www.youtube.com/embed/XHBM84biLJI" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
         </div>
         <div className="video">
@@ -127,7 +115,7 @@ export const About = ({
 
 );
 export const getStaticProps = async () => {
-  const filepath = path.join(process.cwd(), 'data', 'experience.json');
+  const filepath = path.join(process.cwd(), 'page_text', 'experience.json');
   const jsonData = await fs.readFileSync(filepath);
   const data = JSON.parse(jsonData);
   return {

@@ -11,17 +11,9 @@ function Navigation() {
 
   return (
     <div className="navigation">
-      <input
-        className="navigation__checkbox"
-        id="nav_toggle"
-        ref={refContainer}
-        type="checkbox"
-      />
+      <input className="navigation__checkbox" id="nav_toggle" ref={refContainer} type="checkbox" />
       <>{ /* eslint-disable-next-line jsx-a11y/label-has-associated-control */}</>
-      <label
-        className="navigation__button"
-        htmlFor="nav_toggle"
-      >
+      <label className="navigation__button" htmlFor="nav_toggle">
         <span className="navigation__burger" />
       </label>
 
@@ -29,13 +21,7 @@ function Navigation() {
 
       <nav className="navigation__nav">
         <ul className="navigation__list">
-          {links.map((link) => (
-            <Navlinks
-              key={link}
-              link={link}
-              changeTogle={changeTogle}
-            />
-          ))}
+          {links.map((link) => (<Navlinks key={link} link={link} changeTogle={changeTogle} />))}
         </ul>
       </nav>
     </div>
