@@ -1,11 +1,10 @@
 {
   "intro": [
-    "My name is Vitalie. I am full-stack developer currently looking for opportunities.",
-    "Spent the whole 2020 year pair programming with people across five different time zones in a Development Program called Microverse.",
-    "For ten years I was based in China as a freelance dancer, and it was here that I began to learn about development when I built my team's website.",
-    "I also taught myself how to design and edit promotional materials with Photoshop and dance videos in Premiere Pro.",
-    "Although I taught myself the basics of HTML and CSS, I was driven to learn more."
+    "My name is Vitalie. I am a full-stack developer currently looking for opportunities.",
+    "For ten years I lived in China as a freelance dancer. It was here that I began to learn about development when I built my dance team's website. Taught me how to design and edit promotional materials with Photoshop and Premiere Pro.",
+    "Although I taught myself the basics of HTML and CSS, I was driven to learn more. I joined a remote development school called Microverse and have spent most of 2020 refining my technical ( JavaScript, React, NodeJs, Ruby, Ruby on Rails, HTML, CSS,) and soft (Remote pair programming/Communication/Collaboration) skills."
   ],
+
   "experience": [
     {
       "id": 1,
@@ -15,6 +14,7 @@
       "location": "Remote",
       "description": "My responsibilities are to work in a distributed team to ideate software solutions to complex problems design client-side architecture, VueJS jQuery.  Design server-side architecture, Ruby on Rails. Write effective API endpoints  SQL database  manipulation (Postgres, MySQL). Unit testing with Rspec for RoR. Development planning JIRA and SCRUM Daily standup meetings. Technologies Ruby on Rails JavaScript  VueJS  MySQL  Docker GitLab CI"
     },
+
     {
       "id": 2,
       "title": "Freelance Web developer",
@@ -23,6 +23,7 @@
       "location": "Remote",
       "description": "I help businesses build an online presence."
     },
+
     {
       "id": 3,
       "title": "Truck driver dispatcher",
@@ -31,6 +32,7 @@
       "location": "Chicago Illinois U.S.A remote position",
       "description": "Responsible for dispatching 10 trucks reducing cost expenses for the company. Oversaw coordination and orientation of all the drivers in my department. Ensured employee satisfaction while maintaining a good working environment."
     },
+
     {
       "id": 4,
       "title": "Delivery driver",
