@@ -35,18 +35,12 @@ function Portfolio({ data }) {
     <div className="container">
       <Head>
         <title>Vitalie Melnic Porfolios</title>
-        <meta
-          name="description"
-          content="Vitalie Melnic webdeveloper portfolios"
-        />
-
+        <meta name="description" content="Vitalie Melnic webdeveloper portfolios" />
       </Head>
 
       <Heading white="My" color="Portfolio" bg="Work" />
       <motion.div variants={container} initial="hidden" animate="show" className="grid-container">
-        {portfolios.map(({
-          _id: id, title, description, image, slug,
-        }) => (
+        {portfolios.map(({ _id: id, title, description, image, slug }) => (
           <motion.article variants={item} key={id} className="post_container">
             <PortThumb image={image} id={id} slug={slug} title={title} convertTitle={convertTitle} />
             <PortContent title={title} description={description} id={id} slug={slug} convertTitle={convertTitle} />

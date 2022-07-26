@@ -11,9 +11,7 @@ function PortfolioItem({ portfolio }) {
   if (!portfolio) {
     return <h1>Loading..</h1>;
   }
-  const {
-    title, image, githubLink, liveLink, description, technologies,
-  } = portfolio;
+  const { title, image, githubLink, liveLink, description, technologies  } = portfolio;
 
   const links = [githubLink, liveLink];
   const genKeys = () => Math.random().toString(36).slice(2, 9);
@@ -60,9 +58,7 @@ export async function getStaticProps(context) {
     method: 'GET', url, headers: {},
   });
   const data = res.data.data[0];
-  return {
-    props: { portfolio: data }, revalidate: 10,
-  };
+  return { props: { portfolio: data }, revalidate: 10 };
 }
 export async function getStaticPaths() {
   const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/portfolios';
@@ -71,9 +67,6 @@ export async function getStaticPaths() {
   /* eslint-disable-next-line */
   const paths = portfolios.map((p) => ({ params: { item: p.slug.toString() } }));
 
-  return {
-    paths,
-    fallback: true,
-  };
+  return { paths, fallback: true  };
 }
 export default PortfolioItem;

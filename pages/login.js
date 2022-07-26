@@ -8,9 +8,7 @@ import { login } from '../redux/login/loginActions';
 const Login = () => {
   const dispatch = useDispatch();
   const router = useRouter();
-  const {
-    loggedIn, user, errorMsg, admin,
-  } = useSelector((state) => state.loginReducer);
+  const { loggedIn, user, errorMsg, admin,} = useSelector((state) => state.loginReducer);
   const [values, setValues] = useState({
     email: '',
     password: '',
@@ -26,19 +24,12 @@ const Login = () => {
     e.preventDefault();
     const { email, password } = values;
     dispatch(login({ email, password }));
-    setValues({
-      email: '',
-      password: '',
-    });
+    setValues({ email: '', password: '',});
   };
   if (loggedIn && admin) router.push('/admin');
   return (
     <div className="container">
-      <Heading
-        white="Admin"
-        color="Login"
-        bg="Authenticate"
-      />
+      <Heading white="Admin" color="Login" bg="Authenticate" />
       <div className="login">
         <form className="form" onSubmit={handleSubmit}>
           <div className="form__container">

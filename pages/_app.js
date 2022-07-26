@@ -28,7 +28,6 @@ MyApp.propTypes = {
   Component: PropTypes.instanceOf(Object).isRequired,
   pageProps: PropTypes.instanceOf(Object).isRequired,
   router: PropTypes.instanceOf(Object).isRequired,
-
 };
 const makestore = () => store;
 const wrapper = createWrapper(makestore);

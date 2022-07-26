@@ -9,15 +9,15 @@ function Navlinks({ link, changeTogle }) {
   const giveSvg = (link) => {
     switch (link) {
       case 'home':
-        return <Home />;
+        return <Home key={'home'}/>;
       case 'portfolio':
-        return <Portfolio />;
+        return <Portfolio key={'portfolio'}/>;
       case 'contact':
-        return <Envelope />;
+        return <Envelope key={'contact'}/>;
       case 'about':
-        return <User />;
+        return <User key={'about'}/>;
       case 'blog':
-        return <Blog />;
+        return <Blog key={'blog'} />;
       default:
         return null;
     }
@@ -26,22 +26,14 @@ function Navlinks({ link, changeTogle }) {
   if (changeTogle) {
     return (
       <li>
-        <Link href={link === 'home'
-          ? '/'
-          : `/${link}`}
-        >
+        <Link href={link === 'home' ? '/': `/${link}`} >
           {/* eslint-disable-next-line  */}
-          <a
-            className="navigation__itemlink"
-            onClick={() => changeTogle()}
-            onKeyDown={() => changeTogle()}
-            role="button"
-            tabIndex={0}
-          >
-            <i className="navigation__icon">
-              {giveSvg(link)}
-            </i>
-
+          <a className="navigation__itemlink"
+             onClick={() => changeTogle()}
+             onKeyDown={() => changeTogle()}
+             role="button"
+             tabIndex={0} >
+            <i className="navigation__icon">{giveSvg(link)}</i>
             <span className="navigation__item__span">{link}</span>
           </a>
         </Link>
@@ -50,15 +42,9 @@ function Navlinks({ link, changeTogle }) {
   }
 
   return (
-    <Link href={link === 'home'
-      ? '/'
-      : `/${link}`}
-    >
+    <Link href={link === 'home' ? '/' : `/${link}`} >
       <button type="button" className="mynav__link">
-        <i className="mynav__icon">
-          {giveSvg(link)}
-        </i>
-
+        <i className="mynav__icon"> {giveSvg(link)}</i>
         <span className="mynav__link__a">{link}</span>
       </button>
     </Link>
@@ -70,6 +56,5 @@ Navlinks.defaultProps = {
 Navlinks.propTypes = {
   link: PropTypes.string.isRequired,
   changeTogle: PropTypes.func,
-
 };
 export default Navlinks;

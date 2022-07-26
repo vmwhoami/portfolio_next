@@ -18,7 +18,6 @@ function Navigation() {
       </label>
 
       <div className="navigation__background">&nbsp;</div>
-
       <nav className="navigation__nav">
         <ul className="navigation__list">
           {links.map((link) => (<Navlinks key={link} link={link} changeTogle={changeTogle} />))}
