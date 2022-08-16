@@ -7,7 +7,7 @@ const config = {
   },
 };
 
-const changeSubmitted = () => ({ type: SUBMITTED});
+const changeSubmitted = () => ({ type: SUBMITTED });
 
 const submissionError = () => ({ type: ERROR });
 

@@ -1,3 +1,4 @@
+
 {
   "env": {
     "browser": true,
@@ -19,7 +20,7 @@
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "no-shadow": "off",
-    "max-len": ["error", { "code": 140 }],
+    "max-len": ["error", { "code": 120 }]
   },
   "ignorePatterns": [
     "dist/",
