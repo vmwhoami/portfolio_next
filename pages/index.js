@@ -1,10 +1,10 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 import Head from 'next/head';
 import path from 'path';
 import fs from 'fs';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
-import { Portfolio } from '../components/Svgs';
+// import { Portfolio } from '../components/Svgs';
 import SocialLinks from '../components/smallComponents/SocialLinks';
 import { fadeInSide, fadeInRight } from '../components/animations/indexAnimations';
 
