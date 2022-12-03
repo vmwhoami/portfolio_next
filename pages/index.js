@@ -30,14 +30,14 @@ export default function Home({
               <span className="about__name">{name}</span>
             </h1>
             <p className="about__description">{description}</p>
-            <Link href="/portfolio">
+            {/* <Link href="/portfolio">
               <button type="button" className="mybutton">
                 <span className="mybutton__span">Portfolio</span>
                 <i className="mybutton__icon">
                   <Portfolio />
                 </i>
               </button>
-            </Link>
+            </Link> */}
             <SocialLinks />
           </motion.div>
         </div>
