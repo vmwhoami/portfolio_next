@@ -58,7 +58,7 @@ function SocialLinks() {
           variants={item}
           target="_blank"
           className="social__link"
-          href="https://twitter.com/vmwhoami"
+          href="https://x.com/vmwhoami"
           rel="noreferrer"
         >
           <i className="social__icon">

@@ -85,7 +85,7 @@ export const About = ({
       <div className="personal__dance">
         <div className="video">
           <iframe
-            src="https://www.youtube.com/embed/XHBM84biLJI"
+            src="https://www.youtube.com/embed/kF9RgUa6W8o"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
