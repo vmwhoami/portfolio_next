@@ -1,3 +1,7 @@
-const withSass = require('@zeit/next-sass')
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  // Add other config options here
+};
 
-module.exports = withSass({})
+module.exports = nextConfig;

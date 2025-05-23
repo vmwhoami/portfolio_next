@@ -1,9 +1,7 @@
-import PropTypes from 'prop-types';
-import Link from 'next/link';
+import PropTypes from "prop-types";
+import Link from "next/link";
 
-const PortContent = ({
-  title, description, slug,
-}) => (
+const PortContent = ({ title, description, slug }) => (
   <div className="post_content">
     <div className="entry_header">
       <h2>
@@ -15,10 +13,7 @@ const PortContent = ({
       </h2>
     </div>
     <div className="entry_content">
-      <p>
-        {`${description.split(' ').slice(0, 10).join(' ')}...`}
-        {' '}
-      </p>
+      <p>{`${description.split(" ").slice(0, 10).join(" ")}...`} </p>
     </div>
   </div>
 );

@@ -1,12 +1,10 @@
-import React from 'react';
-import useForm from './useForm';
-import validation from './validation';
-import { Plane } from '../Svgs';
+import React from "react";
+import useForm from "./useForm";
+import validation from "./validation";
+import { Plane } from "../Svgs";
 
 const Form = () => {
-  const {
-    handleChange, handleSubmit, values, errors,
-  } = useForm(validation);
+  const { handleChange, handleSubmit, values, errors } = useForm(validation);
 
   return (
     <form
@@ -15,7 +13,6 @@ const Form = () => {
       name="contact"
       onSubmit={handleSubmit}
     >
-
       <div className="contact__nes">
         <div className="contact__input">
           <input

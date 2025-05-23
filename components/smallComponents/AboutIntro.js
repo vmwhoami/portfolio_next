@@ -1,9 +1,11 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const AboutIntro = ({ intro }) => (
   <main>
     <article>
-      {intro.map((item) => <p key={item}>{item}</p>)}
+      {intro.map((item) => (
+        <p key={item}>{item}</p>
+      ))}
     </article>
     <div className="aboutimg">
       <img src="/pictures/mainabout.jpg" alt="Vitalie Melnic" />

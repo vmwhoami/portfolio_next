@@ -1,14 +1,14 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { submitData } from '../../redux/common/commonActions';
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { submitData } from "../../redux/common/commonActions";
 
 const useForm = (validation) => {
   const dispatch = useDispatch();
   const [values, setValues] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
   const [errors, setErrors] = useState({});
 
@@ -28,7 +28,10 @@ const useForm = (validation) => {
   };
 
   return {
-    handleChange, handleSubmit, values, errors,
+    handleChange,
+    handleSubmit,
+    values,
+    errors,
   };
 };
 
