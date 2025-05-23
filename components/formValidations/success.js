@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SentMail } from '../Svgs';
+import React from "react";
+import { motion } from "framer-motion";
+import { SentMail } from "../Svgs";
 
 const ease = [0.34, 1.56, 0.64, 1];
 const variants = {
