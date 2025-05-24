@@ -1,3 +1,5 @@
+// loginAtions.js
+
 import axios from 'axios';
 import {
   LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT, SET_ADMIN,

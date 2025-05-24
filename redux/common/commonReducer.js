@@ -1,3 +1,5 @@
+// commonReducer.js
+
 import { SUBMITTED, ERROR } from './commontTypes';
 
 const initial = {

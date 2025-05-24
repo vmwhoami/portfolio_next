@@ -1,3 +1,5 @@
+// portfolioReducer.js
+
 import { GET_ALL_ITEMS, GET_ALL_FAILURE } from './portfolioTypes';
 
 const initial = { items: [], errors: [] };

@@ -1,3 +1,5 @@
+// loginReducer.js
+
 import {
   LOGIN_SUCCESS, LOGIN_FAILURE, LOGOUT, SET_ADMIN,
 } from './loginTypes';
