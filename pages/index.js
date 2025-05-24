@@ -1,4 +1,6 @@
 // import Link from 'next/link';
+"use client";
+
 import Head from 'next/head';
 import path from 'path';
 import fs from 'fs';

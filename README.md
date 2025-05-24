@@ -1,3 +1,6 @@
+to do: 
+    make it run use_strict and and gradually add tailwind
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

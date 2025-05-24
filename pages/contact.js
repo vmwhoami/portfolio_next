@@ -1,3 +1,5 @@
+"use client";
+
 import { useSelector } from 'react-redux';
 import Head from 'next/head';
 import { Envelope, Phone } from '../components/Svgs';

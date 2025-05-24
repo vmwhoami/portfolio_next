@@ -1,3 +1,5 @@
+"use client";
+
 import path from 'path';
 import PropTypes from 'prop-types';
 import fs from 'fs';

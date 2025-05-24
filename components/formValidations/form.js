@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 import useForm from "./useForm";
 import validation from "./validation";

@@ -1,3 +1,5 @@
+"use client";
+
 import '../styles/application.scss';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
