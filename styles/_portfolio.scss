@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 .grid-container {
   width: 75vw;
@@ -8,7 +8,7 @@
   grid-auto-rows: 1fr;
   gap: 3rem;
 
-  @media screen and (max-width: $bp-lg) {
+  @media screen and (max-width: variables.$bp-lg) {
     width: 90vw;
   }
 
@@ -21,11 +21,11 @@
   display: flex;
   border-radius: 1rem 1rem 0 0;
   overflow: hidden;
-  border-bottom: 1rem solid $main-color;
+  border-bottom: 1rem solid variables.$main-color;
 }
 
 .entry_header h2 a {
-  color: $white-color;
+  color: variables.$white-color;
   font-size: 2.5rem;
   font-weight: 600;
   transition: all 0.3s;
@@ -33,7 +33,7 @@
 
   &:hover {
     text-decoration: none;
-    color: $main-color;
+    color: variables.$main-color;
   }
 }
 
@@ -71,21 +71,21 @@
 
 .new_item {
   text-transform: uppercase;
-  background-color: $main-color;
+  background-color: variables.$main-color;
   padding: 1rem 2rem;
-  color: $white-color;
+  color: variables.$white-color;
   font-weight: 700;
   border-radius: 5rem;
   transition: all 0.3s cubic-bezier(0.76, 0.74, 0.72, 0.8);
 
   &:hover {
-    color: $white-color;
+    color: variables.$white-color;
     border-radius: 0;
   }
 }
 
 .portcontent {
-  color: $white-color;
+  color: variables.$white-color;
   font-size: 2.5rem;
   font-weight: 600;
   transition: all 0.3s;
@@ -95,6 +95,6 @@
 
   &:hover {
     text-decoration: none;
-    color: $main-color;
+    color: variables.$main-color;
   }
 }

@@ -1,5 +1,5 @@
 
-@import 'variables';
+@use 'variables';
 
 .social {
   margin-top: 2rem;
@@ -12,12 +12,12 @@
     width: 5rem;
     height: 5rem;
     margin: 1rem;
-    background-color: $grey-color;
+    background-color: variables.$grey-color;
     border-radius: 50%;
     transition: all 0.3s;
 
     &:hover {
-      background-color: $main-color;
+      background-color: variables.$main-color;
     }
   }
 

@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 .info {
   margin: 1rem 2rem 0 0;
@@ -7,7 +7,7 @@
   cursor: pointer;
   z-index: 4;
 
-  @media screen and (max-width: $bp-md) {
+  @media screen and (max-width: variables.$bp-md) {
     margin: 1rem 0 0 0;
   }
 
@@ -39,7 +39,7 @@
     border-radius: 50%;
 
     svg {
-      fill: $main-color;
+      fill: variables.$main-color;
       width: 2rem;
       height: 2rem;
     }

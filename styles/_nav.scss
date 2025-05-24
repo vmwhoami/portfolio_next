@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 .mynav {
   position: fixed;
@@ -7,7 +7,7 @@
   transform: translateY(-50%);
   z-index: 10000;
 
-  @media screen and (max-width: $bp-md) {
+  @media screen and (max-width: variables.$bp-md) {
     display: none;
   }
 
@@ -17,7 +17,7 @@
     height: 5rem;
     font-size: 1.6rem;
     margin: 2rem 0;
-    background-color: $grey-color;
+    background-color: variables.$grey-color;
     border-radius: 50%;
     display: flex;
     outline: none;
@@ -27,7 +27,7 @@
 
     &:hover,
     &:active {
-      background-color: $main-color;
+      background-color: variables.$main-color;
     }
 
     &__a {
@@ -53,8 +53,8 @@
     }
 
     &:hover &__a {
-      color: $white-color;
-      background-color: $main-color;
+      color: variables.$white-color;
+      background-color: variables.$main-color;
       width: 20rem;
     }
   }

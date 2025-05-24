@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 /* Form */
 
@@ -8,9 +8,9 @@
 
 .contact_form input[type=text],
 .contact_form input[type=email] {
-  border: 1px solid $black-color;
+  border: 1px solid variables.$black-color;
   width: 100%;
-  background: $grey-color;
+  background: variables.$grey-color;
   color: #fff;
   padding: 2rem 2.5rem;
   border-radius: 2rem;
@@ -23,9 +23,9 @@
 }
 
 .contact_form textarea {
-  border: 1px solid $black-color;
-  background: $grey-color;
-  color: $white-color;
+  border: 1px solid variables.$black-color;
+  background: variables.$grey-color;
+  color: variables.$white-color;
   width: 100%;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -72,7 +72,7 @@
   margin: 5rem auto;
   display: flex;
 
-  @media screen and (max-width: $bp-md) {
+  @media screen and (max-width: variables.$bp-md) {
     flex-direction: column;
   }
 
@@ -89,7 +89,7 @@
     display: flex;
     justify-content: space-between;
 
-    @media screen and (max-width: $bp-md) {
+    @media screen and (max-width: variables.$bp-md) {
       flex-direction: column;
       justify-content: flex-start;
     }
@@ -98,7 +98,7 @@
   &__input {
     flex: 0 1 26rem;
 
-    @media screen and (max-width: $bp-md) {
+    @media screen and (max-width: variables.$bp-md) {
       flex: 1 1 7rem;
     }
 
@@ -106,7 +106,7 @@
       text-align: center;
       padding: 1rem;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      color: $main-color;
+      color: variables.$main-color;
     }
   }
 
@@ -117,7 +117,7 @@
       text-align: center;
       padding: 1rem;
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      color: $main-color;
+      color: variables.$main-color;
     }
   }
 
@@ -141,7 +141,7 @@
     svg {
       width: 5rem;
       height: 5rem;
-      fill: $main-color;
+      fill: variables.$main-color;
     }
   }
 
@@ -187,8 +187,8 @@
     height: 7rem;
     text-transform: uppercase;
     font-weight: 600;
-    background-color: $main-color;
-    color: $white-color;
+    background-color: variables.$main-color;
+    color: variables.$white-color;
     border: none;
     padding: 2rem;
     border-radius: 5rem;

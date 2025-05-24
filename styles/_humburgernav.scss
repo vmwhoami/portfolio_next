@@ -1,9 +1,9 @@
-@import 'variables';
+@use 'variables';
 
 .navigation {
   display: none;
 
-  @media screen and (max-width: $bp-md) {
+  @media screen and (max-width: variables.$bp-md) {
     display: block;
   }
 
@@ -12,7 +12,7 @@
   }
 
   &__button {
-    background-color: $grey-color;
+    background-color: variables.$grey-color;
     height: 6rem;
     width: 6rem;
     position: fixed;
@@ -34,7 +34,7 @@
     border-radius: 1rem;
     top: 3rem;
     right: 2%;
-    background-image: radial-gradient($black-color, $grey-color);
+    background-image: radial-gradient(variables.$black-color, variables.$grey-color);
     z-index: 100;
     transition: all 0.8s cubic-bezier(0.97, -0.25, 0.13, 1.31);
   }
@@ -67,13 +67,13 @@
     align-items: center;
     padding: 1rem 1.5rem;
     font-size: 3rem;
-    color: $white-color;
+    color: variables.$white-color;
     text-transform: uppercase;
     font-weight: 600;
 
     &:link,
     &:visited {
-      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $main-color 50%);
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, variables.$main-color 50%);
       background-size: 250%;
       transition: all 0.4s;
     }
@@ -83,7 +83,7 @@
       background-position: 100%;
       transform: translateX(1rem);
       text-decoration: none;
-      color: $white-color;
+      color: variables.$white-color;
     }
   }
 
@@ -119,7 +119,7 @@
       position: absolute;
       width: 5rem;
       height: 3px;
-      background-color: $white-color;
+      background-color: variables.$white-color;
       display: inline-block;
     }
 

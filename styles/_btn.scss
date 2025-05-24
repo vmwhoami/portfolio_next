@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 .mybutton {
   &__span {
@@ -46,8 +46,8 @@
   text-transform: uppercase;
   position: relative;
   font-size: 1.6rem;
-  background-color: $main-color; // color variable
-  color: $white-color;
+  background-color: variables.$main-color; // color variable
+  color: variables.$white-color;
   font-weight: 600;
   letter-spacing: 1px;
   width: 20rem;
@@ -59,7 +59,7 @@
   cursor: pointer;
 
   &:hover {
-    color: $white-color;
+    color: variables.$white-color;
     text-decoration: none;
   }
 }

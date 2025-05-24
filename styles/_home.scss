@@ -1,18 +1,18 @@
-@import 'variables';
+@use 'variables';
 
 .main {
   width: 100%;
-  background: $grey-color;
+  background: variables.$grey-color;
   background:
     linear-gradient(
       75deg,
-      $main-color 0%,
-      $main-color 25%,
-      $black-color 25%
+      variables.$main-color 0%,
+      variables.$main-color 25%,
+      variables.$black-color 25%
     );
 
-  @media screen and (max-width: $bp-md) {
-    background: $black-color;
+  @media screen and (max-width: variables.$bp-md) {
+    background: variables.$black-color;
   }
 
   &__container {
@@ -20,7 +20,7 @@
     padding: 2.5rem;
     align-items: center;
 
-    @media screen and (max-width: $bp-md) {
+    @media screen and (max-width: variables.$bp-md) {
       flex-direction: column;
       justify-content: center;
     }
@@ -33,12 +33,12 @@
   border-radius: 1.5rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.9);
 
-  @media screen and (max-width: $bp-md) {
+  @media screen and (max-width: variables.$bp-md) {
     margin-top: 5rem;
     width: 30rem;
     height: 30rem;
     border-radius: 50%;
-    border: 6px solid $grey-color;
+    border: 6px solid variables.$grey-color;
   }
 
   &__img {
@@ -48,7 +48,7 @@
     border-radius: 1.5rem;
     overflow: hidden;
 
-    @media screen and (max-width: $bp-md) {
+    @media screen and (max-width: variables.$bp-md) {
       border-radius: 50%;
       object-fit: cover;
     }
@@ -64,14 +64,14 @@
 
   &__container {
     width: 50rem;
-    color: $white-color;
+    color: variables.$white-color;
 
-    @media screen and (max-width: $bp-lg) {
+    @media screen and (max-width: variables.$bp-lg) {
       line-height: 1.5rem;
       width: 40rem;
     }
 
-    @media screen and (max-width: $bp-md) {
+    @media screen and (max-width: variables.$bp-md) {
       margin-top: 5rem;
       text-align: center;
       width: 80vw;
@@ -87,7 +87,7 @@
     font-size: 3.5rem;
     text-transform: uppercase;
 
-    @media screen and (max-width: $bp-lg) {
+    @media screen and (max-width: variables.$bp-lg) {
       font-size: 3.5rem;
       line-height: 1em;
     }
@@ -97,7 +97,7 @@
 
   &__name {
     font-weight: 800;
-    color: $main-color;
+    color: variables.$main-color;
     margin-left: 10px;
   }
 
@@ -108,13 +108,13 @@
 }
 
 svg {
-  fill: $white-color;
+  fill: variables.$white-color;
   width: 2rem;
   height: 2rem;
 }
 
 .card {
-  background-color: $grey-color !important;
+  background-color: variables.$grey-color !important;
 }
 
 .rounded-corners {
@@ -125,7 +125,7 @@ svg {
   display: flex;
   width: 100%;
 
-  @media screen and (max-width: $bp-md) {
+  @media screen and (max-width: variables.$bp-md) {
     justify-content: center;
   }
 }

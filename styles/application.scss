@@ -1,8 +1,18 @@
 
-@import 'variables';
-@import 'home','btn','nav','heading','social','form','portfolio','humburgernav','login_register','github_live'
-  ,'portfolio_item'
-  ,'about','info';
+@use 'variables';
+@use 'home';
+@use 'btn';
+@use 'nav';
+@use 'heading';
+@use 'social';
+@use 'form';
+@use 'portfolio';
+@use 'humburgernav';
+@use 'login_register';
+@use 'github_live';
+@use 'portfolio_item';
+@use 'about';
+@use 'info';
 
 *,
 *::before,
@@ -16,7 +26,7 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 
-  @media screen and (max-width: $bp-small) {
+  @media screen and (max-width: variables.$bp-small) {
     font-size: 60%;
   }
 }
@@ -31,9 +41,9 @@ ul {
 }
 
 body {
-  background-color: $black-color;
-  font-family: $open-sans;
-  color: $white-color;
+  background-color: variables.$black-color;
+  font-family: variables.$open-sans;
+  color: variables.$white-color;
   font-weight: 400;
   font-size: 1.6rem;
 }

@@ -1,3 +1,5 @@
+@use "variables";
+
 .portItemCont {
   width: 90vw;
   margin: 2rem auto 2rem auto;
@@ -5,7 +7,7 @@
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   grid-gap: 2rem;
 
-  @media screen and (max-width: $bp-small) {
+  @media screen and (max-width: variables.$bp-small) {
     margin: auto;
   }
 }
