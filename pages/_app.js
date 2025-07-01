@@ -1,15 +1,19 @@
+// app.js
 "use client";
 
 import '../styles/application.scss';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { Provider } from 'react-redux';
-import { createWrapper } from 'next-redux-wrapper';
+import { wrapper } from '../redux/store';
 import Layout from '../components/Layout';
-import store from '../redux/store';
 import ProtectedRoute from '../components/ProtectedRoute';
 
-function MyApp({ Component, pageProps, router }) {
+function MyApp(props) {
+  // Use useWrappedStore hook to get the Redux store
+  const { store, props: { pageProps } } = wrapper.useWrappedStore(props);
+  const { Component, router } = props;
+
   return (
     <Provider store={store}>
       <ProtectedRoute router={router}>
@@ -17,7 +21,6 @@ function MyApp({ Component, pageProps, router }) {
           <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           </Head>
-          {/* eslint-disable-next-line  */}
           <Component {...pageProps} />
         </Layout>
       </ProtectedRoute>
@@ -26,11 +29,9 @@ function MyApp({ Component, pageProps, router }) {
 }
 
 MyApp.propTypes = {
-  Component: PropTypes.instanceOf(Object).isRequired,
-  pageProps: PropTypes.instanceOf(Object).isRequired,
-  router: PropTypes.instanceOf(Object).isRequired,
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.object.isRequired,
+  router: PropTypes.object.isRequired,
 };
-const makestore = () => store;
-const wrapper = createWrapper(makestore);
 
-export default wrapper.withRedux(MyApp);
+export default MyApp; // No wrapper.withRedux needed

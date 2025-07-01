@@ -1,7 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit'
-import rootReducer from './rootReducer'
+// store.js
+import { configureStore } from '@reduxjs/toolkit';
+import rootReducer from './rootReducer';
+import { createWrapper } from 'next-redux-wrapper';
 
-const store = configureStore({
+// Create a makeStore function that returns a new store instance
+const makeStore = () => configureStore({
   reducer: rootReducer,
-})
-export default store
+});
+
+// Create and export the wrapper
+export const wrapper = createWrapper(makeStore);
