@@ -1,22 +1,26 @@
 "use client";
 
-import Head from 'next/head';
-import path from 'path';
-import fs from 'fs';
-import PropTypes from 'prop-types';
-import { motion } from 'framer-motion';
-import SocialLinks from '../components/smallComponents/SocialLinks';
-import { fadeInSide, fadeInRight } from '../components/animations/indexAnimations';
+import Head from "next/head";
+import path from "path";
+import fs from "fs";
+import PropTypes from "prop-types";
+import { motion } from "framer-motion";
+import SocialLinks from "../components/smallComponents/SocialLinks";
+import {
+  fadeInSide,
+  fadeInRight,
+} from "../components/animations/indexAnimations";
 
 export default function Home({ intro, heading, name, description }) {
   return (
-    <motion.main
-      className="w-full min-h-screen bg-[#111] md:bg-gradient-to-tr md:from-[#4169e1] md:via-[#4169e1] md:to-[#111] flex justify-center items-center"
-    >
+    <motion.main className="w-full min-h-screen bg-[#111] md:bg-gradient-to-tr md:from-[#4169e1] md:via-[#4169e1] md:to-[#111] flex justify-center items-center">
       <div className="flex flex-col justify-center items-center px-6 py-10 md:flex-row md:items-center">
         <Head>
           <title>Vitalie Melnic Portfolio Website</title>
-          <meta name="description" content="Vitalie Melnic Portfolio website vmwhoami vmwhoiam" />
+          <meta
+            name="description"
+            content="Vitalie Melnic Portfolio website vmwhoami vmwhoiam"
+          />
         </Head>
 
         <motion.div
@@ -47,36 +51,59 @@ export default function Home({ intro, heading, name, description }) {
 
               <h1 className="text-[2.2rem] uppercase leading-tight md:text-[3.5rem]">
                 My name is
-                <span className="ml-2 font-extrabold text-[#4169e1]">Vitalie</span>
+                <span className="ml-2 font-extrabold text-[#4169e1]">
+                  Vitalie
+                </span>
               </h1>
 
               <div className="space-y-4 text-[1rem] md:text-[1.6rem] md:leading-[2.5rem]">
                 <p>
-                  I am a <strong>full-stack web developer</strong>, content creator, and former professional dancer with a passion for technology, creativity, and storytelling.
+                  I am a <strong>full-stack web developer</strong>, content
+                  creator, and former professional dancer with a passion for
+                  technology, creativity, and storytelling.
                 </p>
 
                 <p>
-                  For over <em>3.5 years</em>, I’ve been building scalable applications using <code>Ruby on Rails</code>, <code>Vue.js</code>, and <code>Docker</code>. I love solving complex problems, refining backend logic, and crafting smooth front‑end experiences.
+                  For over <em>3.5 years</em>, I’ve been building scalable
+                  applications using <code>Ruby on Rails</code>,{" "}
+                  <code>Vue.js</code>, and <code>Docker</code>. I love solving
+                  complex problems, refining backend logic, and crafting smooth
+                  front‑end experiences.
                 </p>
 
                 <p>
-                  But my journey started long before coding. From <strong>2010 to 2018</strong>, I performed professionally as a dancer in Moldova, Romania, and China—while also designing websites, editing videos, and creating promo materials for my team.
+                  But my journey started long before coding. From{" "}
+                  <strong>2010 to 2018</strong>, I performed professionally as a
+                  dancer in Moldova, Romania, and China—while also designing
+                  websites, editing videos, and creating promo materials for my
+                  team.
                 </p>
 
                 <p>
-                  That hands-on combo of <em>Photoshop</em>, <em>Premiere Pro</em>, <em>Illustrator</em>, and web development gave me a unique lens: blending art with code.
+                  That hands-on combo of <em>Photoshop</em>,{" "}
+                  <em>Premiere Pro</em>, <em>Illustrator</em>, and web
+                  development gave me a unique lens: blending art with code.
                 </p>
 
                 <p>
-                  In <strong>2020</strong>, I dove head-first into tech—graduating from Microverse’s rigorous remote bootcamp, then working as a Technical Support Engineer to help students sharpen their code.
+                  In <strong>2020</strong>, I dove head-first into
+                  tech—graduating from Microverse’s rigorous remote bootcamp,
+                  then working as a Technical Support Engineer to help students
+                  sharpen their code.
                 </p>
 
                 <p>
-                  Since then, I’ve shipped web apps, APIs, and polished front‑ends… all while running my YouTube channel, where I tackle societal change, deep dives, and big philosophical questions.
+                  Since then, I’ve shipped web apps, APIs, and polished
+                  front‑ends… all while running my YouTube channel, where I
+                  tackle societal change, deep dives, and big philosophical
+                  questions.
                 </p>
 
                 <p>
-                  I thrive on <strong>continuous learning</strong> and <strong>pushing boundaries</strong>—whether it’s writing clean, scalable code, producing engaging digital content, or exploring the latest tech frontiers.
+                  I thrive on <strong>continuous learning</strong> and{" "}
+                  <strong>pushing boundaries</strong>—whether it’s writing
+                  clean, scalable code, producing engaging digital content, or
+                  exploring the latest tech frontiers.
                 </p>
               </div>
 
@@ -92,7 +119,7 @@ export default function Home({ intro, heading, name, description }) {
 }
 
 export const getStaticProps = async () => {
-  const filepath = path.join(process.cwd(), 'page_text', 'main_text.json');
+  const filepath = path.join(process.cwd(), "page_text", "main_text.json");
   const jsonData = await fs.readFileSync(filepath);
   const data = JSON.parse(jsonData);
   return {
@@ -108,8 +135,8 @@ Home.propTypes = {
 };
 
 Home.defaultProps = {
-  intro: '',
-  heading: '',
-  name: '',
-  description: '',
+  intro: "",
+  heading: "",
+  name: "",
+  description: "",
 };
