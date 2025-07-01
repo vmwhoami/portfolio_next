@@ -1,4 +1,3 @@
-// import Link from 'next/link';
 "use client";
 
 import Head from 'next/head';
@@ -6,45 +5,88 @@ import path from 'path';
 import fs from 'fs';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
-// import { Portfolio } from '../components/Svgs';
 import SocialLinks from '../components/smallComponents/SocialLinks';
 import { fadeInSide, fadeInRight } from '../components/animations/indexAnimations';
 
-export default function Home({
-  intro, heading, name, description,
-}) {
+export default function Home({ intro, heading, name, description }) {
   return (
-    <motion.main className="main">
-      <div className="main__container">
+    <motion.main
+      className="w-full min-h-screen bg-[#111] md:bg-gradient-to-tr md:from-[#4169e1] md:via-[#4169e1] md:to-[#111] flex justify-center items-center"
+    >
+      <div className="flex flex-col justify-center items-center px-6 py-10 md:flex-row md:items-center">
         <Head>
-          <title>Vitalie Melnic Porfolio Website</title>
-          <meta name="description" content="Vitalie Melnic Porfolio website vmwhoami vmwhoiam" />
+          <title>Vitalie Melnic Portfolio Website</title>
+          <meta name="description" content="Vitalie Melnic Portfolio website vmwhoami vmwhoiam" />
         </Head>
-        <motion.div variants={fadeInSide} initial="initial" animate="animate" exit="exit" className="image">
-          <img alt="Vitalie Melnic" className="image__img" src="./pictures/portfolio.jpg" />
+
+        <motion.div
+          variants={fadeInSide}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          className="w-[18rem] h-[18rem] mt-10 rounded-full border-8 border-[#2b2a2a] overflow-hidden shadow-lg md:w-[50vw] md:h-[calc(100vh-6rem)] md:rounded-3xl md:border-none md:mt-0"
+        >
+          <img
+            alt="Vitalie Melnic"
+            className="w-full h-full object-cover rounded-full md:rounded-3xl"
+            src="./pictures/portfolio.jpg"
+          />
         </motion.div>
 
-        <div className="about">
-          <motion.div variants={fadeInRight} initial="initial" animate="animate" className="about__container">
-            <p className="about__intro">{intro}</p>
-            <h1 className="about__heading">
-              {heading}
-              <span className="about__name">{name}</span>
-            </h1>
-            <p className="about__description">{description}</p>
-            {/* <Link href="/portfolio">
-              <button type="button" className="mybutton">
-                <span className="mybutton__span">Portfolio</span>
-                <i className="mybutton__icon">
-                  <Portfolio />
-                </i>
-              </button>
-            </Link> */}
-            <SocialLinks />
+        <div className="w-full h-full flex justify-center items-end">
+          <motion.div
+            variants={fadeInRight}
+            initial="initial"
+            animate="animate"
+            className="mt-10 text-center w-[80vw] text-[#f8f8f8] md:text-left md:w-[40rem] lg:w-[50rem]"
+          >
+            <section className="space-y-6">
+              <p className="text-[1.4rem] uppercase md:text-[2.2rem]">
+                Hi there!
+              </p>
+
+              <h1 className="text-[2.2rem] uppercase leading-tight md:text-[3.5rem]">
+                My name is
+                <span className="ml-2 font-extrabold text-[#4169e1]">Vitalie</span>
+              </h1>
+
+              <div className="space-y-4 text-[1rem] md:text-[1.6rem] md:leading-[2.5rem]">
+                <p>
+                  I am a <strong>full-stack web developer</strong>, content creator, and former professional dancer with a passion for technology, creativity, and storytelling.
+                </p>
+
+                <p>
+                  For over <em>3.5 years</em>, I’ve been building scalable applications using <code>Ruby on Rails</code>, <code>Vue.js</code>, and <code>Docker</code>. I love solving complex problems, refining backend logic, and crafting smooth front‑end experiences.
+                </p>
+
+                <p>
+                  But my journey started long before coding. From <strong>2010 to 2018</strong>, I performed professionally as a dancer in Moldova, Romania, and China—while also designing websites, editing videos, and creating promo materials for my team.
+                </p>
+
+                <p>
+                  That hands-on combo of <em>Photoshop</em>, <em>Premiere Pro</em>, <em>Illustrator</em>, and web development gave me a unique lens: blending art with code.
+                </p>
+
+                <p>
+                  In <strong>2020</strong>, I dove head-first into tech—graduating from Microverse’s rigorous remote bootcamp, then working as a Technical Support Engineer to help students sharpen their code.
+                </p>
+
+                <p>
+                  Since then, I’ve shipped web apps, APIs, and polished front‑ends… all while running my YouTube channel, where I tackle societal change, deep dives, and big philosophical questions.
+                </p>
+
+                <p>
+                  I thrive on <strong>continuous learning</strong> and <strong>pushing boundaries</strong>—whether it’s writing clean, scalable code, producing engaging digital content, or exploring the latest tech frontiers.
+                </p>
+              </div>
+
+              <div className="mt-6 flex justify-center md:justify-start">
+                <SocialLinks />
+              </div>
+            </section>
           </motion.div>
         </div>
       </div>
-
     </motion.main>
   );
 }
