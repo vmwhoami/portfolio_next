@@ -130,6 +130,7 @@ function Lock() {
     </svg>
   );
 }
+
 function SentMail() {
   return (
     <svg width="375" height="249" viewBox="0 0 375 249" fill="none" xmlns="http://www.w3.org/2000/svg">

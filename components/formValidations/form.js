@@ -9,12 +9,10 @@ const Form = () => {
   const { handleChange, handleSubmit, values, errors } = useForm(validation);
 
   return (
-    <form
-      className="contact_form"
-      method="POST"
-      name="contact"
-      onSubmit={handleSubmit}
-    >
+    <form className="contact_form"
+          method="POST"
+          name="contact"
+          onSubmit={handleSubmit}>
       <div className="contact__nes">
         <div className="contact__input">
           <input
@@ -23,8 +21,7 @@ const Form = () => {
             name="name"
             id="name"
             value={values.name}
-            onChange={handleChange}
-          />
+            onChange={handleChange}/>
           {errors.name && <p>{errors.name}</p>}
         </div>
 
@@ -35,8 +32,7 @@ const Form = () => {
             name="email"
             id="email"
             value={values.email}
-            onChange={handleChange}
-          />
+            onChange={handleChange}/>
           {errors.email && <p>{errors.email}</p>}
         </div>
 
@@ -47,9 +43,9 @@ const Form = () => {
             name="subject"
             id="subject"
             value={values.subject}
-            onChange={handleChange}
-          />
+            onChange={handleChange}/>
         </div>
+
       </div>
 
       <div className="contact__message">
@@ -58,17 +54,14 @@ const Form = () => {
           name="message"
           id="message"
           onChange={handleChange}
-          value={values.message}
-        />
+          value={values.message}/>
         {errors.message && <p>{errors.message}</p>}
       </div>
 
       <div data-netlify-recaptcha="true" />
       <button type="submit" className="contact__button">
         <span>SEND MESSAGE</span>
-        <i className="social__icon">
-          <Plane />
-        </i>
+        <i className="social__icon"><Plane /></i>
       </button>
     </form>
   );
