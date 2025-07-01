@@ -26,8 +26,8 @@ const Success = () => (
       initial="hidden"
       animate="visible"
       variants={variants}
-      className="contact__svg"
-    >
+      className="contact__svg">
+        
       <h2>The message was sent.</h2>
       <SentMail />
       <h2>Thank you!</h2>

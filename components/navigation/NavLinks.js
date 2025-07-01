@@ -19,18 +19,16 @@ function Navlinks({ link, changeTogle }) {
   if (changeTogle) {
     return (
       <li>
-        <Link href={link === "home" ? "/" : `/${link}`}>
-          {/* eslint-disable-next-line  */}
-          <a
-            className="navigation__itemlink"
+        <Link 
+         className="navigation__itemlink"
             onClick={() => changeTogle()}
             onKeyDown={() => changeTogle()}
             role="button"
-            tabIndex={0}
-          >
+            tabIndex={0} href={link === "home" ? "/" : `/${link}`}>
+          {/* eslint-disable-next-line  */}
             <i className="navigation__icon">{giveSvg(link)}</i>
             <span className="navigation__item__span">{link}</span>
-          </a>
+          
         </Link>
       </li>
     );

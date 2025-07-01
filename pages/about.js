@@ -7,6 +7,7 @@ import Heading from '../components/smallComponents/Heading';
 import Info from '../components/smallComponents/Info';
 import { Youtube } from '../components/Svgs';
 import AboutIntro from '../components/smallComponents/AboutIntro';
+import Link from "next/link";
 
 export const About = ({
   experience, knoledge, tools, featured, intro,
@@ -47,10 +48,10 @@ export const About = ({
             <ul>
               {featured.map((el) => (
                 <li key={el.id}>
-                  <a href={el.link} target="blank">
+                  <Link href={el.link} target="blank">
                     {' '}
                     {el.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -61,9 +62,9 @@ export const About = ({
     <div className="personal">
       <h2>Personal</h2>
       <div className="personal__info">
-        <a href="https://www.youtube.com/user/vmwhoiam/videos" target="_blank" rel="noreferrer">
+        <Link href="https://www.youtube.com/user/vmwhoiam/videos" target="_blank" rel="noreferrer">
           <Youtube />
-        </a>
+        </Link>
         <div>
           <p>
             I have been often asked what did I do before coding.
