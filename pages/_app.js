@@ -1,6 +1,7 @@
 // app.js
 "use client";
 
+import './globals.css'
 import '../styles/application.scss';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
