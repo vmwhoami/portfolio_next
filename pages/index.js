@@ -13,7 +13,9 @@ import {
 
 export default function Home({ intro, heading, name, description }) {
   return (
-    <motion.main className="w-full min-h-screen bg-[#111] md:bg-gradient-to-tr md:from-[#4169e1] md:via-[#4169e1] md:to-[#111] flex justify-center items-center">
+    <motion.main className="w-full min-h-screen flex justify-center items-center
+    bg-[linear-gradient(75deg,#4169e1_0%,#4169e1_25%,#111_25%,#111_100%)]
+    md:bg-[linear-gradient(75deg,#4169e1_0%,#4169e1_25%,#111_25%,#111_100%)]">
       <div className="flex flex-col justify-center items-center px-6 py-10 md:flex-row md:items-center">
         <Head>
           <title>Vitalie Melnic Portfolio Website</title>

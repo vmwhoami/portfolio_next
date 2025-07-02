@@ -12,7 +12,7 @@ import Link from "next/link";
 export const About = ({
   experience, knoledge, tools, featured, intro,
 }) => (
-  <div className="container aboutpage">
+  <div>
     <Heading white="About " color="me" bg="About" />
     <div className="aboutp">
       <AboutIntro intro={intro} />

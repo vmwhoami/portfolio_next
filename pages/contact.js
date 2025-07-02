@@ -11,7 +11,7 @@ import Success from '../components/formValidations/success';
 const Contact = () => {
   const submitted = useSelector((state) => state.commonReducer.submitted);
   return (
-    <div className="container">
+    <div className="">
       <Head>
         <title>Contact Vitalie Melnic</title>
         <meta
