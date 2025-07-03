@@ -1,8 +1,9 @@
 {
   "intro": [
-    "My name is Vitalie. I am a full-stack developer currently looking for opportunities.",
-    "For ten years I lived in China as a freelance dancer. It was here that I began to learn about development when I built my dance team's website. Taught me how to design and edit promotional materials with Photoshop and Premiere Pro.",
-    "Although I taught myself the basics of HTML and CSS, I was driven to learn more. I joined a remote development school called Microverse and have spent most of 2020 refining my technical ( JavaScript, React, NodeJs, Ruby, Ruby on Rails, HTML, CSS,) and soft (Remote pair programming/Communication/Collaboration) skills."
+    "My name is Vitalie full‑stack web developer, content creator, and former pro dancer now recalibrating life after brain‑tumor surgery. I write clean, scalable code in Ruby on Rails, Vue.js/React, Node.js, Docker, and whatever else it takes to solve tricky problems. When I’m not knee‑deep in loops or refactoring someone’s legacy jank, you’ll find me sketching interfaces in Figma, cutting promos in Premiere Pro, or ranting into a mic on my YouTube channel about society’s big questions.",
+    "For nearly a decade I toured as a freelance dancer across China, Moldova, and Romania—building my own team’s website and teaching myself HTML, CSS, Photoshop, Premiere, and Illustrator on the fly. In 2020 I leveled up through Microverse’s remote bootcamp, mastering JavaScript, React, Node.js, Rails, plus the soft skills of remote pair programming, clear communication, and cross‑cultural collaboration.",
+    "Life threw me a curveball when I had brain‑tumor removal surgery. I’ve got zero tolerance for excuses, though—so while I’m slower on the trigger with a keyboard than I once was, I compensate with relentless curiosity, rock‑solid reliability, and a willingness to dig into Docker, Ubuntu, and local AI models just to see what’s possible.",
+    "Today I’m juggling code sprints with school runs (I’ve got a six‑year‑old sidekick), a mortgage, and a disability stipend—but I still find time to build PCs for AI work, stay active with Taekwondo‑turned‑dance moves, and grow a YouTube community exploring “moneyless” societies and future‑tech scenarios. Ready to bring that same grit, creativity, and forward‑thinking energy to your team. Let’s talk."
   ],
 
   "experience": [
@@ -68,12 +69,7 @@
     "NEXT JS",
     "MongoDb"
   ],
-  "tools": [
-    "Photoshop",
-    "Illustrator",
-    "PremierePro",
-    "After Effects"
-  ],
+  "tools": ["Photoshop", "Illustrator", "PremierePro", "After Effects"],
   "featured": [
     {
       "id": 6,

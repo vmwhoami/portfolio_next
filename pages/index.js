@@ -13,9 +13,11 @@ import {
 
 export default function Home({ intro, heading, name, description }) {
   return (
-    <motion.main className="w-full min-h-screen flex justify-center items-center
+    <motion.main
+      className="w-full min-h-screen flex justify-center items-center
     bg-[linear-gradient(75deg,#4169e1_0%,#4169e1_25%,#111_25%,#111_100%)]
-    md:bg-[linear-gradient(75deg,#4169e1_0%,#4169e1_25%,#111_25%,#111_100%)]">
+    md:bg-[linear-gradient(75deg,#4169e1_0%,#4169e1_25%,#111_25%,#111_100%)]"
+    >
       <div className="flex flex-col justify-center items-center px-6 py-10 md:flex-row md:items-center">
         <Head>
           <title>Vitalie Melnic Portfolio Website</title>
@@ -47,16 +49,17 @@ export default function Home({ intro, heading, name, description }) {
             className="mt-10 text-center w-[80vw] text-[#f8f8f8] md:text-left md:w-[40rem] lg:w-[50rem]"
           >
             <section className="space-y-6">
-              <p className="text-[1.4rem] uppercase md:text-[2.2rem]">
-                Hi there!
-              </p>
-
-              <h1 className="text-[2.2rem] uppercase leading-tight md:text-[3.5rem]">
-                My name is
-                <span className="ml-2 font-extrabold text-[#4169e1]">
-                  Vitalie
-                </span>
+              {/* Main Heading */}
+              <h1 className="text-3xl md:text-5xl font-bold uppercase">
+                My name is <span className="text-[#4169e1]">Vitalie</span>
               </h1>
+
+              {/* Nickname Explanation */}
+              <p className="text-sm md:text-base text-gray-300">
+                Also known online as <strong>nickpon</strong> on GitHub
+                (vmwhoami), inspired by the classic "Who Am I" Linux command and
+                the Jackie Chan movie.
+              </p>
 
               <div className="space-y-4 text-[1rem] md:text-[1.6rem] md:leading-[2.5rem]">
                 <p>
@@ -67,7 +70,7 @@ export default function Home({ intro, heading, name, description }) {
 
                 <p>
                   For over <em>3.5 years</em>, I’ve been building scalable
-                  applications using <code>Ruby on Rails</code>,{" "}
+                  applications using <code>Ruby on Rails</code>,{" "}, <code>FastAPI</code>
                   <code>Vue.js</code>, and <code>Docker</code>. I love solving
                   complex problems, refining backend logic, and crafting smooth
                   front‑end experiences.
@@ -108,7 +111,6 @@ export default function Home({ intro, heading, name, description }) {
                   exploring the latest tech frontiers.
                 </p>
               </div>
-
               <div className="mt-6 flex justify-center md:justify-start">
                 <SocialLinks />
               </div>
