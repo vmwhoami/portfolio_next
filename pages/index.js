@@ -37,7 +37,7 @@ export default function Home({ intro, heading, name, description }) {
           <img
             alt="Vitalie Melnic"
             className="w-full h-full object-cover rounded-full md:rounded-3xl"
-            src="./pictures/portfolio.jpg"
+            src="./pictures/izit.jpg"
           />
         </motion.div>
 
