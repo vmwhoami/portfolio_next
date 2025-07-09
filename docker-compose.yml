@@ -1,10 +1,14 @@
+version: "3.8"
 services:
   portfolio:
     build: .
+    expose:
+      - "3000"
     environment:
-      VIRTUAL_HOST: vmwhoami.com     
-      LETSENCRYPT_HOST: vmwhoami.com 
-      LETSENCRYPT_EMAIL: vmhoami@gmail.com
+      - VIRTUAL_HOST=vmwhoami.com,www.vmwhoami.com
+      - VIRTUAL_PORT=3000
+      - LETSENCRYPT_HOST=vmwhoami.com,www.vmwhoami.com
+      - LETSENCRYPT_EMAIL=vmhoami@gmail.com
     networks:
       - nginx-proxy
 
