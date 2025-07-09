@@ -1,14 +1,24 @@
+version: "3.8"
+
 services:
   portfolio:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
     expose:
       - "3000"
     ports:
       - "3000:3000"
     environment:
+      - NODE_ENV=production
       - VIRTUAL_HOST=vmwhoami.com,www.vmwhoami.com
       - VIRTUAL_PORT=3000
       - LETSENCRYPT_HOST=vmwhoami.com,www.vmwhoami.com
       - LETSENCRYPT_EMAIL=vmhoami@gmail.com
     networks:
       - nginx-proxy
+
+networks:
+  nginx-proxy:
+    external: true
