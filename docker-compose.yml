@@ -1,0 +1,13 @@
+services:
+  portfolio:
+    build: .
+    environment:
+      VIRTUAL_HOST: vmwhoami.com     
+      LETSENCRYPT_HOST: vmwhoami.com 
+      LETSENCRYPT_EMAIL: vmhoami@gmail.com
+    networks:
+      - nginx-proxy
+
+networks:
+  nginx-proxy:
+    external: true
