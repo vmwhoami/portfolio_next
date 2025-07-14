@@ -35,4 +35,4 @@ MyApp.propTypes = {
   router: PropTypes.object.isRequired,
 };
 
-export default MyApp; // No wrapper.withRedux needed
+export default MyApp; 
