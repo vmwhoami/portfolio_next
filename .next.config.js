@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
+  output: "standalone",
   reactStrictMode: true,
-  // Add other config options here
+  sassOptions: {
+    includePaths: ["./styles"],
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig;
