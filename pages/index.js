@@ -21,33 +21,32 @@ export default function Home({ intro, heading, name, description }) {
       <div className="flex flex-col justify-center items-center px-6 py-10 md:flex-row md:items-center">
         <Head>
           <title>Vitalie Melnic Portfolio Website</title>
-          <meta
-            name="description"
-            content="Vitalie Melnic Portfolio website vmwhoami vmwhoiam"
-          />
+          <meta name="description"
+                content="Vitalie Melnic Portfolio website vmwhoami vmwhoiam"/>
         </Head>
 
-        <motion.div
-          variants={fadeInSide}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          className="w-[18rem] h-[18rem] mt-10 rounded-full border-8 border-[#2b2a2a] overflow-hidden shadow-lg md:w-[50vw] md:h-[calc(100vh-6rem)] md:rounded-3xl md:border-none md:mt-0"
-        >
-          <img
-            alt="Vitalie Melnic"
-            className="w-full h-full object-cover rounded-full md:rounded-3xl"
-            src="./pictures/izit.jpg"
-          />
+        <motion.div variants={fadeInSide}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                    className="w-[18rem] h-[18rem] mt-10 
+                               rounded-full border-8 border-[#2b2a2a] 
+                               overflow-hidden shadow-lg 
+                               md:w-[50vw] md:h-[calc(100vh-6rem)] 
+                               md:rounded-3xl md:border-none md:mt-0">
+          <img alt="Vitalie Melnic"
+               className="w-full h-full 
+                          object-cover rounded-full md:rounded-3xl"
+               src="./pictures/portfolio.png"/>
         </motion.div>
 
         <div className="w-full h-full flex justify-center items-end">
-          <motion.div
-            variants={fadeInRight}
-            initial="initial"
-            animate="animate"
-            className="mt-10 text-center w-[80vw] text-[#f8f8f8] md:text-left md:w-[40rem] lg:w-[50rem]"
-          >
+          <motion.div variants={fadeInRight}
+                      initial="initial"
+                      animate="animate"
+                      className="mt-10 text-center w-[80vw] 
+                                text-[#f8f8f8] md:text-left 
+                                md:w-[40rem] lg:w-[50rem]">
             <section className="space-y-6">
               {/* Main Heading */}
               <h1 className="text-3xl md:text-5xl font-bold uppercase">
