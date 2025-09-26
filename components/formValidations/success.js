@@ -1,5 +1,5 @@
 "use client";
-
+//components/formValidations/success.js
 import React from "react";
 import { motion } from "framer-motion";
 import { SentMail } from "../Svgs";

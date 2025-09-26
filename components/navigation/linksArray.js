@@ -1,7 +1,8 @@
+//components/navigation/linksArray.js
 const links = [
   "home",
   // 'portfolio',
-  // "contact",
+  "contact",
   "about",
   // 'blog',
 ];

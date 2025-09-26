@@ -4,12 +4,19 @@ services:
       context: .
       dockerfile: Dockerfile
     restart: unless-stopped
+    ports:
+      - "3000:3000"
     expose:
       - "3000"
     environment:
       - NODE_ENV=production
+      - MONGODB_URI=mongodb://mongodb:27017/portfolio
+      - MONGODB_DB_NAME=portfolio
     networks:
-      - nginxproxymanager_default  # Use exact network name
+      - nginxproxymanager_default
+      - portfolio_internal
+    depends_on:
+      - mongodb
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/"]
       interval: 30s
@@ -25,7 +32,36 @@ services:
           memory: 256M
           cpus: '0.5'
 
+  mongodb:
+    image: mongo:7.0
+    restart: unless-stopped
+    environment:
+      - MONGO_INITDB_DATABASE=portfolio
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=your_password
+    volumes:
+      - mongodb_data:/data/db
+      # - ./mongo-init:/docker-entrypoint-initdb.d  # Optional: for init scripts
+    networks:
+      - portfolio_internal
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+          cpus: '0.5'
+        reservations:
+          memory: 512M
+          cpus: '0.25'
+    # Optional: Expose port for development access
+    ports:
+      - "27017:27017"
+
+volumes:
+  mongodb_data:
+    driver: local
 
 networks:
   nginxproxymanager_default:
     external: true
+  portfolio_internal:
+    driver: bridge

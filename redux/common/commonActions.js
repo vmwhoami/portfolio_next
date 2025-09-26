@@ -14,7 +14,7 @@ const changeSubmitted = () => ({ type: SUBMITTED });
 const submissionError = () => ({ type: ERROR });
 
 const submitData = (data) => async (dispatch) => {
-  const url = 'https://vmwhoami-portfolio-mern.herokuapp.com/api/v1/contacts';
+  const url = 'mongodb://mongodb:27017/portfolio';
   try {
     await axios({
       method: 'POST', url, data, config,
